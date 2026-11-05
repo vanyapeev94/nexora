@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora — Веб-студия полного цикла</title>
+  <meta name="description" content="Создаём сайты и digital-продукты под ваш бизнес. Продуманный дизайн, сильная разработка и маркетинговый подход. Помогаем бизнесу расти в цифровой среде.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nexora — Веб-студия полного цикла">
+  <meta property="og:description" content="Создаём сайты и digital-продукты под ваш бизнес. Продуманный дизайн, сильная разработка и маркетинговый подход.">
+  <meta property="og:type" content="website">
+  <!-- canonical placeholder -->
+  <!-- <link rel="canonical" href="https://nexora.ru/"> -->
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#" class="header__logo" aria-label="Nexora — главная">Nexora</a>
+
+        <nav class="header__nav" aria-label="Главное меню">
+          <ul>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#technologies">Технологии</a></li>
+            <li><a href="#portfolio">Кейсы</a></li>
+            <li><a href="#process">Этапы</a></li>
+            <li><a href="#partners">О нас</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <a href="#contact" class="btn-primary header__cta">Обсудить проект <span aria-hidden="true">→</span></a>
+          <button class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MOBILE MENU
+  ============================================================ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+    <div class="mobile-menu__head">
+      <span class="mobile-menu__logo">Nexora</span>
+      <button class="mobile-menu__close" aria-label="Закрыть меню">×</button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="#services">Услуги</a>
+      <a href="#technologies">Технологии</a>
+      <a href="#portfolio">Кейсы</a>
+      <a href="#process">Этапы</a>
+      <a href="#partners">О нас</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="#contact" class="btn-primary">Обсудить проект →</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="hero">
+      <!-- Decorative background blobs -->
+      <div class="blob blob--1" aria-hidden="true"></div>
+      <div class="blob blob--2" aria-hidden="true"></div>
+      <div class="blob blob--3" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero__inner">
+
+          <!-- Left: text content -->
+          <div class="hero__content">
+            <p class="hero__eyebrow animate-fade-up">ВЕБ-СТУДИЯ ПОЛНОГО ЦИКЛА • САЙТЫ • ПРОДУКТЫ • СТАРТАПЫ</p>
+
+            <h1 class="hero__title animate-fade-up">
+              Создаём сайты<br>
+              и <span class="gradient-text">digital-продукты</span><br>
+              под ваш бизнес
+            </h1>
+
+            <p class="hero__subtitle animate-fade-up">
+              Продуманный дизайн, сильная разработка<br>
+              и маркетинговый подход. Помогаем бизнесу<br>
+              расти в цифровой среде.
+            </p>
+
+            <div class="hero__actions animate-fade-up">
+              <a href="#contact" class="btn-primary">Обсудить проект <span aria-hidden="true">→</span></a>
+              <a href="#portfolio" class="btn-secondary">Смотреть презентацию</a>
+            </div>
+
+            <div class="hero__stats animate-fade-up">
+              <div class="hero__stat">
+                <span class="hero__stat-value">10+</span>
+                <span class="hero__stat-label">лет на рынке</span>
+              </div>
+              <div class="hero__stat">
+                <span class="hero__stat-value">90+</span>
+                <span class="hero__stat-label">реализованных проектов</span>
+              </div>
+              <div class="hero__stat">
+                <span class="hero__stat-value">98%</span>
+                <span class="hero__stat-label">клиентов остаются с нами</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Before/After comparison slider -->
+          <div class="hero__visual animate-fade-up">
+            <div class="comparison-slider"
+                 role="img"
+                 aria-label="Сравнение дизайнов: до и после редизайна">
+
+              <!-- BEFORE layer -->
+              <div class="comparison-slider__before">
+                <div class="comparison-slider__label before-label">Было</div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <!-- Background -->
+                  <rect width="560" height="420" fill="#F2EFE9"/>
+                  <!-- Floor -->
+                  <rect x="0" y="290" width="560" height="130" fill="#E3DDD4"/>
+                  <!-- Left wall accent -->
+                  <rect x="0" y="0" width="80" height="420" fill="#EAE5DE"/>
+                  <!-- Window -->
+                  <rect x="370" y="40" width="140" height="190" fill="#D8E8F0" rx="2"/>
+                  <rect x="370" y="40" width="140" height="190" fill="none" stroke="#C5BFB5" stroke-width="3" rx="2"/>
+                  <line x1="440" y1="40" x2="440" y2="230" stroke="#C5BFB5" stroke-width="2"/>
+                  <line x1="370" y1="135" x2="510" y2="135" stroke="#C5BFB5" stroke-width="2"/>
+                  <!-- Sofa body -->
+                  <rect x="140" y="255" width="220" height="35" fill="#BDBBB5" rx="4"/>
+                  <rect x="130" y="220" width="240" height="45" fill="#C8C6C0" rx="6"/>
+                  <!-- Sofa back cushions -->
+                  <rect x="135" y="215" width="108" height="50" fill="#CFCDC7" rx="4"/>
+                  <rect x="251" y="215" width="108" height="50" fill="#CFCDC7" rx="4"/>
+                  <!-- Sofa legs -->
+                  <rect x="148" y="290" width="14" height="22" fill="#A5A09A"/>
+                  <rect x="338" y="290" width="14" height="22" fill="#A5A09A"/>
+                  <!-- Armrests -->
+                  <rect x="125" y="230" width="18" height="60" fill="#C0BDB7" rx="3"/>
+                  <rect x="357" y="230" width="18" height="60" fill="#C0BDB7" rx="3"/>
+                  <!-- Coffee table -->
+                  <rect x="175" y="300" width="160" height="12" fill="#C4BDB5" rx="2"/>
+                  <rect x="195" y="312" width="8" height="30" fill="#AEA9A2"/>
+                  <rect x="317" y="312" width="8" height="30" fill="#AEA9A2"/>
+                  <!-- Floor lamp -->
+                  <rect x="88" y="130" width="5" height="160" fill="#B0AAA3"/>
+                  <ellipse cx="90" cy="128" rx="22" ry="14" fill="#CAC4BC"/>
+                  <!-- Small plant -->
+                  <rect x="320" y="265" width="28" height="35" fill="#A9A39A" rx="2"/>
+                  <ellipse cx="334" cy="260" rx="18" ry="20" fill="#7D8C5A"/>
+                  <ellipse cx="322" cy="252" rx="12" ry="16" fill="#8A9A62"/>
+                  <ellipse cx="346" cy="253" rx="13" ry="15" fill="#7D8C5A"/>
+                  <!-- Framed art on wall -->
+                  <rect x="170" y="80" width="100" height="80" fill="#E8E3DC" stroke="#C5BFB5" stroke-width="2"/>
+                  <rect x="180" y="90" width="80" height="60" fill="#D5CFC8"/>
+                  <line x1="180" y1="120" x2="260" y2="120" stroke="#BFBAB3" stroke-width="1"/>
+                  <!-- Small shelf items -->
+                  <rect x="96" y="165" width="30" height="40" fill="#C0BAB3" rx="1"/>
+                  <rect x="96" y="152" width="30" height="14" fill="#B8B2AB" rx="1"/>
+                  <!-- Text label at bottom -->
+                  <rect x="40" y="385" width="120" height="22" fill="#DDDAD5" rx="11"/>
+                  <rect x="50" y="391" width="100" height="10" fill="#C8C4BE" rx="5"/>
+                </svg>
+              </div>
+
+              <!-- AFTER layer -->
+              <div class="comparison-slider__after" style="clip-path: inset(0 0 0 50%)">
+                <div class="comparison-slider__label after-label">Стало</div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#1E1245"/>
+                      <stop offset="100%" stop-color="#2D1B6E"/>
+                    </linearGradient>
+                    <linearGradient id="floorG" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#251550"/>
+                      <stop offset="100%" stop-color="#140A30"/>
+                    </linearGradient>
+                    <linearGradient id="sofaG" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#9B5CF6"/>
+                      <stop offset="100%" stop-color="#6D28D9"/>
+                    </linearGradient>
+                    <linearGradient id="wallG" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#2A1560"/>
+                      <stop offset="100%" stop-color="#1E0F45"/>
+                    </linearGradient>
+                    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.6"/>
+                      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+                    </radialGradient>
+                    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.5"/>
+                      <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
+                    </radialGradient>
+                    <filter id="blur4">
+                      <feGaussianBlur stdDeviation="4"/>
+                    </filter>
+                    <filter id="blur8">
+                      <feGaussianBlur stdDeviation="8"/>
+                    </filter>
+                  </defs>
+                  <!-- Background -->
+                  <rect width="560" height="420" fill="url(#bgG)"/>
+                  <!-- Floor -->
+                  <rect x="0" y="295" width="560" height="125" fill="url(#floorG)"/>
+                  <!-- Wall left panel -->
+                  <rect x="0" y="0" width="85" height="420" fill="url(#wallG)"/>
+                  <!-- Ambient glow blobs -->
+                  <ellipse cx="420" cy="80" rx="100" ry="80" fill="url(#glowCyan)" filter="url(#blur8)"/>
+                  <ellipse cx="150" cy="300" rx="90" ry="70" fill="url(#glowPurple)" filter="url(#blur8)"/>
+                  <!-- Window with glow -->
+                  <rect x="370" y="30" width="150" height="210" fill="#0D2035" rx="4"/>
+                  <rect x="370" y="30" width="150" height="210" fill="none" stroke="#4A6FA5" stroke-width="2" rx="4"/>
+                  <rect x="390" y="50" width="110" height="170" fill="#112B48" opacity="0.8"/>
+                  <!-- Window light rays -->
+                  <rect x="420" y="30" width="2" height="210" fill="#22D3EE" opacity="0.15"/>
+                  <rect x="445" y="30" width="2" height="210" fill="#22D3EE" opacity="0.10"/>
+                  <!-- Neon strip light on ceiling -->
+                  <rect x="100" y="0" width="260" height="6" fill="#A78BFA" rx="3"/>
+                  <rect x="100" y="0" width="260" height="16" fill="url(#glowPurple)" filter="url(#blur4)" opacity="0.8"/>
+                  <!-- Modern sofa -->
+                  <rect x="125" y="260" width="260" height="38" fill="#3B1D7A" rx="6"/>
+                  <rect x="118" y="222" width="274" height="48" fill="url(#sofaG)" rx="8"/>
+                  <!-- Cushions with gradient -->
+                  <rect x="124" y="217" width="125" height="55" fill="#8B5CF6" rx="5" opacity="0.9"/>
+                  <rect x="255" y="217" width="125" height="55" fill="#7C3AED" rx="5" opacity="0.9"/>
+                  <!-- Cushion highlight lines -->
+                  <line x1="135" y1="240" x2="240" y2="240" stroke="#C4B5FD" stroke-width="1.5" opacity="0.5"/>
+                  <line x1="265" y1="240" x2="370" y2="240" stroke="#C4B5FD" stroke-width="1.5" opacity="0.5"/>
+                  <!-- Gold legs -->
+                  <rect x="134" y="298" width="16" height="24" fill="#D4AF37" rx="3"/>
+                  <rect x="350" y="298" width="16" height="24" fill="#D4AF37" rx="3"/>
+                  <!-- Armrests -->
+                  <rect x="110" y="230" width="20" height="68" fill="#7C3AED" rx="4"/>
+                  <rect x="370" y="230" width="20" height="68" fill="#7C3AED" rx="4"/>
+                  <!-- Low coffee table with glow -->
+                  <rect x="170" y="310" width="180" height="14" fill="#2A1560" rx="4" stroke="#6D28D9" stroke-width="1.5"/>
+                  <rect x="195" y="324" width="10" height="28" fill="#D4AF37" rx="2"/>
+                  <rect x="315" y="324" width="10" height="28" fill="#D4AF37" rx="2"/>
+                  <!-- Vase on table -->
+                  <ellipse cx="260" cy="308" rx="14" ry="8" fill="#22D3EE" opacity="0.3"/>
+                  <rect x="252" y="284" width="16" height="26" fill="#164E63" rx="8"/>
+                  <!-- Plant pot with neon leaves -->
+                  <rect x="315" y="268" width="36" height="40" fill="#1E0A45" rx="4" stroke="#6D28D9" stroke-width="1.5"/>
+                  <ellipse cx="333" cy="262" rx="22" ry="24" fill="#166534" opacity="0.9"/>
+                  <ellipse cx="318" cy="252" rx="14" ry="18" fill="#15803D" opacity="0.8"/>
+                  <ellipse cx="348" cy="253" rx="16" ry="16" fill="#166534" opacity="0.8"/>
+                  <!-- Neon glow on plant -->
+                  <ellipse cx="333" cy="262" rx="26" ry="28" fill="#4ADE80" opacity="0.08" filter="url(#blur4)"/>
+                  <!-- Floor lamp (neon style) -->
+                  <rect x="92" y="100" width="6" height="195" fill="#3B1D7A"/>
+                  <ellipse cx="95" cy="98" rx="26" ry="16" fill="#4A1D96"/>
+                  <ellipse cx="95" cy="98" rx="26" ry="16" fill="#A78BFA" opacity="0.3" filter="url(#blur4)"/>
+                  <!-- Abstract wall art -->
+                  <rect x="160" y="60" width="120" height="100" fill="#16093D" rx="6" stroke="#4A1D96" stroke-width="2"/>
+                  <ellipse cx="220" cy="110" rx="35" ry="30" fill="#7C3AED" opacity="0.5"/>
+                  <ellipse cx="240" cy="95" rx="20" ry="22" fill="#22D3EE" opacity="0.4"/>
+                  <circle cx="195" cy="125" rx="12" fill="#F472B6" opacity="0.5"/>
+                  <!-- Floating geometric decoration -->
+                  <circle cx="100" cy="200" r="35" fill="none" stroke="#6D28D9" stroke-width="1.5" opacity="0.6"/>
+                  <circle cx="100" cy="200" r="22" fill="none" stroke="#A78BFA" stroke-width="1" opacity="0.4"/>
+                  <!-- CTA Card overlay -->
+                  <rect x="30" y="340" width="160" height="60" fill="rgba(255,255,255,0.08)" rx="12" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                  <rect x="44" y="355" width="90" height="10" fill="rgba(255,255,255,0.6)" rx="5"/>
+                  <rect x="44" y="372" width="60" height="8" fill="#A78BFA" rx="4"/>
+                  <rect x="115" y="367" width="60" height="18" fill="#7C3AED" rx="9"/>
+                  <rect x="120" y="373" width="50" height="6" fill="white" rx="3" opacity="0.8"/>
+                </svg>
+              </div>
+
+              <!-- Divider line -->
+              <div class="comparison-slider__divider" style="left: 50%" aria-hidden="true"></div>
+
+              <!-- Drag handle -->
+              <div class="comparison-slider__handle"
+                   style="left: 50%"
+                   role="slider"
+                   aria-label="Разделитель до/после"
+                   aria-valuemin="0"
+                   aria-valuemax="100"
+                   aria-valuenow="50"
+                   tabindex="0">
+                <span aria-hidden="true">‹ ›</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES
+    ============================================================ -->
+    <section class="services" id="services" style="scroll-margin-top: 80px;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Что вам нужно разработать?</h2>
+            <p class="section-subtitle">Разрабатываем цифровые продукты под любые задачи: от стильного сайта до сложной web-платформы. Подберём оптимальное решение для вашего бизнеса.</p>
+          </div>
+          <a href="#contact" class="btn-text section-link">Все услуги →</a>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card animate-fade-up">
+            <div class="service-card__icon" style="background: rgba(101,120,255,0.10);">
+              <img src="assets/icons/website.svg" alt="" width="24" height="24" aria-hidden="true">
+            </div>
+            <h3 class="service-card__title">Сайт компании</h3>
+            <p class="service-card__desc">Представительский сайт с акцентом на бренд и конверсию</p>
+            <div class="service-card__arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card animate-fade-up">
+            <div class="service-card__icon" style="background: rgba(141,104,255,0.10);">
+              <img src="assets/icons/shop.svg" alt="" width="24" height="24" aria-hidden="true">
+            </div>
+            <h3 class="service-card__title">Интернет-магазин</h3>
+            <p class="service-card__desc">Мощные e-commerce решения с интеграциями и удобной панелью</p>
+            <div class="service-card__arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card animate-fade-up">
+            <div class="service-card__icon" style="background: rgba(108,207,239,0.10);">
+              <img src="assets/icons/landing.svg" alt="" width="24" height="24" aria-hidden="true">
+            </div>
+            <h3 class="service-card__title">Лендинг</h3>
+            <p class="service-card__desc">Продающие страницы с высокой конверсией для товаров и услуг</p>
+            <div class="service-card__arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card animate-fade-up">
+            <div class="service-card__icon" style="background: rgba(74,222,128,0.10);">
+              <img src="assets/icons/webservice.svg" alt="" width="24" height="24" aria-hidden="true">
+            </div>
+            <h3 class="service-card__title">Веб-сервис и платформа</h3>
+            <p class="service-card__desc">Сложные веб-приложения и сервисы с уникальным функционалом</p>
+            <div class="service-card__arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card animate-fade-up">
+            <div class="service-card__icon" style="background: rgba(251,146,60,0.10);">
+              <img src="assets/icons/corporate.svg" alt="" width="24" height="24" aria-hidden="true">
+            </div>
+            <h3 class="service-card__title">Корпоративный сайт</h3>
+            <p class="service-card__desc">Платформы для автоматизации процессов внутри компании</p>
+            <div class="service-card__arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card animate-fade-up">
+            <div class="service-card__icon" style="background: rgba(242,164,217,0.10);">
+              <img src="assets/icons/uxui.svg" alt="" width="24" height="24" aria-hidden="true">
+            </div>
+            <h3 class="service-card__title">UI/UX дизайн</h3>
+            <p class="service-card__desc">Проектирование удобных и современных интерфейсов</p>
+            <div class="service-card__arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card animate-fade-up">
+            <div class="service-card__icon" style="background: rgba(170,112,255,0.10);">
+              <img src="assets/icons/redesign.svg" alt="" width="24" height="24" aria-hidden="true">
+            </div>
+            <h3 class="service-card__title">Редизайн</h3>
+            <p class="service-card__desc">Обновление устаревших сайтов для соответствия современным трендам</p>
+            <div class="service-card__arrow" aria-hidden="true">→</div>
+          </article>
+
+          <article class="service-card animate-fade-up">
+            <div class="service-card__icon" style="background: rgba(101,120,255,0.10);">
+              <img src="assets/icons/seo.svg" alt="" width="24" height="24" aria-hidden="true">
+            </div>
+            <h3 class="service-card__title">SEO-оптимизация</h3>
+            <p class="service-card__desc">Комплексное продвижение сайтов в поисковых системах</p>
+            <div class="service-card__arrow" aria-hidden="true">→</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TECHNOLOGIES
+    ============================================================ -->
+    <section class="technologies" id="technologies" style="scroll-margin-top: 80px;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Технологии под задачи проекта</h2>
+            <p class="section-subtitle">Используем современные и проверенные технологии, чтобы создавать надёжные, быстрые и масштабируемые решения.</p>
+          </div>
+        </div>
+
+        <div class="tech-tabs" role="tablist" aria-label="Категории технологий">
+          <button class="tech-tab active" role="tab" data-category="all" aria-selected="true">Все технологии</button>
+          <button class="tech-tab" role="tab" data-category="shop" aria-selected="false">Интернет-магазин</button>
+          <button class="tech-tab" role="tab" data-category="landing" aria-selected="false">Лендинг</button>
+          <button class="tech-tab" role="tab" data-category="card" aria-selected="false">Визитка</button>
+          <button class="tech-tab" role="tab" data-category="forum" aria-selected="false">Форум</button>
+          <button class="tech-tab" role="tab" data-category="corporate" aria-selected="false">Корпоративный сайт</button>
+        </div>
+
+        <div class="tech-grid" role="tabpanel" aria-live="polite">
+          <!-- Cards built dynamically by technologies-filter.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROCESS
+    ============================================================ -->
+    <section class="process" id="process" style="scroll-margin-top: 80px;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Этапы работы</h2>
+            <p class="section-subtitle">Прозрачный и понятный процесс. Вы всегда знаете, на каком этапе проект и что будет дальше.</p>
+          </div>
+        </div>
+
+        <div class="process-steps">
+
+          <div class="process-step animate-fade-up">
+            <div class="process-step__number">01</div>
+            <div class="process-step__icon-wrap">
+              <img src="assets/icons/meeting.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="process-step__title">Встреча и согласование</h3>
+            <p class="process-step__desc">Обсуждаем задачу, цели проекта, целевую аудиторию и сроки.</p>
+          </div>
+
+          <div class="process-step animate-fade-up">
+            <div class="process-step__number">02</div>
+            <div class="process-step__icon-wrap">
+              <img src="assets/icons/document.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="process-step__title">Написание ТЗ и утверждение</h3>
+            <p class="process-step__desc">Фиксируем функциональные требования, структуру проекта и детали реализации.</p>
+          </div>
+
+          <div class="process-step animate-fade-up">
+            <div class="process-step__number">03</div>
+            <div class="process-step__icon-wrap">
+              <img src="assets/icons/design.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="process-step__title">Творческий дизайн и правки</h3>
+            <p class="process-step__desc">Создаём визуальную концепцию, дизайн интерфейса и вносим согласованные правки.</p>
+          </div>
+
+          <div class="process-step animate-fade-up">
+            <div class="process-step__number">04</div>
+            <div class="process-step__icon-wrap">
+              <img src="assets/icons/code.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="process-step__title">Программирование и тестирование</h3>
+            <p class="process-step__desc">Верстаем, программируем, интегрируем функционал и тестируем продукт.</p>
+          </div>
+
+          <div class="process-step animate-fade-up">
+            <div class="process-step__number">05</div>
+            <div class="process-step__icon-wrap">
+              <img src="assets/icons/launch.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="process-step__title">Выпуск продукта</h3>
+            <p class="process-step__desc">Размещаем проект на сервере, проводим финальную проверку и запускаем.</p>
+          </div>
+
+          <div class="process-step animate-fade-up">
+            <div class="process-step__number">06</div>
+            <div class="process-step__icon-wrap">
+              <img src="assets/icons/marketing.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="process-step__title">Реклама, продвижение и поддержка</h3>
+            <p class="process-step__desc">Помогаем с продвижением, аналитикой, рекламой и последующей технической поддержкой.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PORTFOLIO
+    ============================================================ -->
+    <section class="portfolio" id="portfolio" style="scroll-margin-top: 80px;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Портфолио</h2>
+            <p class="section-subtitle">Реальные проекты для реального бизнеса. Создаём сайты и продукты, которые приносят результат.</p>
+          </div>
+          <a href="#contact" class="btn-text section-link">Смотреть все кейсы →</a>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <!-- TechMarket -->
+          <article class="portfolio-card animate-fade-up">
+            <div class="portfolio-card__image">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <linearGradient id="shopHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1A365D"/>
+                    <stop offset="100%" stop-color="#2C5282"/>
+                  </linearGradient>
+                </defs>
+                <rect width="440" height="280" fill="#EDF2F7"/>
+                <!-- Nav -->
+                <rect width="440" height="44" fill="#1A365D"/>
+                <rect x="18" y="17" width="70" height="10" fill="#fff" rx="2" opacity="0.9"/>
+                <rect x="130" y="18" width="170" height="8" fill="#2B6CB0" rx="4"/>
+                <circle cx="380" cy="22" r="10" fill="#2B6CB0"/>
+                <circle cx="410" cy="22" r="10" fill="#E53E3E"/>
+                <!-- Hero banner -->
+                <rect x="0" y="44" width="440" height="90" fill="url(#shopHero)"/>
+                <rect x="20" y="62" width="140" height="18" fill="#fff" rx="3" opacity="0.9"/>
+                <rect x="20" y="88" width="90" height="12" fill="#90CDF4" rx="2" opacity="0.8"/>
+                <rect x="20" y="108" width="110" height="16" fill="#E53E3E" rx="8"/>
+                <rect x="240" y="50" width="180" height="74" fill="#2B6CB0" rx="6" opacity="0.6"/>
+                <!-- Product cards row 1 -->
+                <rect x="12" y="148" width="96" height="86" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="14" y="150" width="92" height="50" fill="#EBF8FF"/>
+                <rect x="20" y="208" width="60" height="8" fill="#4A5568" rx="2"/>
+                <rect x="20" y="220" width="40" height="7" fill="#E53E3E" rx="2"/>
+                <rect x="120" y="148" width="96" height="86" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="122" y="150" width="92" height="50" fill="#FFF5F5"/>
+                <rect x="128" y="208" width="60" height="8" fill="#4A5568" rx="2"/>
+                <rect x="128" y="220" width="40" height="7" fill="#E53E3E" rx="2"/>
+                <rect x="228" y="148" width="96" height="86" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="230" y="150" width="92" height="50" fill="#F0FFF4"/>
+                <rect x="236" y="208" width="60" height="8" fill="#4A5568" rx="2"/>
+                <rect x="236" y="220" width="40" height="7" fill="#E53E3E" rx="2"/>
+                <rect x="336" y="148" width="96" height="86" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="338" y="150" width="92" height="50" fill="#FFFFF0"/>
+                <rect x="344" y="208" width="60" height="8" fill="#4A5568" rx="2"/>
+                <rect x="344" y="220" width="40" height="7" fill="#E53E3E" rx="2"/>
+                <!-- Pagination -->
+                <circle cx="208" cy="264" r="5" fill="#3182CE"/>
+                <circle cx="222" cy="264" r="4" fill="#CBD5E0"/>
+                <circle cx="235" cy="264" r="4" fill="#CBD5E0"/>
+              </svg>
+            </div>
+            <div class="portfolio-card__body">
+              <div class="portfolio-card__type">Интернет-магазин</div>
+              <h3 class="portfolio-card__title">TechMarket</h3>
+              <p class="portfolio-card__desc">Крупный интернет-магазин электроники с каталогом 50 000+ товаров</p>
+              <div class="portfolio-card__tags">
+                <span class="portfolio-card__tag">React</span>
+                <span class="portfolio-card__tag">Laravel</span>
+                <span class="portfolio-card__tag">MySQL</span>
+              </div>
+              <div class="portfolio-card__arrow">
+                <span>Подробнее</span>
+                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
+              </div>
+            </div>
+          </article>
+
+          <!-- Maison Decor -->
+          <article class="portfolio-card animate-fade-up">
+            <div class="portfolio-card__image">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <linearGradient id="decorHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#C8B89A"/>
+                    <stop offset="100%" stop-color="#A89070"/>
+                  </linearGradient>
+                </defs>
+                <rect width="440" height="280" fill="#FAF7F2"/>
+                <!-- Clean nav -->
+                <rect width="440" height="50" fill="#fff" stroke="#EDE7DD" stroke-width="1"/>
+                <rect x="185" y="20" width="70" height="10" fill="#8C7D6A" rx="2"/>
+                <rect x="20" y="22" width="18" height="2" fill="#C5B9A8"/>
+                <rect x="20" y="28" width="18" height="2" fill="#C5B9A8"/>
+                <rect x="360" y="20" width="60" height="10" fill="#8C7D6A" rx="4"/>
+                <!-- Full-width image hero -->
+                <rect x="0" y="50" width="440" height="140" fill="url(#decorHero)"/>
+                <!-- Interior image shapes -->
+                <rect x="0" y="50" width="220" height="140" fill="#C4B095" opacity="0.5"/>
+                <rect x="220" y="50" width="220" height="140" fill="#A89070" opacity="0.4"/>
+                <!-- Text overlay -->
+                <rect x="24" y="90" width="200" height="24" fill="#fff" rx="3" opacity="0.9"/>
+                <rect x="24" y="122" width="130" height="12" fill="#fff" rx="2" opacity="0.7"/>
+                <rect x="24" y="146" width="110" height="28" fill="#8C7D6A" rx="4"/>
+                <!-- Below: content cards -->
+                <rect x="12" y="206" width="130" height="60" fill="#fff" rx="4" stroke="#EDE7DD" stroke-width="1"/>
+                <rect x="22" y="216" width="80" height="8" fill="#8C7D6A" rx="2"/>
+                <rect x="22" y="232" width="100" height="7" fill="#C5B9A8" rx="2"/>
+                <rect x="22" y="246" width="70" height="7" fill="#C5B9A8" rx="2"/>
+                <rect x="155" y="206" width="130" height="60" fill="#fff" rx="4" stroke="#EDE7DD" stroke-width="1"/>
+                <rect x="165" y="216" width="80" height="8" fill="#8C7D6A" rx="2"/>
+                <rect x="165" y="232" width="100" height="7" fill="#C5B9A8" rx="2"/>
+                <rect x="165" y="246" width="70" height="7" fill="#C5B9A8" rx="2"/>
+                <rect x="298" y="206" width="130" height="60" fill="#fff" rx="4" stroke="#EDE7DD" stroke-width="1"/>
+                <rect x="308" y="216" width="80" height="8" fill="#8C7D6A" rx="2"/>
+                <rect x="308" y="232" width="100" height="7" fill="#C5B9A8" rx="2"/>
+                <rect x="308" y="246" width="70" height="7" fill="#C5B9A8" rx="2"/>
+              </svg>
+            </div>
+            <div class="portfolio-card__body">
+              <div class="portfolio-card__type">Дизайн интерьеров</div>
+              <h3 class="portfolio-card__title">Maison Decor</h3>
+              <p class="portfolio-card__desc">Сайт-визитка для студии премиального дизайна интерьеров</p>
+              <div class="portfolio-card__tags">
+                <span class="portfolio-card__tag">Vue.js</span>
+                <span class="portfolio-card__tag">GSAP</span>
+                <span class="portfolio-card__tag">Figma</span>
+              </div>
+              <div class="portfolio-card__arrow">
+                <span>Подробнее</span>
+                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
+              </div>
+            </div>
+          </article>
+
+          <!-- MoveApp -->
+          <article class="portfolio-card animate-fade-up">
+            <div class="portfolio-card__image">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <linearGradient id="appBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0F0A2A"/>
+                    <stop offset="100%" stop-color="#1E0D4E"/>
+                  </linearGradient>
+                  <radialGradient id="appGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <rect width="440" height="280" fill="url(#appBg)"/>
+                <!-- Glow -->
+                <ellipse cx="220" cy="140" rx="150" ry="120" fill="url(#appGlow)"/>
+                <!-- Phone frame -->
+                <rect x="155" y="14" width="130" height="252" fill="#120833" rx="20" stroke="#4A1D96" stroke-width="2"/>
+                <!-- Notch -->
+                <rect x="192" y="18" width="56" height="6" fill="#0F0A2A" rx="3"/>
+                <!-- Screen content -->
+                <rect x="162" y="30" width="116" height="226" fill="#1E0D4E" rx="14"/>
+                <!-- Avatar / profile top -->
+                <circle cx="220" cy="58" r="18" fill="#6D28D9"/>
+                <rect x="197" y="82" width="46" height="7" fill="#E9D5FF" rx="3"/>
+                <rect x="205" y="93" width="30" height="5" fill="#7C3AED" rx="2"/>
+                <!-- Stats bar -->
+                <rect x="168" y="108" width="104" height="34" fill="#2D1065" rx="8"/>
+                <rect x="175" y="115" width="24" height="4" fill="#A78BFA" rx="2"/>
+                <rect x="175" y="123" width="16" height="8" fill="#C4B5FD" rx="2"/>
+                <rect x="215" y="115" width="24" height="4" fill="#A78BFA" rx="2"/>
+                <rect x="215" y="123" width="16" height="8" fill="#C4B5FD" rx="2"/>
+                <rect x="255" y="115" width="10" height="4" fill="#A78BFA" rx="2"/>
+                <rect x="255" y="123" width="10" height="8" fill="#C4B5FD" rx="2"/>
+                <!-- Chart area -->
+                <rect x="168" y="150" width="104" height="56" fill="#1A0840" rx="8"/>
+                <polyline points="175,195 185,178 200,185 215,165 235,172 255,160 268,168" fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-linejoin="round"/>
+                <polyline points="175,195 185,178 200,185 215,165 235,172 255,160 268,168" fill="url(#appGlow)" opacity="0.3"/>
+                <!-- Bottom tabs -->
+                <rect x="168" y="216" width="104" height="32" fill="#1E0D4E" rx="8"/>
+                <circle cx="189" cy="232" r="6" fill="#7C3AED"/>
+                <circle cx="220" cy="232" r="6" fill="#4A1D96"/>
+                <circle cx="251" cy="232" r="6" fill="#4A1D96"/>
+                <!-- Outside phone text -->
+                <rect x="18" y="80" width="120" height="18" fill="#E9D5FF" rx="3" opacity="0.8"/>
+                <rect x="18" y="106" width="90" height="10" fill="#A78BFA" rx="2" opacity="0.6"/>
+                <rect x="18" y="124" width="110" height="10" fill="#7C3AED" rx="2" opacity="0.5"/>
+                <rect x="18" y="148" width="80" height="20" fill="#6D28D9" rx="10"/>
+                <rect x="28" y="154" width="60" height="8" fill="#fff" rx="4" opacity="0.8"/>
+                <!-- Right side stats -->
+                <rect x="308" y="80" width="114" height="50" fill="rgba(109,40,217,0.2)" rx="10" stroke="#4A1D96" stroke-width="1"/>
+                <rect x="318" y="90" width="60" height="8" fill="#A78BFA" rx="2"/>
+                <rect x="318" y="104" width="80" height="16" fill="#7C3AED" rx="3"/>
+                <rect x="308" y="144" width="114" height="50" fill="rgba(109,40,217,0.2)" rx="10" stroke="#4A1D96" stroke-width="1"/>
+                <rect x="318" y="154" width="60" height="8" fill="#A78BFA" rx="2"/>
+                <rect x="318" y="168" width="80" height="16" fill="#6D28D9" rx="3"/>
+              </svg>
+            </div>
+            <div class="portfolio-card__body">
+              <div class="portfolio-card__type">Мобильное приложение</div>
+              <h3 class="portfolio-card__title">MoveApp</h3>
+              <p class="portfolio-card__desc">Фитнес-трекер с элементами геймификации и социальной сети</p>
+              <div class="portfolio-card__tags">
+                <span class="portfolio-card__tag">React Native</span>
+                <span class="portfolio-card__tag">Node.js</span>
+                <span class="portfolio-card__tag">MongoDB</span>
+              </div>
+              <div class="portfolio-card__arrow">
+                <span>Подробнее</span>
+                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
+              </div>
+            </div>
+          </article>
+
+          <!-- SkyTravel -->
+          <article class="portfolio-card animate-fade-up">
+            <div class="portfolio-card__image">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#1E3A5F"/>
+                    <stop offset="60%" stop-color="#2E6FA3"/>
+                    <stop offset="100%" stop-color="#5BA3D9"/>
+                  </linearGradient>
+                  <linearGradient id="sea" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#1A4F7A"/>
+                    <stop offset="100%" stop-color="#0D3358"/>
+                  </linearGradient>
+                </defs>
+                <rect width="440" height="280" fill="url(#sky)"/>
+                <!-- Stars -->
+                <circle cx="60" cy="30" r="1.5" fill="#fff" opacity="0.8"/>
+                <circle cx="120" cy="50" r="1" fill="#fff" opacity="0.6"/>
+                <circle cx="200" cy="20" r="1.5" fill="#fff" opacity="0.7"/>
+                <circle cx="300" cy="40" r="1" fill="#fff" opacity="0.5"/>
+                <circle cx="380" cy="25" r="1.5" fill="#fff" opacity="0.8"/>
+                <circle cx="420" cy="60" r="1" fill="#fff" opacity="0.6"/>
+                <!-- Moon -->
+                <circle cx="390" cy="45" r="22" fill="#FEF3C7" opacity="0.9"/>
+                <circle cx="398" cy="38" r="17" fill="#2E6FA3"/>
+                <!-- Mountains -->
+                <polygon points="0,200 80,100 160,200" fill="#1A3A5C"/>
+                <polygon points="60,200 160,80 260,200" fill="#1E4570"/>
+                <polygon points="200,200 300,100 400,200" fill="#1A3A5C"/>
+                <polygon points="300,200 400,90 440,150 440,200" fill="#1E4570"/>
+                <!-- Snow caps -->
+                <polygon points="80,100 95,130 65,130" fill="#fff" opacity="0.7"/>
+                <polygon points="160,80 175,115 145,115" fill="#fff" opacity="0.7"/>
+                <polygon points="300,100 315,130 285,130" fill="#fff" opacity="0.7"/>
+                <!-- Sea / water -->
+                <rect x="0" y="200" width="440" height="80" fill="url(#sea)"/>
+                <path d="M0,210 Q55,202 110,210 T220,210 T330,210 T440,210 L440,280 L0,280 Z" fill="#0D3358" opacity="0.5"/>
+                <!-- Transparent glass nav -->
+                <rect x="0" y="0" width="440" height="46" fill="rgba(0,0,0,0.3)"/>
+                <rect x="16" y="16" width="70" height="14" fill="#fff" rx="3" opacity="0.9"/>
+                <rect x="260" y="19" width="40" height="8" fill="#fff" rx="2" opacity="0.6"/>
+                <rect x="310" y="19" width="40" height="8" fill="#fff" rx="2" opacity="0.6"/>
+                <rect x="360" y="14" width="64" height="18" fill="#3B82F6" rx="9"/>
+                <rect x="366" y="19" width="52" height="8" fill="#fff" rx="4" opacity="0.85"/>
+                <!-- Hero card -->
+                <rect x="20" y="70" width="200" height="110" fill="rgba(255,255,255,0.12)" rx="12" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <rect x="34" y="84" width="130" height="16" fill="#fff" rx="3" opacity="0.9"/>
+                <rect x="34" y="106" width="100" height="10" fill="#BAE6FD" rx="2" opacity="0.8"/>
+                <rect x="34" y="122" width="80" height="10" fill="#BAE6FD" rx="2" opacity="0.6"/>
+                <rect x="34" y="144" width="110" height="24" fill="#3B82F6" rx="12"/>
+                <rect x="44" y="150" width="90" height="12" fill="#fff" rx="6" opacity="0.9"/>
+              </svg>
+            </div>
+            <div class="portfolio-card__body">
+              <div class="portfolio-card__type">Лендинг</div>
+              <h3 class="portfolio-card__title">SkyTravel</h3>
+              <p class="portfolio-card__desc">Агрегатор авторских туров с онлайн-бронированием</p>
+              <div class="portfolio-card__tags">
+                <span class="portfolio-card__tag">HTML/CSS</span>
+                <span class="portfolio-card__tag">JavaScript</span>
+                <span class="portfolio-card__tag">PHP</span>
+              </div>
+              <div class="portfolio-card__arrow">
+                <span>Подробнее</span>
+                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
+              </div>
+            </div>
+          </article>
+
+          <!-- Объяви.ру -->
+          <article class="portfolio-card animate-fade-up">
+            <div class="portfolio-card__image">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="440" height="280" fill="#F7FAFC"/>
+                <!-- Nav bar -->
+                <rect width="440" height="50" fill="#2B8A6E"/>
+                <rect x="16" y="15" width="80" height="20" fill="#fff" rx="4" opacity="0.9"/>
+                <rect x="116" y="16" width="200" height="18" fill="#1A6B54" rx="4"/>
+                <rect x="330" y="16" width="20" height="18" fill="#E6FFFA" rx="3"/>
+                <circle cx="398" cy="25" r="14" fill="#fff" opacity="0.9"/>
+                <!-- Filter sidebar -->
+                <rect x="0" y="50" width="100" height="230" fill="#EDF2F7"/>
+                <rect x="10" y="66" width="80" height="12" fill="#4A5568" rx="3"/>
+                <rect x="10" y="88" width="60" height="8" fill="#A0AEC0" rx="2"/>
+                <rect x="10" y="104" width="70" height="8" fill="#A0AEC0" rx="2"/>
+                <rect x="10" y="120" width="55" height="8" fill="#A0AEC0" rx="2"/>
+                <rect x="10" y="136" width="65" height="8" fill="#A0AEC0" rx="2"/>
+                <rect x="10" y="154" width="80" height="12" fill="#4A5568" rx="3"/>
+                <rect x="10" y="174" width="60" height="8" fill="#A0AEC0" rx="2"/>
+                <rect x="10" y="190" width="70" height="8" fill="#A0AEC0" rx="2"/>
+                <!-- Product grid -->
+                <!-- Row 1 -->
+                <rect x="108" y="58" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="110" y="60" width="96" height="58" fill="#E6FFFA"/>
+                <rect x="116" y="124" width="70" height="8" fill="#2D3748" rx="2"/>
+                <rect x="116" y="138" width="50" height="7" fill="#2B8A6E" rx="2"/>
+                <rect x="218" y="58" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="220" y="60" width="96" height="58" fill="#EDF2F7"/>
+                <rect x="226" y="124" width="70" height="8" fill="#2D3748" rx="2"/>
+                <rect x="226" y="138" width="50" height="7" fill="#2B8A6E" rx="2"/>
+                <rect x="328" y="58" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="330" y="60" width="96" height="58" fill="#FFFBEB"/>
+                <rect x="336" y="124" width="70" height="8" fill="#2D3748" rx="2"/>
+                <rect x="336" y="138" width="50" height="7" fill="#2B8A6E" rx="2"/>
+                <!-- Row 2 -->
+                <rect x="108" y="168" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="110" y="170" width="96" height="58" fill="#FFF5F5"/>
+                <rect x="116" y="234" width="70" height="8" fill="#2D3748" rx="2"/>
+                <rect x="116" y="248" width="50" height="7" fill="#2B8A6E" rx="2"/>
+                <rect x="218" y="168" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="220" y="170" width="96" height="58" fill="#EBF8FF"/>
+                <rect x="226" y="234" width="70" height="8" fill="#2D3748" rx="2"/>
+                <rect x="226" y="248" width="50" height="7" fill="#2B8A6E" rx="2"/>
+                <rect x="328" y="168" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
+                <rect x="330" y="170" width="96" height="58" fill="#F0FFF4"/>
+                <rect x="336" y="234" width="70" height="8" fill="#2D3748" rx="2"/>
+                <rect x="336" y="248" width="50" height="7" fill="#2B8A6E" rx="2"/>
+              </svg>
+            </div>
+            <div class="portfolio-card__body">
+              <div class="portfolio-card__type">Доска объявлений</div>
+              <h3 class="portfolio-card__title">Объяви.ру</h3>
+              <p class="portfolio-card__desc">Высоконагруженный портал с миллионом посещений в сутки</p>
+              <div class="portfolio-card__tags">
+                <span class="portfolio-card__tag">Laravel</span>
+                <span class="portfolio-card__tag">PostgreSQL</span>
+                <span class="portfolio-card__tag">Redis</span>
+              </div>
+              <div class="portfolio-card__arrow">
+                <span>Подробнее</span>
+                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PARTNERS
+    ============================================================ -->
+    <section class="partners" id="partners" style="scroll-margin-top: 80px;">
+      <div class="container">
+        <div class="section-header partners__header">
+          <div>
+            <h2 class="section-title">Партнёры</h2>
+            <p class="section-subtitle">Нам доверяют компании из разных сфер. Строим долгосрочные партнёрские отношения и растём вместе.</p>
+          </div>
+        </div>
+
+        <div class="partners-grid">
+          <div class="partner-logo">NovaTrade</div>
+          <div class="partner-logo">Insoft</div>
+          <div class="partner-logo">UrbanFox</div>
+          <div class="partner-logo">DeltaPay</div>
+          <div class="partner-logo">GreenHub</div>
+          <div class="partner-logo">PixelOne</div>
+          <div class="partner-logo">CloudRiver</div>
+          <div class="partner-logo">Luma</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="contact" id="contact" style="scroll-margin-top: 80px;">
+      <div class="container">
+        <div class="contact__inner">
+
+          <!-- Left info -->
+          <div class="contact__info">
+            <p class="contact__eyebrow">НАЧНЁМ СОТРУДНИЧЕСТВО?</p>
+            <h2 class="contact__title">Оставьте заявку —<br>и мы свяжемся с вами</h2>
+            <p class="contact__desc">Обсудим ваш проект, подберём оптимальное решение и подготовим предварительную оценку.</p>
+
+            <ul class="contact__advantages">
+              <li class="contact__advantage">
+                <img src="assets/icons/check.svg" alt="" width="20" height="20" class="contact__adv-icon" aria-hidden="true">
+                <span>Бесплатная консультация</span>
+              </li>
+              <li class="contact__advantage">
+                <img src="assets/icons/check.svg" alt="" width="20" height="20" class="contact__adv-icon" aria-hidden="true">
+                <span>Ответ в течение 1 часа</span>
+              </li>
+              <li class="contact__advantage">
+                <img src="assets/icons/check.svg" alt="" width="20" height="20" class="contact__adv-icon" aria-hidden="true">
+                <span>Индивидуальное предложение</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right form -->
+          <div class="contact__form-wrap">
+            <form class="contact-form" id="contact-form" novalidate>
+
+              <div class="form-group">
+                <label for="name">Ваше имя <span class="form-required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Иван Иванов" autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Телефон <span class="form-required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.ru" autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="project_type">Тип проекта</label>
+                <select id="project_type" name="project_type">
+                  <option value="">— Выберите тип проекта —</option>
+                  <option value="card">Сайт-визитка</option>
+                  <option value="landing">Лендинг</option>
+                  <option value="shop">Интернет-магазин</option>
+                  <option value="corporate">Корпоративный сайт</option>
+                  <option value="mobile">Мобильное приложение</option>
+                  <option value="forum">Форум</option>
+                  <option value="board">Доска объявлений</option>
+                  <option value="webservice">Веб-сервис</option>
+                  <option value="uxui">UI/UX дизайн</option>
+                  <option value="redesign">Редизайн</option>
+                  <option value="seo">Продвижение</option>
+                  <option value="other">Другое</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Расскажите о проекте</label>
+                <textarea id="message" name="message" rows="4" placeholder="Кратко опишите задачу, сроки, бюджет…"></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary form-submit-btn">
+                Отправить заявку <span aria-hidden="true">→</span>
+              </button>
+
+              <p class="form-privacy">Мы не передаём ваши данные третьим лицам.</p>
+            </form>
+
+            <!-- Success state -->
+            <div class="form-success" role="alert" aria-live="polite">
+              <div class="form-success__icon" aria-hidden="true">✓</div>
+              <h3>Спасибо!</h3>
+              <p>Мы получили вашу заявку и скоро свяжемся с вами.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">Nexora</a>
+          <p class="footer__desc">Создаём цифровые продукты, которые помогают бизнесу расти.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Telegram">
+              <img src="assets/icons/telegram.svg" alt="" width="20" height="20">
+            </a>
+            <a href="#" class="footer__social" aria-label="VK">
+              <img src="assets/icons/vk.svg" alt="" width="20" height="20">
+            </a>
+            <a href="#" class="footer__social" aria-label="YouTube">
+              <img src="assets/icons/youtube.svg" alt="" width="20" height="20">
+            </a>
+          </div>
+        </div>
+
+        <!-- Services column -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Услуги</h4>
+          <ul>
+            <li><a href="#services">Сайты компаний</a></li>
+            <li><a href="#services">Интернет-магазины</a></li>
+            <li><a href="#services">Лендинги</a></li>
+            <li><a href="#services">Веб-сервисы</a></li>
+            <li><a href="#services">UI/UX дизайн</a></li>
+            <li><a href="#services">SEO</a></li>
+          </ul>
+        </div>
+
+        <!-- Company column -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Компания</h4>
+          <ul>
+            <li><a href="#partners">О нас</a></li>
+            <li><a href="#portfolio">Кейсы</a></li>
+            <li><a href="#process">Этапы работы</a></li>
+            <li><a href="#partners">Партнёры</a></li>
+            <li><a href="#contact">Блог</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts column -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Контакты</h4>
+          <ul class="footer__contacts">
+            <li>
+              <img src="assets/icons/mail.svg" alt="" width="16" height="16" aria-hidden="true">
+              <a href="mailto:hello@nexora.ru">hello@nexora.ru</a>
+            </li>
+            <li>
+              <img src="assets/icons/phone.svg" alt="" width="16" height="16" aria-hidden="true">
+              <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+            </li>
+            <li>
+              <img src="assets/icons/location.svg" alt="" width="16" height="16" aria-hidden="true">
+              <span>г. Москва, ул. Примерная, 10</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Nexora. Все права защищены.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/comparison-slider.js"></script>
+  <!-- Isotope — фильтрация карточек технологий -->
+  <script src="assets/vendor/isotope.pkgd.min.js"></script>
+  <script src="js/technologies-filter.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

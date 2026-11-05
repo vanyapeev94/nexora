@@ -1,0 +1,73 @@
+/* ============================================================
+   variables.css — CSS Custom Properties for Nexora IT Landing Page
+   ============================================================ */
+
+:root {
+  /* ── Colors ────────────────────────────────────────────── */
+  --bg: #f8faff;
+  --bg-2: #fbfbfd;
+  --bg-3: #f4f7ff;
+  --surface: rgba(255,255,255,0.72);
+  --surface-hover: rgba(255,255,255,0.88);
+  --border: rgba(255,255,255,0.75);
+  --border-subtle: rgba(100,120,180,0.12);
+
+  --text: #111827;
+  --text-secondary: #667085;
+  --text-muted: #9aa3b4;
+
+  /* ── Brand ─────────────────────────────────────────────── */
+  --blue: #6578ff;
+  --blue-light: #8490ff;
+  --violet: #8d68ff;
+  --violet-light: #aa70ff;
+  --cyan: #6ccfef;
+  --cyan-light: #77e3da;
+  --pink: #f2a4d9;
+  --green: #4ade80;
+  --orange: #fb923c;
+
+  /* ── Gradients ─────────────────────────────────────────── */
+  --gradient-cta: linear-gradient(135deg, #6278ff 0%, #8068ff 55%, #a16cf4 100%);
+  --gradient-hero-blob-1: radial-gradient(ellipse, rgba(130, 110, 255, 0.22) 0%, transparent 70%);
+  --gradient-hero-blob-2: radial-gradient(ellipse, rgba(108, 207, 239, 0.20) 0%, transparent 70%);
+  --gradient-hero-blob-3: radial-gradient(ellipse, rgba(242, 164, 217, 0.18) 0%, transparent 70%);
+
+  /* ── Shadows ───────────────────────────────────────────── */
+  --shadow-xs: 0 2px 8px rgba(42,63,105,0.05);
+  --shadow-sm: 0 8px 24px rgba(42,63,105,0.07);
+  --shadow-md: 0 16px 48px rgba(42,63,105,0.09);
+  --shadow-lg: 0 30px 80px rgba(42,63,105,0.11);
+  --shadow-card: 0 4px 20px rgba(42,63,105,0.07), inset 0 1px 0 rgba(255,255,255,0.8);
+  --shadow-card-hover: 0 12px 40px rgba(42,63,105,0.13), inset 0 1px 0 rgba(255,255,255,0.9);
+
+  /* ── Border Radius ─────────────────────────────────────── */
+  --radius-xs: 8px;
+  --radius-sm: 14px;
+  --radius-md: 22px;
+  --radius-lg: 36px;
+  --radius-xl: 48px;
+  --radius-pill: 999px;
+
+  /* ── Spacing ───────────────────────────────────────────── */
+  --section-gap: 120px;
+  --section-gap-md: 80px;
+
+  /* ── Container ─────────────────────────────────────────── */
+  --container-max: 1380px;
+  --container-pad: 24px;
+
+  /* ── Transitions ───────────────────────────────────────── */
+  --transition-fast: 180ms cubic-bezier(0.2,0.8,0.2,1);
+  --transition-base: 280ms cubic-bezier(0.2,0.8,0.2,1);
+  --transition-slow: 420ms cubic-bezier(0.2,0.8,0.2,1);
+
+  /* ── Typography ────────────────────────────────────────── */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ── Glassmorphism ─────────────────────────────────────── */
+  --glass-bg: rgba(255,255,255,0.68);
+  --glass-border: rgba(255,255,255,0.80);
+  --glass-blur: blur(20px);
+  --glass-shadow: 0 20px 60px rgba(64,87,140,0.08), inset 0 1px 0 rgba(255,255,255,0.8);
+}

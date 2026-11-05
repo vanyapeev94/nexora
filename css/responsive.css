@@ -1,0 +1,371 @@
+/* ============================================================
+   NEXORA — responsive.css
+   Breakpoints:
+     1279px  → laptop / small desktop
+     1023px  → tablet
+      767px  → large mobile
+      479px  → mobile (small)
+   ============================================================ */
+
+/* Prevent any horizontal scroll at every viewport width */
+body {
+  overflow-x: hidden;
+}
+
+/* Prevent iOS form-field zoom */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+/* ============================================================
+   1. LAPTOP / SMALL DESKTOP  ≤ 1279px
+   ============================================================ */
+@media (max-width: 1279px) {
+
+  /* — Hero — */
+  .hero__title {
+    font-size: clamp(36px, 4.5vw, 56px);
+  }
+
+  /* — Services — */
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* — Tech stack — */
+  .tech-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* — Process — */
+  .process-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  /* Hide the decorative connecting line between process steps at this width */
+  .process-steps::before,
+  .process-step::after {
+    display: none;
+  }
+
+  /* — Portfolio — */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* — Footer — */
+  .footer__top {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+
+/* ============================================================
+   2. TABLET  ≤ 1023px
+   ============================================================ */
+@media (max-width: 1023px) {
+
+  /* — Header — */
+  .header__nav {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  /* — Hero — */
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* Text first, then visual slider below */
+  .hero__content {
+    order: 1;
+  }
+
+  .hero__visual {
+    order: 2;
+  }
+
+  /* — Services — */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* — Tech stack — */
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* — Process — */
+  .process-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* — Portfolio — */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* — Contact — */
+  .contact__inner {
+    grid-template-columns: 1fr;
+  }
+
+  /* — Footer — */
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============================================================
+   3. LARGE MOBILE  ≤ 767px
+   ============================================================ */
+@media (max-width: 767px) {
+
+  /* — Base — */
+  body {
+    font-size: 15px;
+  }
+
+  :root {
+    --section-gap: 80px;
+  }
+
+  /* — Section header — */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* — Hero — */
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__title {
+    font-size: clamp(34px, 8vw, 44px);
+  }
+
+  .hero__actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero__stats {
+    gap: 24px;
+  }
+
+  /* — Services — */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  /* — Tech tabs (horizontal scroll) — */
+  .tech-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .tech-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* — Tech grid — */
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* — Process — vertical timeline layout — */
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* Remove any horizontal connector lines */
+  .process-steps::before,
+  .process-step::after {
+    display: none;
+  }
+
+  .process-step {
+    display: flex;
+    text-align: left;
+    padding: 0 0 32px 72px;
+    position: relative;
+  }
+
+  /* Vertical connecting line drawn from this step's icon down to next */
+  .process-step::before {
+    content: '';
+    position: absolute;
+    left: 27px;
+    top: 56px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #6578ff, rgba(101, 120, 255, 0.1));
+    display: block; /* override the 1279px rule that hid it */
+  }
+
+  /* No line after the last step */
+  .process-step:last-child::before {
+    display: none;
+  }
+
+  /* Icon anchored to the left */
+  .process-step__icon-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-shrink: 0;
+  }
+
+  /* — Portfolio — horizontal scroll with snap — */
+  .portfolio-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 16px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Reset grid columns — not applicable in flex context */
+    grid-template-columns: unset;
+  }
+
+  .portfolio-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .portfolio-card {
+    flex-shrink: 0;
+    width: 85%;
+    scroll-snap-align: start;
+  }
+
+  /* — Partners — */
+  .partners-grid {
+    gap: 12px 20px;
+  }
+
+  .partner-logo {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+
+  /* — Contact — */
+  .contact__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__title {
+    font-size: clamp(24px, 6vw, 34px);
+  }
+
+  /* — Footer — */
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============================================================
+   4. MOBILE (SMALL)  ≤ 479px
+   ============================================================ */
+@media (max-width: 479px) {
+
+  :root {
+    --section-gap: 64px;
+  }
+
+  /* — Container — */
+  .container {
+    width: calc(100% - 32px);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* — Hero — */
+  .hero__title {
+    font-size: clamp(30px, 9vw, 38px);
+  }
+
+  .hero__stats {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* — Services — single column on very small screens — */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* — Tech grid — keep 2 cols — */
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* — Portfolio — slightly wider card — */
+  .portfolio-card {
+    width: 90%;
+  }
+
+  /* — Footer — */
+  .footer__top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__brand {
+    grid-column: auto;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  /* — Mobile menu nav links — */
+  .mobile-menu nav a {
+    font-size: 20px;
+  }
+}
+
+/* ============================================================
+   5. NARROW-MOBILE OVERRIDE  ≤ 430px
+   Services back to 2 columns on mid-small phones
+   ============================================================ */
+@media (min-width: 380px) and (max-width: 479px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
