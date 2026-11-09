@@ -24,7 +24,7 @@
     init() {
       // Keyboard support
       this.handle.setAttribute('role', 'slider');
-      this.handle.setAttribute('aria-label', 'Разделитель до/после');
+      this.handle.setAttribute('aria-label', 'Сравнить минимализм и максимализм одного сайта');
       this.handle.setAttribute('aria-valuemin', '0');
       this.handle.setAttribute('aria-valuemax', '100');
       this.handle.setAttribute('aria-valuenow', '50');
@@ -60,6 +60,7 @@
       this.handle.style.left = percent + '%';
       this.after.style.clipPath = `inset(0 0 0 ${percent}%)`;
       this.handle.setAttribute('aria-valuenow', Math.round(percent));
+      this.handle.setAttribute('aria-valuetext', `Минимализм: ${Math.round(percent)}%, максимализм: ${100 - Math.round(percent)}%`);
     }
 
     onPointerDown(e) {
@@ -112,6 +113,9 @@
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
         this.setPosition(Math.max(2, this.currentPosition - step), true);
+      } else if (e.key === 'Home' || e.key === 'End') {
+        e.preventDefault();
+        this.setPosition(e.key === 'Home' ? 2 : 98, false);
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
         this.setPosition(Math.min(98, this.currentPosition + step), true);

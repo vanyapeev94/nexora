@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -22,8 +22,14 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/enhancements.css">
+  <link rel="stylesheet" href="css/calculator-preview.css">
+  <link rel="stylesheet" href="css/process-flow.css">
+  <link rel="stylesheet" href="css/technologies-design.css">
+  <script src="js/motion.js" defer></script>
 </head>
-<body>
+<body data-page="home">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
 
   <!-- ============================================================
        HEADER
@@ -31,21 +37,22 @@
   <header class="header" role="banner">
     <div class="container">
       <div class="header__inner">
-        <a href="#" class="header__logo" aria-label="Nexora — главная">Nexora</a>
+        <a href="index.html" class="header__logo" aria-label="Nexora — главная">Nexora</a>
 
         <nav class="header__nav" aria-label="Главное меню">
           <ul>
             <li><a href="#services">Услуги</a></li>
             <li><a href="#technologies">Технологии</a></li>
-            <li><a href="#portfolio">Кейсы</a></li>
+            <li><a href="portfolio.html">Кейсы</a></li>
             <li><a href="#process">Этапы</a></li>
-            <li><a href="#partners">О нас</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="blog.html">Блог</a></li>
           </ul>
         </nav>
 
         <div class="header__actions">
           <a href="#contact" class="btn-primary header__cta">Обсудить проект <span aria-hidden="true">→</span></a>
+          <button class="motion-toggle header__motion" type="button" data-motion-toggle aria-pressed="false" aria-label="Включить анимацию на сайте" title="Включить или выключить анимацию"><span class="motion-toggle__track" aria-hidden="true"></span></button>
           <button class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
             <span class="burger-line"></span>
             <span class="burger-line"></span>
@@ -67,17 +74,17 @@
     <nav class="mobile-menu__nav">
       <a href="#services">Услуги</a>
       <a href="#technologies">Технологии</a>
-      <a href="#portfolio">Кейсы</a>
+      <a href="portfolio.html">Кейсы</a>
       <a href="#process">Этапы</a>
-      <a href="#partners">О нас</a>
-      <a href="#contact">Контакты</a>
+      <a href="#team">Команда</a>
+      <a href="blog.html">Блог</a>
     </nav>
     <div class="mobile-menu__footer">
       <a href="#contact" class="btn-primary">Обсудить проект →</a>
     </div>
   </div>
 
-  <main>
+  <main id="main">
     <!-- ============================================================
          HERO
     ============================================================ -->
@@ -108,186 +115,41 @@
 
             <div class="hero__actions animate-fade-up">
               <a href="#contact" class="btn-primary">Обсудить проект <span aria-hidden="true">→</span></a>
-              <a href="#portfolio" class="btn-secondary">Смотреть презентацию</a>
+              <a href="#portfolio" class="btn-secondary">Смотреть проекты</a>
             </div>
 
             <div class="hero__stats animate-fade-up">
               <div class="hero__stat">
-                <span class="hero__stat-value">10+</span>
-                <span class="hero__stat-label">лет на рынке</span>
+                <span class="hero__stat-value">6</span>
+                <span class="hero__stat-label">проектов в портфолио</span>
               </div>
               <div class="hero__stat">
-                <span class="hero__stat-value">90+</span>
-                <span class="hero__stat-label">реализованных проектов</span>
+                <span class="hero__stat-value">3</span>
+                <span class="hero__stat-label">формата: сайты, платформы, игры</span>
               </div>
               <div class="hero__stat">
-                <span class="hero__stat-value">98%</span>
-                <span class="hero__stat-label">клиентов остаются с нами</span>
+                <span class="hero__stat-value">↻</span>
+                <span class="hero__stat-label">поддержка после запуска</span>
               </div>
             </div>
           </div>
 
           <!-- Right: Before/After comparison slider -->
-          <div class="hero__visual animate-fade-up">
-            <div class="comparison-slider"
-                 role="img"
-                 aria-label="Сравнение дизайнов: до и после редизайна">
+          <div class="hero__visual animate-fade-up" style="flex-direction:column">
+            <div class="comparison-slider comparison-slider--designs"
+                 role="group"
+                 aria-label="Один сайт AURA ONE: сравнение минимализма и максимализма">
 
               <!-- BEFORE layer -->
               <div class="comparison-slider__before">
-                <div class="comparison-slider__label before-label">Было</div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                  <!-- Background -->
-                  <rect width="560" height="420" fill="#F2EFE9"/>
-                  <!-- Floor -->
-                  <rect x="0" y="290" width="560" height="130" fill="#E3DDD4"/>
-                  <!-- Left wall accent -->
-                  <rect x="0" y="0" width="80" height="420" fill="#EAE5DE"/>
-                  <!-- Window -->
-                  <rect x="370" y="40" width="140" height="190" fill="#D8E8F0" rx="2"/>
-                  <rect x="370" y="40" width="140" height="190" fill="none" stroke="#C5BFB5" stroke-width="3" rx="2"/>
-                  <line x1="440" y1="40" x2="440" y2="230" stroke="#C5BFB5" stroke-width="2"/>
-                  <line x1="370" y1="135" x2="510" y2="135" stroke="#C5BFB5" stroke-width="2"/>
-                  <!-- Sofa body -->
-                  <rect x="140" y="255" width="220" height="35" fill="#BDBBB5" rx="4"/>
-                  <rect x="130" y="220" width="240" height="45" fill="#C8C6C0" rx="6"/>
-                  <!-- Sofa back cushions -->
-                  <rect x="135" y="215" width="108" height="50" fill="#CFCDC7" rx="4"/>
-                  <rect x="251" y="215" width="108" height="50" fill="#CFCDC7" rx="4"/>
-                  <!-- Sofa legs -->
-                  <rect x="148" y="290" width="14" height="22" fill="#A5A09A"/>
-                  <rect x="338" y="290" width="14" height="22" fill="#A5A09A"/>
-                  <!-- Armrests -->
-                  <rect x="125" y="230" width="18" height="60" fill="#C0BDB7" rx="3"/>
-                  <rect x="357" y="230" width="18" height="60" fill="#C0BDB7" rx="3"/>
-                  <!-- Coffee table -->
-                  <rect x="175" y="300" width="160" height="12" fill="#C4BDB5" rx="2"/>
-                  <rect x="195" y="312" width="8" height="30" fill="#AEA9A2"/>
-                  <rect x="317" y="312" width="8" height="30" fill="#AEA9A2"/>
-                  <!-- Floor lamp -->
-                  <rect x="88" y="130" width="5" height="160" fill="#B0AAA3"/>
-                  <ellipse cx="90" cy="128" rx="22" ry="14" fill="#CAC4BC"/>
-                  <!-- Small plant -->
-                  <rect x="320" y="265" width="28" height="35" fill="#A9A39A" rx="2"/>
-                  <ellipse cx="334" cy="260" rx="18" ry="20" fill="#7D8C5A"/>
-                  <ellipse cx="322" cy="252" rx="12" ry="16" fill="#8A9A62"/>
-                  <ellipse cx="346" cy="253" rx="13" ry="15" fill="#7D8C5A"/>
-                  <!-- Framed art on wall -->
-                  <rect x="170" y="80" width="100" height="80" fill="#E8E3DC" stroke="#C5BFB5" stroke-width="2"/>
-                  <rect x="180" y="90" width="80" height="60" fill="#D5CFC8"/>
-                  <line x1="180" y1="120" x2="260" y2="120" stroke="#BFBAB3" stroke-width="1"/>
-                  <!-- Small shelf items -->
-                  <rect x="96" y="165" width="30" height="40" fill="#C0BAB3" rx="1"/>
-                  <rect x="96" y="152" width="30" height="14" fill="#B8B2AB" rx="1"/>
-                  <!-- Text label at bottom -->
-                  <rect x="40" y="385" width="120" height="22" fill="#DDDAD5" rx="11"/>
-                  <rect x="50" y="391" width="100" height="10" fill="#C8C4BE" rx="5"/>
-                </svg>
+                <div class="comparison-slider__label before-label">Минимализм</div>
+                <img src="assets/images/comparison/aura-minimalism.png" alt="Дизайн сайта AURA ONE в стиле минимализм: светлый фон, лаконичная типографика и фотография серебристых наушников" width="1448" height="1086" fetchpriority="high" decoding="async">
               </div>
 
               <!-- AFTER layer -->
               <div class="comparison-slider__after" style="clip-path: inset(0 0 0 50%)">
-                <div class="comparison-slider__label after-label">Стало</div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                  <defs>
-                    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#1E1245"/>
-                      <stop offset="100%" stop-color="#2D1B6E"/>
-                    </linearGradient>
-                    <linearGradient id="floorG" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stop-color="#251550"/>
-                      <stop offset="100%" stop-color="#140A30"/>
-                    </linearGradient>
-                    <linearGradient id="sofaG" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#9B5CF6"/>
-                      <stop offset="100%" stop-color="#6D28D9"/>
-                    </linearGradient>
-                    <linearGradient id="wallG" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#2A1560"/>
-                      <stop offset="100%" stop-color="#1E0F45"/>
-                    </linearGradient>
-                    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.6"/>
-                      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
-                    </radialGradient>
-                    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.5"/>
-                      <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
-                    </radialGradient>
-                    <filter id="blur4">
-                      <feGaussianBlur stdDeviation="4"/>
-                    </filter>
-                    <filter id="blur8">
-                      <feGaussianBlur stdDeviation="8"/>
-                    </filter>
-                  </defs>
-                  <!-- Background -->
-                  <rect width="560" height="420" fill="url(#bgG)"/>
-                  <!-- Floor -->
-                  <rect x="0" y="295" width="560" height="125" fill="url(#floorG)"/>
-                  <!-- Wall left panel -->
-                  <rect x="0" y="0" width="85" height="420" fill="url(#wallG)"/>
-                  <!-- Ambient glow blobs -->
-                  <ellipse cx="420" cy="80" rx="100" ry="80" fill="url(#glowCyan)" filter="url(#blur8)"/>
-                  <ellipse cx="150" cy="300" rx="90" ry="70" fill="url(#glowPurple)" filter="url(#blur8)"/>
-                  <!-- Window with glow -->
-                  <rect x="370" y="30" width="150" height="210" fill="#0D2035" rx="4"/>
-                  <rect x="370" y="30" width="150" height="210" fill="none" stroke="#4A6FA5" stroke-width="2" rx="4"/>
-                  <rect x="390" y="50" width="110" height="170" fill="#112B48" opacity="0.8"/>
-                  <!-- Window light rays -->
-                  <rect x="420" y="30" width="2" height="210" fill="#22D3EE" opacity="0.15"/>
-                  <rect x="445" y="30" width="2" height="210" fill="#22D3EE" opacity="0.10"/>
-                  <!-- Neon strip light on ceiling -->
-                  <rect x="100" y="0" width="260" height="6" fill="#A78BFA" rx="3"/>
-                  <rect x="100" y="0" width="260" height="16" fill="url(#glowPurple)" filter="url(#blur4)" opacity="0.8"/>
-                  <!-- Modern sofa -->
-                  <rect x="125" y="260" width="260" height="38" fill="#3B1D7A" rx="6"/>
-                  <rect x="118" y="222" width="274" height="48" fill="url(#sofaG)" rx="8"/>
-                  <!-- Cushions with gradient -->
-                  <rect x="124" y="217" width="125" height="55" fill="#8B5CF6" rx="5" opacity="0.9"/>
-                  <rect x="255" y="217" width="125" height="55" fill="#7C3AED" rx="5" opacity="0.9"/>
-                  <!-- Cushion highlight lines -->
-                  <line x1="135" y1="240" x2="240" y2="240" stroke="#C4B5FD" stroke-width="1.5" opacity="0.5"/>
-                  <line x1="265" y1="240" x2="370" y2="240" stroke="#C4B5FD" stroke-width="1.5" opacity="0.5"/>
-                  <!-- Gold legs -->
-                  <rect x="134" y="298" width="16" height="24" fill="#D4AF37" rx="3"/>
-                  <rect x="350" y="298" width="16" height="24" fill="#D4AF37" rx="3"/>
-                  <!-- Armrests -->
-                  <rect x="110" y="230" width="20" height="68" fill="#7C3AED" rx="4"/>
-                  <rect x="370" y="230" width="20" height="68" fill="#7C3AED" rx="4"/>
-                  <!-- Low coffee table with glow -->
-                  <rect x="170" y="310" width="180" height="14" fill="#2A1560" rx="4" stroke="#6D28D9" stroke-width="1.5"/>
-                  <rect x="195" y="324" width="10" height="28" fill="#D4AF37" rx="2"/>
-                  <rect x="315" y="324" width="10" height="28" fill="#D4AF37" rx="2"/>
-                  <!-- Vase on table -->
-                  <ellipse cx="260" cy="308" rx="14" ry="8" fill="#22D3EE" opacity="0.3"/>
-                  <rect x="252" y="284" width="16" height="26" fill="#164E63" rx="8"/>
-                  <!-- Plant pot with neon leaves -->
-                  <rect x="315" y="268" width="36" height="40" fill="#1E0A45" rx="4" stroke="#6D28D9" stroke-width="1.5"/>
-                  <ellipse cx="333" cy="262" rx="22" ry="24" fill="#166534" opacity="0.9"/>
-                  <ellipse cx="318" cy="252" rx="14" ry="18" fill="#15803D" opacity="0.8"/>
-                  <ellipse cx="348" cy="253" rx="16" ry="16" fill="#166534" opacity="0.8"/>
-                  <!-- Neon glow on plant -->
-                  <ellipse cx="333" cy="262" rx="26" ry="28" fill="#4ADE80" opacity="0.08" filter="url(#blur4)"/>
-                  <!-- Floor lamp (neon style) -->
-                  <rect x="92" y="100" width="6" height="195" fill="#3B1D7A"/>
-                  <ellipse cx="95" cy="98" rx="26" ry="16" fill="#4A1D96"/>
-                  <ellipse cx="95" cy="98" rx="26" ry="16" fill="#A78BFA" opacity="0.3" filter="url(#blur4)"/>
-                  <!-- Abstract wall art -->
-                  <rect x="160" y="60" width="120" height="100" fill="#16093D" rx="6" stroke="#4A1D96" stroke-width="2"/>
-                  <ellipse cx="220" cy="110" rx="35" ry="30" fill="#7C3AED" opacity="0.5"/>
-                  <ellipse cx="240" cy="95" rx="20" ry="22" fill="#22D3EE" opacity="0.4"/>
-                  <circle cx="195" cy="125" rx="12" fill="#F472B6" opacity="0.5"/>
-                  <!-- Floating geometric decoration -->
-                  <circle cx="100" cy="200" r="35" fill="none" stroke="#6D28D9" stroke-width="1.5" opacity="0.6"/>
-                  <circle cx="100" cy="200" r="22" fill="none" stroke="#A78BFA" stroke-width="1" opacity="0.4"/>
-                  <!-- CTA Card overlay -->
-                  <rect x="30" y="340" width="160" height="60" fill="rgba(255,255,255,0.08)" rx="12" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-                  <rect x="44" y="355" width="90" height="10" fill="rgba(255,255,255,0.6)" rx="5"/>
-                  <rect x="44" y="372" width="60" height="8" fill="#A78BFA" rx="4"/>
-                  <rect x="115" y="367" width="60" height="18" fill="#7C3AED" rx="9"/>
-                  <rect x="120" y="373" width="50" height="6" fill="white" rx="3" opacity="0.8"/>
-                </svg>
+                <div class="comparison-slider__label after-label">Максимализм</div>
+                <img src="assets/images/comparison/aura-maximalism.png" alt="Дизайн того же сайта AURA ONE в стиле максимализм: насыщенные цвета, многослойная графика и те же серебристые наушники" width="1448" height="1086" fetchpriority="high" decoding="async">
               </div>
 
               <!-- Divider line -->
@@ -302,9 +164,10 @@
                    aria-valuemax="100"
                    aria-valuenow="50"
                    tabindex="0">
-                <span aria-hidden="true">‹ ›</span>
+                
               </div>
             </div>
+            <div class="comparison-caption comparison-caption--designs"><div class="comparison-caption__styles"><span>Минимализм</span><span>Максимализм</span></div><p>Один сайт AURA ONE — два исполнения. Потяните разделитель.</p></div>
           </div>
 
         </div>
@@ -318,84 +181,84 @@
       <div class="container">
         <div class="section-header">
           <div>
-            <h2 class="section-title">Что вам нужно разработать?</h2>
-            <p class="section-subtitle">Разрабатываем цифровые продукты под любые задачи: от стильного сайта до сложной web-платформы. Подберём оптимальное решение для вашего бизнеса.</p>
+            <h2 class="section-title">Какую задачу решает ваш проект?</h2>
+            <p class="section-subtitle">Помогаем представить бизнес, организовать продажи, обучение или взаимодействие пользователей. Формат проекта выбираем вместе с вами.</p>
           </div>
-          <a href="#contact" class="btn-text section-link">Все услуги →</a>
+          <a href="#contact" class="btn-text section-link">Выбрать возможности</a>
         </div>
 
         <div class="services-grid">
-          <article class="service-card animate-fade-up">
+          <a href="#contact" class="service-card animate-fade-up" data-estimate-type="corporate">
             <div class="service-card__icon" style="background: rgba(101,120,255,0.10);">
               <img src="assets/icons/website.svg" alt="" width="24" height="24" aria-hidden="true">
             </div>
             <h3 class="service-card__title">Сайт компании</h3>
-            <p class="service-card__desc">Представительский сайт с акцентом на бренд и конверсию</p>
+            <p class="service-card__desc">Компания, услуги и выполненные работы — в понятной структуре</p>
             <div class="service-card__arrow" aria-hidden="true">→</div>
-          </article>
+          </a>
 
-          <article class="service-card animate-fade-up">
+          <a href="#contact" class="service-card animate-fade-up" data-estimate-type="shop">
             <div class="service-card__icon" style="background: rgba(141,104,255,0.10);">
               <img src="assets/icons/shop.svg" alt="" width="24" height="24" aria-hidden="true">
             </div>
             <h3 class="service-card__title">Интернет-магазин</h3>
-            <p class="service-card__desc">Мощные e-commerce решения с интеграциями и удобной панелью</p>
+            <p class="service-card__desc">Каталог, оформление заказа и интеграции под процесс продаж</p>
             <div class="service-card__arrow" aria-hidden="true">→</div>
-          </article>
+          </a>
 
-          <article class="service-card animate-fade-up">
+          <a href="#contact" class="service-card animate-fade-up" data-estimate-type="landing">
             <div class="service-card__icon" style="background: rgba(108,207,239,0.10);">
               <img src="assets/icons/landing.svg" alt="" width="24" height="24" aria-hidden="true">
             </div>
             <h3 class="service-card__title">Лендинг</h3>
-            <p class="service-card__desc">Продающие страницы с высокой конверсией для товаров и услуг</p>
+            <p class="service-card__desc">Страница для одной услуги или предложения с понятным целевым действием</p>
             <div class="service-card__arrow" aria-hidden="true">→</div>
-          </article>
+          </a>
 
-          <article class="service-card animate-fade-up">
+          <a href="#contact" class="service-card animate-fade-up" data-estimate-type="platform">
             <div class="service-card__icon" style="background: rgba(74,222,128,0.10);">
               <img src="assets/icons/webservice.svg" alt="" width="24" height="24" aria-hidden="true">
             </div>
             <h3 class="service-card__title">Веб-сервис и платформа</h3>
             <p class="service-card__desc">Сложные веб-приложения и сервисы с уникальным функционалом</p>
             <div class="service-card__arrow" aria-hidden="true">→</div>
-          </article>
+          </a>
 
-          <article class="service-card animate-fade-up">
+          <a href="#contact" class="service-card animate-fade-up" data-estimate-type="game">
             <div class="service-card__icon" style="background: rgba(251,146,60,0.10);">
               <img src="assets/icons/corporate.svg" alt="" width="24" height="24" aria-hidden="true">
             </div>
-            <h3 class="service-card__title">Корпоративный сайт</h3>
-            <p class="service-card__desc">Платформы для автоматизации процессов внутри компании</p>
+            <h3 class="service-card__title">Браузерные игры</h3>
+            <p class="service-card__desc">Игровая механика и интерфейс для запуска прямо в браузере</p>
             <div class="service-card__arrow" aria-hidden="true">→</div>
-          </article>
+          </a>
 
-          <article class="service-card animate-fade-up">
+          <a href="#contact" class="service-card animate-fade-up" data-estimate-type="corporate">
             <div class="service-card__icon" style="background: rgba(242,164,217,0.10);">
               <img src="assets/icons/uxui.svg" alt="" width="24" height="24" aria-hidden="true">
             </div>
             <h3 class="service-card__title">UI/UX дизайн</h3>
             <p class="service-card__desc">Проектирование удобных и современных интерфейсов</p>
             <div class="service-card__arrow" aria-hidden="true">→</div>
-          </article>
+          </a>
 
-          <article class="service-card animate-fade-up">
+          <a href="#contact" class="service-card animate-fade-up" data-estimate-type="corporate">
             <div class="service-card__icon" style="background: rgba(170,112,255,0.10);">
               <img src="assets/icons/redesign.svg" alt="" width="24" height="24" aria-hidden="true">
             </div>
             <h3 class="service-card__title">Редизайн</h3>
-            <p class="service-card__desc">Обновление устаревших сайтов для соответствия современным трендам</p>
+            <p class="service-card__desc">Обновление структуры, интерфейса и визуального языка существующего сайта</p>
             <div class="service-card__arrow" aria-hidden="true">→</div>
-          </article>
+          </a>
 
-          <article class="service-card animate-fade-up">
+          <a href="#contact" class="service-card animate-fade-up" data-estimate-type="corporate">
             <div class="service-card__icon" style="background: rgba(101,120,255,0.10);">
               <img src="assets/icons/seo.svg" alt="" width="24" height="24" aria-hidden="true">
             </div>
-            <h3 class="service-card__title">SEO-оптимизация</h3>
-            <p class="service-card__desc">Комплексное продвижение сайтов в поисковых системах</p>
+            <h3 class="service-card__title">SEO-подготовка</h3>
+            <p class="service-card__desc">Техническая подготовка к индексации, структура страниц и метаданные</p>
             <div class="service-card__arrow" aria-hidden="true">→</div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -408,96 +271,82 @@
         <div class="section-header">
           <div>
             <h2 class="section-title">Технологии под задачи проекта</h2>
-            <p class="section-subtitle">Используем современные и проверенные технологии, чтобы создавать надёжные, быстрые и масштабируемые решения.</p>
+            <p class="section-subtitle">От дизайна до публикации: подбираем инструменты, движок и инфраструктуру под задачи проекта. Показываем рабочие сочетания без лишних зависимостей.</p>
           </div>
         </div>
 
         <div class="tech-tabs" role="tablist" aria-label="Категории технологий">
-          <button class="tech-tab active" role="tab" data-category="all" aria-selected="true">Все технологии</button>
-          <button class="tech-tab" role="tab" data-category="shop" aria-selected="false">Интернет-магазин</button>
-          <button class="tech-tab" role="tab" data-category="landing" aria-selected="false">Лендинг</button>
-          <button class="tech-tab" role="tab" data-category="card" aria-selected="false">Визитка</button>
-          <button class="tech-tab" role="tab" data-category="forum" aria-selected="false">Форум</button>
-          <button class="tech-tab" role="tab" data-category="corporate" aria-selected="false">Корпоративный сайт</button>
+          <button class="tech-tab active" role="tab" data-category="all" aria-selected="true"><img src="assets/icons/code.svg" width="20" height="20" alt="" aria-hidden="true"><span>Все технологии</span></button>
+          <button class="tech-tab" role="tab" data-category="shop" aria-selected="false"><img src="assets/icons/shop.svg" width="20" height="20" alt="" aria-hidden="true"><span>Интернет-магазин</span></button>
+          <button class="tech-tab" role="tab" data-category="landing" aria-selected="false"><img src="assets/icons/landing.svg" width="20" height="20" alt="" aria-hidden="true"><span>Лендинг</span></button>
+          <button class="tech-tab" role="tab" data-category="card" aria-selected="false"><img src="assets/icons/businesscard.svg" width="20" height="20" alt="" aria-hidden="true"><span>Визитка</span></button>
+          <button class="tech-tab" role="tab" data-category="application" aria-selected="false"><img src="assets/icons/webservice.svg" width="20" height="20" alt="" aria-hidden="true"><span>Приложения</span></button>
+          <button class="tech-tab" role="tab" data-category="corporate" aria-selected="false"><img src="assets/icons/corporate.svg" width="20" height="20" alt="" aria-hidden="true"><span>Корпоративный сайт</span></button>
+          <button class="tech-tab" role="tab" data-category="game" aria-selected="false"><img src="assets/icons/board.svg" width="20" height="20" alt="" aria-hidden="true"><span>Браузерные игры</span></button>
         </div>
 
-        <div class="tech-grid" role="tabpanel" aria-live="polite">
+        <div class="tech-grid" id="technology-panel" role="tabpanel" aria-live="polite" aria-labelledby="tech-tab-all">
           <!-- Cards built dynamically by technologies-filter.js -->
         </div>
-      </div>
+        <div class="tech-notes">
+        <div class="tech-profile" aria-live="polite" aria-atomic="true"><h3 id="tech-profile-title">Инструменты под задачу</h3><p id="tech-profile-description">Направления для будущих проектов. В карточках — варианты технологий и их роли. Выбираем совместимый набор под функции, бюджет и развитие проекта.</p></div>
+        <p class="tech-design-note">В карточках — варианты и их роли. Выбираем совместимую основу проекта. Инструменты дизайна и базовые веб-технологии могут работать вместе; дополнительные возможности подключаем по необходимости.</p>
+        </div>
+
+</div>
     </section>
 
     <!-- ============================================================
          PROCESS
     ============================================================ -->
-    <section class="process" id="process" style="scroll-margin-top: 80px;">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">Этапы работы</h2>
-            <p class="section-subtitle">Прозрачный и понятный процесс. Вы всегда знаете, на каком этапе проект и что будет дальше.</p>
-          </div>
-        </div>
+    <section class="process" id="process" style="scroll-margin-top:80px"><div class="container"><div class="section-header flow-heading"><h2 class="section-title">Этапы работы</h2><button class="motion-toggle flow-motion-toggle" type="button" data-motion-toggle aria-pressed="false" aria-label="Включить анимацию на сайте"><span class="motion-toggle__track" aria-hidden="true"></span></button></div><div class="pipeline" aria-label="Project workflow"><svg class="flow-svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="flow-accent" x2="1" y2="1"><stop stop-color="#8a9bfa"/><stop offset="1" stop-color="#ae8ce4"/></linearGradient>
+<linearGradient id="flow-soft" x2="1" y2="1"><stop stop-color="#eef2ff"/><stop offset="1" stop-color="#eee8fa"/></linearGradient>
+<filter id="flow-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#6578ff" flood-opacity=".10"/></filter>
+<symbol id="flow-worker" viewBox="0 0 86 105"><path d="M14 102V73c0-12 13-20 29-20s29 8 29 20v29" fill="#a8b8ef"/><path d="M27 61q16 13 32 0" fill="#c8d2f6"/><rect x="36" y="42" width="14" height="17" rx="5" fill="#e9bda9"/><ellipse cx="43" cy="30" rx="22" ry="26" fill="#f0cdb9"/><path d="M21 29C18 7 32 1 44 3c22-3 24 17 21 29-6-7-8-15-10-18-10 8-20 6-34 15" fill="#56567a"/><path d="M20 76l-8 22m54-22 9 22" stroke="#9cadde" stroke-width="13" stroke-linecap="round"/></symbol>
+<symbol id="flow-worker-back" viewBox="0 0 86 105"><rect x="17" y="57" width="52" height="45" rx="12" fill="#d9def1"/><path d="M10 104V77c1-18 16-25 33-25s32 7 33 25v27" fill="#b6a5e4"/><rect x="37" y="43" width="12" height="16" rx="4" fill="#e8c4b2"/><ellipse cx="43" cy="30" rx="22" ry="25" fill="#edcbb8"/><path d="M21 32C17 8 32 0 45 3c21-1 25 18 19 33-5-4-8-9-10-16-8 6-19 4-33 12" fill="#5e5c80"/></symbol>
+<symbol id="flow-avatar" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#f0ecfc" stroke="#d7d1ee"/><circle cx="16" cy="12" r="5" fill="#b4a5df"/><path d="M7 26c0-10 18-10 18 0" fill="#b4a5df"/></symbol>
+<symbol id="flow-gear" viewBox="0 0 40 40"><path d="m16 2 8 0 2 5 4 2 5-1 4 7-4 4v4l3 4-4 7-5-1-4 3-2 4h-8l-2-5-4-2-5 1-4-7 4-4v-4l-3-4 4-7 5 1 4-3z" fill="#d4cdf1" stroke="#b1a5d8"/><circle cx="20" cy="21" r="7" fill="#f8faff" stroke="#b1a5d8"/></symbol>
 
-        <div class="process-steps">
-
-          <div class="process-step animate-fade-up">
-            <div class="process-step__number">01</div>
-            <div class="process-step__icon-wrap">
-              <img src="assets/icons/meeting.svg" alt="" width="26" height="26" aria-hidden="true">
-            </div>
-            <h3 class="process-step__title">Встреча и согласование</h3>
-            <p class="process-step__desc">Обсуждаем задачу, цели проекта, целевую аудиторию и сроки.</p>
-          </div>
-
-          <div class="process-step animate-fade-up">
-            <div class="process-step__number">02</div>
-            <div class="process-step__icon-wrap">
-              <img src="assets/icons/document.svg" alt="" width="26" height="26" aria-hidden="true">
-            </div>
-            <h3 class="process-step__title">Написание ТЗ и утверждение</h3>
-            <p class="process-step__desc">Фиксируем функциональные требования, структуру проекта и детали реализации.</p>
-          </div>
-
-          <div class="process-step animate-fade-up">
-            <div class="process-step__number">03</div>
-            <div class="process-step__icon-wrap">
-              <img src="assets/icons/design.svg" alt="" width="26" height="26" aria-hidden="true">
-            </div>
-            <h3 class="process-step__title">Творческий дизайн и правки</h3>
-            <p class="process-step__desc">Создаём визуальную концепцию, дизайн интерфейса и вносим согласованные правки.</p>
-          </div>
-
-          <div class="process-step animate-fade-up">
-            <div class="process-step__number">04</div>
-            <div class="process-step__icon-wrap">
-              <img src="assets/icons/code.svg" alt="" width="26" height="26" aria-hidden="true">
-            </div>
-            <h3 class="process-step__title">Программирование и тестирование</h3>
-            <p class="process-step__desc">Верстаем, программируем, интегрируем функционал и тестируем продукт.</p>
-          </div>
-
-          <div class="process-step animate-fade-up">
-            <div class="process-step__number">05</div>
-            <div class="process-step__icon-wrap">
-              <img src="assets/icons/launch.svg" alt="" width="26" height="26" aria-hidden="true">
-            </div>
-            <h3 class="process-step__title">Выпуск продукта</h3>
-            <p class="process-step__desc">Размещаем проект на сервере, проводим финальную проверку и запускаем.</p>
-          </div>
-
-          <div class="process-step animate-fade-up">
-            <div class="process-step__number">06</div>
-            <div class="process-step__icon-wrap">
-              <img src="assets/icons/marketing.svg" alt="" width="26" height="26" aria-hidden="true">
-            </div>
-            <h3 class="process-step__title">Реклама, продвижение и поддержка</h3>
-            <p class="process-step__desc">Помогаем с продвижением, аналитикой, рекламой и последующей технической поддержкой.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
+<symbol id="flow-bulb" viewBox="0 0 32 42"><circle cx="16" cy="15" r="14" fill="#fff5d8" opacity=".65"/><path d="M7 15a9 9 0 1 1 16 6c-2 2-3 4-3 7h-8c0-3-1-5-3-7z" fill="#fff2bc" stroke="#d9ba72" stroke-width="1.4"/><path d="m12 17 4 5 4-5m-4 5v6" fill="none" stroke="#d6ad58" stroke-width="1.2" stroke-linecap="round"/><path d="M12 31h8m-8 4h8m-6 3h4" stroke="#a9b5d2" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="flow-envelope" viewBox="0 0 30 23"><rect x="1" y="1" width="28" height="21" rx="4" fill="#f5f2ff" stroke="#b7a8dc" stroke-width="1.3"/><path d="m2 3 13 10L28 3M2 20l9-8m17 8-9-8" fill="none" stroke="#c3b5e2" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+<symbol id="ad-facebook" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#1877f2"/><path d="M14 21v-8h3l.5-3H14V8.5c0-1 .3-1.5 1.6-1.5H18V4.2c-.6-.1-1.6-.2-2.7-.2C12.5 4 11 5.7 11 8.3V10H8v3h3v8z" fill="#fff"/></symbol><symbol id="ad-google" viewBox="0 0 24 24"><path d="M20 12h-8m8 0c0 5-3 8-8 8" fill="none" stroke="#4285f4" stroke-width="4"/><path d="M12 20a8 8 0 0 1-7-4" fill="none" stroke="#34a853" stroke-width="4"/><path d="M5 16a8 8 0 0 1 0-8" fill="none" stroke="#fbbc05" stroke-width="4"/><path d="M5 8a8 8 0 0 1 13-2" fill="none" stroke="#ea4335" stroke-width="4"/></symbol>
+<symbol id="ad-youtube" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="5" fill="#f16d78"/><path d="m10 8 7 4-7 4z" fill="#fff"/></symbol>
+<linearGradient id="ad-instagram-gradient" x2="1" y2="1"><stop stop-color="#af8fdd"/><stop offset=".5" stop-color="#e8a4c4"/><stop offset="1" stop-color="#f3c396"/></linearGradient>
+<symbol id="ad-instagram" viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="6" fill="url(#ad-instagram-gradient)"/><rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="17" cy="7" r="1" fill="#fff"/></symbol>
+<symbol id="ad-tiktok" viewBox="0 0 24 24"><path d="M14 4v12a4 4 0 1 1-4-4m4-8c0 4 3 5 6 5" fill="none" stroke="#b2dce5" stroke-width="3.5" transform="translate(-1 1)"/><path d="M14 4v12a4 4 0 1 1-4-4m4-8c0 4 3 5 6 5" fill="none" stroke="#d7a8cc" stroke-width="3.5" transform="translate(1 -1)"/><path d="M14 4v12a4 4 0 1 1-4-4m4-8c0 4 3 5 6 5" fill="none" stroke="#707495" stroke-width="2.5"/></symbol>
+<symbol id="ad-twitter" viewBox="0 0 24 24"><path d="M22 5q-2 1-4 0c-4-4-8 0-6 4-5 0-8-3-10-5-1 3 0 5 2 6l-2-1c0 3 2 4 4 5H4c1 2 3 3 5 3-3 2-5 2-8 2 12 7 21-3 20-11z" fill="#91bfe9"/></symbol>
+<symbol id="ad-tv" viewBox="0 0 24 24"><path d="m8 2 4 4 4-4" fill="none" stroke="#a99acb" stroke-width="1.6" stroke-linecap="round"/><rect x="1" y="6" width="22" height="15" rx="4" fill="#eee9f8" stroke="#b2a5d4"/><rect x="4" y="9" width="13" height="9" rx="2" fill="#c6b9e6"/><circle cx="20" cy="11" r="1" fill="#b2a5d4"/><path d="M19 15h2" stroke="#b2a5d4"/></symbol>
+<symbol id="ad-news" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="19" rx="3" fill="#fff" stroke="#b4c2df"/><rect x="5" y="6" width="14" height="3" rx="1" fill="#b7c6e7"/><rect x="5" y="12" width="6" height="6" rx="1" fill="#d5def2"/><path d="M14 12h5m-5 3h5M5 20h14" stroke="#bbc7e2" stroke-width="1.3" stroke-linecap="round"/></symbol>
+<symbol id="ad-mail" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="4" fill="#e6edf9" stroke="#acbbde"/><path d="m2 6 10 8L22 6" fill="none" stroke="#a2b3d8" stroke-width="1.5"/></symbol>
+<symbol id="ad-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7" fill="#f4effc" stroke="#b7a6d8" stroke-width="1.6"/><path d="m15 15 6 6m-15-11h8m-4-4v8" stroke="#b7a6d8" stroke-width="1.6" stroke-linecap="round"/></symbol>
+<clipPath id="handover-laptop-clip"><rect x="61" y="53" width="138" height="73" rx="2"/></clipPath><clipPath id="handover-phone-clip"><rect x="107" y="38" width="46" height="91" rx="4"/></clipPath><symbol id="handover-thumb" viewBox="0 0 28 28"><path d="M10 12 14 6q2-4 4-2c2 2-1 7-1 7h6q4 0 3 4l-2 8q0 2-3 2H10z" fill="#d8cee9" stroke="#ad9bce" stroke-width="1.2" stroke-linejoin="round"/><rect x="3" y="12" width="7" height="13" rx="2" fill="#b7a8d8" stroke="#a392c4"/></symbol><clipPath id="promotion-preview-clip"><rect x="103" y="33" width="131" height="81" rx="3"/></clipPath><linearGradient id="promotion-highlight" x2="1" y2="1"><stop stop-color="#8a99ff"/><stop offset="1" stop-color="#b787ed"/></linearGradient></defs></svg><ol class="pipeline__stages"><li class="flow-stage" aria-labelledby="flow-title-0"><div class="flow-scene" aria-hidden="true"><svg class="flow-svg" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg"><path d="M26 173h208" class="desk"/><g data-anim="worker"><use href="#flow-worker" x="28" y="85" width="65" height="80"/></g><g data-anim="worker-alt"><use href="#flow-worker" x="169" y="85" width="65" height="80"/></g><path d="M82 152h24m46 0h26" stroke="#b1bde6" stroke-width="8" stroke-linecap="round"/>
+<path d="M28 20h68q8 0 8 8v44q0 8-8 8H73L64 89l-1-9H28q-8 0-8-8V28q0-8 8-8z" class="paper"/>
+<path d="M174 20h60q8 0 8 8v44q0 8-8 8h-25l-10 9 1-9h-26q-8 0-8-8V28q0-8 8-8z" fill="url(#flow-soft)" stroke="#d8d1ee"/>
+<path d="M72 38Q130-5 201 39" class="line idea-route" stroke-dasharray="2 4" opacity=".5"/>
+<g class="idea-cycle" style="--message-delay:0s"><g transform="translate(48 28)"><g data-anim="sender-bulb"><use href="#flow-bulb" width="28" height="37"/></g></g><g data-anim="idea-flight" class="idea-mail"><g data-anim="mail-fold"><use href="#flow-envelope" x="-12" y="-9" width="24" height="18"/><path data-anim="mail-flap" class="mail-flap" d="m-11-8 11-8 11 8" fill="#f5f2ff" stroke="#b7a8dc" stroke-width="1"/></g></g><g transform="translate(190 27)"><g data-anim="received-bulb"><use href="#flow-bulb" width="28" height="37"/></g></g></g><g class="idea-cycle idea-cycle--echo" style="--message-delay:-3s"><g transform="translate(48 28)"><g data-anim="sender-bulb"><use href="#flow-bulb" width="28" height="37"/></g></g><g data-anim="idea-flight" class="idea-mail"><g data-anim="mail-fold"><use href="#flow-envelope" x="-12" y="-9" width="24" height="18"/><path data-anim="mail-flap" class="mail-flap" d="m-11-8 11-8 11 8" fill="#f5f2ff" stroke="#b7a8dc" stroke-width="1"/></g></g><g transform="translate(190 27)"><g data-anim="received-bulb"><use href="#flow-bulb" width="28" height="37"/></g></g></g><g><rect x="106" y="112" width="47" height="50" rx="5" class="paper"/><path d="M115 124h25m-25 8h22m-22 8h17" class="record-lines" fill="none" stroke="#b9c3e5" stroke-width="1.6" stroke-linecap="round"/><g data-anim="record-pen"><path d="m131 143 11-15 4 3-11 15-5 2z" fill="#aaa0d2" stroke="#9286bd" stroke-width=".7"/><path d="m130 148 1-5 4 3z" fill="#fff"/></g><circle cx="151" cy="159" r="10" fill="url(#flow-accent)"/><path d="m146 159 3 3 6-7" class="check-white"/></g>
+<g transform="translate(179 71)"><g data-anim="receive-ripple" class="flow-transient"><circle cx="24" cy="-25" r="15" fill="none" stroke="#d4c5ed" stroke-width="1.5"/></g></g></svg><div class="flow-link" aria-hidden="true"><span class="flow-link__line"></span><span class="flow-link__packet"></span></div></div><div class="flow-caption"><span class="flow-caption__number" aria-hidden="true">01</span><h3 id="flow-title-0">Идея и задача</h3><p>Обсуждаем идеи и фиксируем требования к проекту.</p></div></li><li class="flow-stage" aria-labelledby="flow-title-1"><div class="flow-scene" aria-hidden="true"><svg class="flow-svg" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg"><path d="M22 177h211" class="desk"/><rect x="31" y="91" width="72" height="54" rx="6" fill="#dce2f4" stroke="#b9c5e5"/><path d="M68 145v24m-13 1h27" class="line"/><g data-anim="worker"><use href="#flow-worker-back" x="34" y="86" width="72" height="88"/></g>
+<circle cx="107" cy="84" r="3" class="bubble-dot"/><circle cx="115" cy="70" r="5" class="bubble-dot"/>
+<g><rect x="124" y="20" width="112" height="128" rx="12" class="paper" filter="url(#flow-shadow)"/><path d="M125 36h110" class="line"/><circle cx="134" cy="28" r="2" fill="#b8b1e6"/><circle cx="141" cy="28" r="2" fill="#c8d2f1"/><circle cx="148" cy="28" r="2" fill="#bcdbe7"/>
+<g data-anim="header"><rect x="133" y="44" width="94" height="13" rx="3" fill="url(#flow-accent)"/><rect x="139" y="49" width="14" height="3" rx="1" fill="#fff"/><path d="M202 50h6m5 0h6" stroke="#fff" stroke-width="2"/></g>
+<g data-anim="hero"><rect x="133" y="64" width="94" height="28" rx="4" fill="#ede8fa"/><rect x="140" y="71" width="35" height="4" rx="2" fill="#b4a9dc"/><rect x="140" y="80" width="24" height="3" rx="1" fill="#d0c7e8"/><circle cx="210" cy="78" r="9" fill="#c3b3e8"/></g>
+<g data-anim="content"><rect x="133" y="99" width="94" height="25" rx="3" fill="none" stroke="#a6b5ec" stroke-dasharray="3 2"/><rect x="138" y="103" width="23" height="16" rx="2" fill="#e0eafa"/><rect x="168" y="103" width="23" height="16" rx="2" fill="#e6ddf5"/><rect x="198" y="103" width="23" height="16" rx="2" fill="#dceef3"/><rect x="131" y="97" width="4" height="4" fill="#a6b5ec"/><rect x="225" y="122" width="4" height="4" fill="#a6b5ec"/></g>
+<g data-anim="footer"><rect x="133" y="131" width="94" height="7" rx="2" fill="#cad4ef"/></g></g>
+<g data-anim="cursor"><circle data-anim="click" class="flow-transient" cx="219" cy="117" r="8" fill="none" stroke="#b3a3e1" stroke-width="1.3"/><path d="m217 115 1 14 4-4 3 5 3-2-3-5 5-1z" class="svg-cursor"/></g><g data-anim="approve"><circle cx="223" cy="150" r="11" fill="url(#flow-accent)"/><path d="m218 150 3 3 6-7" class="check-white"/></g></svg><div class="flow-link" aria-hidden="true"><span class="flow-link__line"></span><span class="flow-link__packet"></span></div></div><div class="flow-caption"><span class="flow-caption__number" aria-hidden="true">02</span><h3 id="flow-title-1">Дизайн и прототип</h3><p>Собираем структуру и продумываем внешний вид.</p></div></li><li class="flow-stage" aria-labelledby="flow-title-2"><div class="flow-scene" aria-hidden="true"><svg class="flow-svg" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg"><path d="M29 178h202" class="desk"/><g data-anim="worker"><use href="#flow-worker" x="88" y="60" width="84" height="102"/></g>
+<g data-anim="typing"><path d="M89 134h-9" stroke="#edcbb8" stroke-width="8" stroke-linecap="round"/></g><g data-anim="typing-alt"><path d="M171 134h9" stroke="#edcbb8" stroke-width="8" stroke-linecap="round"/></g>
+<g class="coding-laptop" filter="url(#flow-shadow)"><path d="M77 171 72 177q0 2 4 2h110q4 0 4-2l-6-6z" fill="#bac9e4" stroke="#8fa3c8" stroke-width="1.2"/><rect x="77" y="110" width="107" height="62" rx="5" fill="#d2dcf0" stroke="#91a5ca" stroke-width="1.6"/><path d="M82 115h97" stroke="#edf2fc" stroke-width="1.5" stroke-linecap="round"/><path d="M79 172h103" stroke="#849ac1" stroke-width="2"/><rect x="119" y="173" width="23" height="3" rx="1.5" fill="#97acd0"/><path d="M74 177h114" stroke="#dfe8f7" stroke-width="1"/><path d="m130 136 5 5-5 5-5-5z" fill="#a7b7d8"/></g>
+<g data-anim="code-rise-a"><rect x="38" y="49" width="55" height="24" rx="8" class="paper"/><text x="48" y="65" class="code-text">{ }</text></g><g data-anim="code-rise-b"><rect x="167" y="47" width="67" height="24" rx="8" class="paper"/><text x="176" y="63" class="code-text">const</text></g>
+<g data-anim="code-rise-c"><rect x="23" y="91" width="59" height="25" rx="8" class="paper"/><text x="34" y="108" class="code-text">&lt;/&gt;</text></g>
+<g transform="translate(186 82)"><g data-anim="gear"><use href="#flow-gear" width="27" height="27"/></g></g><g transform="translate(210 102)"><g data-anim="gear-back"><use href="#flow-gear" width="19" height="19"/></g></g>
+<g data-anim="file"><path d="M30 137h15l6 6v21H30z" class="paper"/><path d="M45 137v7h6m-16 7h10m-10 5h7" class="line"/></g><path data-anim="data-path" d="M53 149h18" class="line" stroke-dasharray="3 3"/><g data-anim="test"><circle cx="205" cy="145" r="13" fill="#eae5f8" stroke="#cec3ea"/><path d="m199 145 4 4 8-9" class="check"/></g>
+<g data-anim="flash" class="flow-flash"><circle cx="130" cy="145" r="35" fill="#d3c5f0" opacity=".3"/><path d="M130 102v7m0 72v7m-43-43h7m72 0h7" class="line"/></g></svg><div class="flow-link" aria-hidden="true"><span class="flow-link__line"></span><span class="flow-link__packet"></span></div></div><div class="flow-caption"><span class="flow-caption__number" aria-hidden="true">03</span><h3 id="flow-title-2">Разработка и тесты</h3><p>Пишем код, связываем функции и проверяем работу.</p></div></li><li class="flow-stage" aria-labelledby="flow-title-3"><div class="flow-scene" aria-hidden="true"><svg class="flow-svg" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg"><path d="M24 178h212" class="desk"/><g data-anim="worker"><use href="#flow-worker" x="17" y="99" width="61" height="75"/></g><g data-anim="worker-alt"><use href="#flow-worker" x="184" y="99" width="61" height="75"/></g>
+<g class="handover-laptop" data-anim="handover-laptop"><rect x="52" y="33" width="156" height="102" rx="8" fill="#dfe5f5" stroke="#bbc8e7" stroke-width="1.3"/><rect x="59" y="42" width="142" height="86" rx="4" fill="#fff"/><circle cx="130" cy="37" r="1.2" fill="#b1bddd"/><path d="M45 135h170l-6 6H51z" fill="#c6d1ee" stroke="#b4c2e3"/><path d="M116 136h28l-2 2h-24z" fill="#aebbdf"/>
+<g clip-path="url(#handover-laptop-clip)"><g data-anim="demo-scroll"><rect x="61" y="53" width="138" height="163" fill="#fff"/><rect x="64" y="56" width="132" height="12" rx="2" fill="url(#flow-accent)"/><rect x="65" y="74" width="130" height="35" rx="3" fill="#eeebfa"/><rect x="71" y="81" width="51" height="4" rx="2" fill="#b8ace0"/><rect x="71" y="90" width="35" height="3" rx="1" fill="#d0c5eb"/><circle cx="173" cy="91" r="12" fill="#d1c2ec"/><rect x="65" y="116" width="38" height="29" rx="3" fill="#e2eafa"/><rect x="111" y="116" width="38" height="29" rx="3" fill="#ebe3f7"/><rect x="157" y="116" width="38" height="29" rx="3" fill="#e1eef3"/><rect x="65" y="153" width="130" height="25" rx="3" fill="#edf0fa"/><path d="M73 160h65m-65 7h87" class="line"/><rect x="65" y="186" width="130" height="16" rx="3" fill="#d5def1"/></g></g><g data-anim="laptop-confirm"><g transform="translate(170 147)"><circle cx="0" cy="0" r="12" fill="url(#flow-accent)"/><path d="m-6 0 4 4 8-9" class="check-white"/><use href="#handover-thumb" x="15" y="-15" width="27" height="27"/></g></g></g><g class="handover-phone" data-anim="handover-phone"><rect x="101" y="25" width="58" height="119" rx="11" fill="#dce3f3" stroke="#b3c1e1" stroke-width="1.5"/><rect x="106" y="33" width="48" height="101" rx="6" fill="#fff"/><rect x="120" y="29" width="20" height="3" rx="2" fill="#b6c4e2"/><path d="M124 138h12" stroke="#adbcde" stroke-width="2" stroke-linecap="round"/>
+<g clip-path="url(#handover-phone-clip)"><g data-anim="demo-phone-pages"><g transform="translate(0 0)"><rect x="107" y="38" width="46" height="91" fill="#fff"/><rect x="110" y="42" width="40" height="8" rx="2" fill="url(#flow-accent)"/><rect x="110" y="55" width="40" height="31" rx="3" fill="#ede7fa"/><circle cx="130" cy="70" r="8" fill="#cebee9"/><path d="M111 95h36m-36 6h26" class="line"/><rect x="111" y="111" width="27" height="8" rx="3" fill="#c0b2e4"/></g><g transform="translate(52 0)"><rect x="107" y="38" width="46" height="91" fill="#fff"/><rect x="110" y="42" width="40" height="8" rx="2" fill="url(#flow-accent)"/><rect x="110" y="55" width="18" height="24" rx="3" fill="#e3eafa"/><path d="M113 73h11" class="line"/><rect x="132" y="55" width="18" height="24" rx="3" fill="#e3eafa"/><path d="M135 73h11" class="line"/><rect x="110" y="85" width="18" height="24" rx="3" fill="#e3eafa"/><path d="M113 103h11" class="line"/><rect x="132" y="85" width="18" height="24" rx="3" fill="#e3eafa"/><path d="M135 103h11" class="line"/></g><g transform="translate(104 0)"><rect x="107" y="38" width="46" height="91" fill="#fff"/><rect x="110" y="42" width="40" height="8" rx="2" fill="url(#flow-accent)"/><rect x="110" y="55" width="40" height="20" rx="3" fill="#e6edf8"/><path d="M111 83h34m-34 7h34m-34 7h25" class="line"/><rect x="110" y="108" width="40" height="11" rx="3" fill="url(#flow-accent)"/></g></g></g><g data-anim="phone-confirm"><g transform="translate(171 110)"><circle cx="0" cy="0" r="12" fill="url(#flow-accent)"/><path d="m-6 0 4 4 8-9" class="check-white"/><use href="#handover-thumb" x="15" y="-15" width="27" height="27"/></g></g></g><g class="handover-contract" data-anim="handover-contract"><g filter="url(#flow-shadow)"><path d="M87 22h76l15 15v113H87q-7 0-7-7V29q0-7 7-7z" class="paper"/><path d="M163 22v15h15" fill="#eeebfa" stroke="#d4dbef"/><rect x="92" y="35" width="28" height="20" rx="3" fill="#ece8f8"/><path d="M97 40h18m-18 5h11m-11 5h15M129 40h23m-23 7h29M93 66h72m-72 7h65m-65 7h69m-69 7h53" class="line"/><path d="M92 125h31m14 0h30" stroke="#c5cce5" stroke-width="1"/></g>
+<path data-anim="signature-left" d="m94 117 5-10-2 12 7-7-2 6 7-4 7 3" class="signature"/>
+<path data-anim="signature-right" d="m138 117 5-9-1 12 6-6 5 3 4-3 6 2" class="signature"/>
+<g data-anim="signing-pen"><path d="m102 112 14-22 5 3-14 22-7 3z" fill="#a69bd0" stroke="#8d82b8" stroke-width=".8"/><path d="m100 118 2-6 5 3z" fill="#fff"/></g>
+<g data-anim="contract-seal"><path d="m159 137 2 15 8-5 6 5 1-15" fill="#d4c7ed"/><circle cx="168" cy="133" r="14" fill="url(#flow-accent)"/><path d="m161 133 5 5 9-10" class="check-white"/></g></g></svg><div class="flow-link" aria-hidden="true"><span class="flow-link__line"></span><span class="flow-link__packet"></span></div></div><div class="flow-caption"><span class="flow-caption__number" aria-hidden="true">04</span><h3 id="flow-title-3">Демонстрация и сдача</h3><p>Показываем сайт на устройствах и принимаем результат.</p></div></li><li class="flow-stage" aria-labelledby="flow-title-4"><div class="flow-scene" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="flow-svg promotion-scene" viewBox="0 0 260 200"><path d="M20 179h220" class="desk" /><g data-anim="worker"><use href="#flow-worker" x="24" y="93" width="62" height="76" /></g><g data-anim="campaign-hand"><path d="M84 153h9" stroke="#edcbb8" stroke-width="6" stroke-linecap="round" /></g><g class="promotion-laptop" filter="url(#flow-shadow)"><path d="M20 171 15 176q0 2 3 2h76q3 0 2-2l-5-5z" fill="#bac9e4" stroke="#8fa3c8" stroke-width="1.1"/><rect x="20" y="128" width="71" height="44" rx="4" fill="#d2dcf0" stroke="#91a5ca" stroke-width="1.5"/><path d="M25 132h61" stroke="#edf2fc" stroke-width="1.3" stroke-linecap="round"/><path d="M22 172h67" stroke="#849ac1" stroke-width="1.7"/><rect x="48" y="173" width="16" height="2.5" rx="1" fill="#97acd0"/><path d="M17 176h77" stroke="#dfe8f7" stroke-width="1"/><path d="m55 146 4 4-4 4-4-4z" fill="#a7b7d8"/></g><path d="M84 134q11-8 14-24" class="line" stroke-dasharray="3 4" /><g class="promotion-dashboard"><rect x="99" y="13" width="144" height="106" rx="10" fill="#fff" stroke="#d4dbef" /><g class="campaign-channel" data-channel="google"><rect x="107" y="35" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-google" x="111" y="41" width="15" height="15" /></g><g class="campaign-channel" data-channel="youtube"><rect x="134" y="35" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-youtube" x="138" y="41" width="15" height="15" /></g><g class="campaign-channel" data-channel="instagram"><rect x="161" y="35" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-instagram" x="165" y="41" width="15" height="15" /></g><g class="campaign-channel" data-channel="facebook"><rect x="188" y="35" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-facebook" x="192" y="41" width="15" height="15" /></g><g class="campaign-channel" data-channel="twitter"><rect x="215" y="35" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-twitter" x="219" y="41" width="15" height="15" /></g><g class="campaign-channel" data-channel="tiktok"><rect x="107" y="74" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-tiktok" x="111" y="80" width="15" height="15" /></g><g class="campaign-channel" data-channel="tv"><rect x="134" y="74" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-tv" x="138" y="80" width="15" height="15" /></g><g class="campaign-channel" data-channel="news"><rect x="161" y="74" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-news" x="165" y="80" width="15" height="15" /></g><g class="campaign-channel" data-channel="mail"><rect x="188" y="74" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-mail" x="192" y="80" width="15" height="15" /></g><g class="campaign-channel" data-channel="search"><rect x="215" y="74" width="23" height="28" rx="6" fill="#f4f5fc" stroke="#e5e8f5" /><use href="#ad-search" x="219" y="80" width="15" height="15" /></g></g><path d="M171 120v7m-61 5v-5h120v5" class="line" stroke-width="1.1" /><g class="campaign-person"><circle cx="110" cy="145" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="110" cy="142.5" r="2.7" fill="#b1a1d4" /><path d="M105.2 150v-1q0-4 4.8-4t4.8 4v1" fill="#b1a1d4" /></g><g class="campaign-person"><circle cx="134" cy="145" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="134" cy="142.5" r="2.7" fill="#9fb6da" /><path d="M129.2 150v-1q0-4 4.8-4t4.8 4v1" fill="#9fb6da" /></g><g class="campaign-person"><circle cx="158" cy="145" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="158" cy="142.5" r="2.7" fill="#b9afd4" /><path d="M153.2 150v-1q0-4 4.8-4t4.8 4v1" fill="#b9afd4" /></g><g class="campaign-person"><circle cx="182" cy="145" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="182" cy="142.5" r="2.7" fill="#b1a1d4" /><path d="M177.2 150v-1q0-4 4.8-4t4.8 4v1" fill="#b1a1d4" /></g><g class="campaign-person"><circle cx="206" cy="145" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="206" cy="142.5" r="2.7" fill="#9fb6da" /><path d="M201.2 150v-1q0-4 4.8-4t4.8 4v1" fill="#9fb6da" /></g><g class="campaign-person"><circle cx="230" cy="145" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="230" cy="142.5" r="2.7" fill="#b9afd4" /><path d="M225.2 150v-1q0-4 4.8-4t4.8 4v1" fill="#b9afd4" /></g><g class="campaign-person"><circle cx="110" cy="170" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="110" cy="167.5" r="2.7" fill="#b1a1d4" /><path d="M105.2 175v-1q0-4 4.8-4t4.8 4v1" fill="#b1a1d4" /></g><g class="campaign-person"><circle cx="134" cy="170" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="134" cy="167.5" r="2.7" fill="#9fb6da" /><path d="M129.2 175v-1q0-4 4.8-4t4.8 4v1" fill="#9fb6da" /></g><g class="campaign-person"><circle cx="158" cy="170" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="158" cy="167.5" r="2.7" fill="#b9afd4" /><path d="M153.2 175v-1q0-4 4.8-4t4.8 4v1" fill="#b9afd4" /></g><g class="campaign-person"><circle cx="182" cy="170" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="182" cy="167.5" r="2.7" fill="#b1a1d4" /><path d="M177.2 175v-1q0-4 4.8-4t4.8 4v1" fill="#b1a1d4" /></g><g class="campaign-person"><circle cx="206" cy="170" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="206" cy="167.5" r="2.7" fill="#9fb6da" /><path d="M201.2 175v-1q0-4 4.8-4t4.8 4v1" fill="#9fb6da" /></g><g class="campaign-person"><circle cx="230" cy="170" r="9.5" fill="#fff" stroke="#dcdff0" /><circle cx="230" cy="167.5" r="2.7" fill="#b9afd4" /><path d="M225.2 175v-1q0-4 4.8-4t4.8 4v1" fill="#b9afd4" /></g><g class="promotion-slot" data-channel="google" style="--slot-delay:0s"><g class="promotion-preview" data-preview="google" data-kind="search"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-google" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-first"><rect x="107" y="38" width="122" height="19" rx="4" fill="#edf0f6" /><circle cx="115" cy="45" r="2.5" fill="#cbd3e3" /><path d="M123 44h96m-96 6h83" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class="promotion-displaced"><g class=""><rect x="107" y="61" width="122" height="19" rx="4" fill="#edf0f6" /><circle cx="115" cy="68" r="2.5" fill="#cbd3e3" /><path d="M123 67h96m-96 6h83" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="107" y="84" width="122" height="19" rx="4" fill="#edf0f6" /><circle cx="115" cy="91" r="2.5" fill="#cbd3e3" /><path d="M123 90h96m-96 6h83" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g></g></g></g><g class="promotion-insert" data-kind="search"><g class="promotion-payload"><rect x="107" y="61" width="122" height="19" rx="4" fill="url(#promotion-highlight)" /><circle cx="115" cy="68" r="2.5" fill="#ffffffb3" /><path d="M123 67h96m-96 6h83" fill="none" stroke="#ffffffb3" stroke-width="2" stroke-linecap="round" /></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g><g class="promotion-slot" data-channel="youtube" style="--slot-delay:-54s"><g class="promotion-preview" data-preview="youtube" data-kind="video"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-youtube" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-video-first"><rect x="107" y="38" width="58" height="29" rx="4" fill="#edf0f6" /><path d="m131.36 46.120000000000005 13.92 6.38-13.92 6.38z" fill="#cbd3e3" /></g><g class="promotion-video-displaced"><g class="promotion-video-second"><rect x="171" y="38" width="58" height="29" rx="4" fill="#edf0f6" /><path d="m195.36 46.120000000000005 13.92 6.38-13.92 6.38z" fill="#cbd3e3" /></g><g class="promotion-video-third"><rect x="107" y="76" width="58" height="29" rx="4" fill="#edf0f6" /><path d="m131.36 84.12 13.92 6.38-13.92 6.38z" fill="#cbd3e3" /></g><g class="promotion-video-last"><rect x="171" y="76" width="58" height="29" rx="4" fill="#edf0f6" /><path d="m195.36 84.12 13.92 6.38-13.92 6.38z" fill="#cbd3e3" /></g></g></g></g><g class="promotion-insert" data-kind="video"><g class="promotion-payload"><rect x="107" y="38" width="58" height="29" rx="4" fill="url(#promotion-highlight)" /><path d="m131.36 46.120000000000005 13.92 6.38-13.92 6.38z" fill="#ffffffb3" /></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g><g class="promotion-slot" data-channel="instagram" style="--slot-delay:-48s"><g class="promotion-preview" data-preview="instagram" data-kind="social"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-instagram" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-feed" data-platform="instagram"><g><rect x="108" y="38" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="114" cy="43" r="2" fill="#c4cddd" /><path d="M120 43h24" stroke="#c4cddd" stroke-width="2" /><rect x="112" y="48" width="112" height="12" rx="2" fill="#c4cddd" opacity=".5" /><path d="m142 59-10-8-10 8" fill="none" stroke="#c4cddd" stroke-width="1.1" /><circle cx="210" cy="51" r="2" fill="#c4cddd" /><path d="M113 63h4m5 0h4m92 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g><g><rect x="108" y="70" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="114" cy="75" r="2" fill="#c4cddd" /><path d="M120 75h24" stroke="#c4cddd" stroke-width="2" /><rect x="112" y="80" width="112" height="12" rx="2" fill="#c4cddd" opacity=".5" /><path d="m142 91-10-8-10 8" fill="none" stroke="#c4cddd" stroke-width="1.1" /><circle cx="210" cy="83" r="2" fill="#c4cddd" /><path d="M113 95h4m5 0h4m92 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g><g class="promotion-post-displaced" data-platform="instagram"><g><rect x="108" y="102" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="114" cy="107" r="2" fill="#c4cddd" /><path d="M120 107h24" stroke="#c4cddd" stroke-width="2" /><rect x="112" y="112" width="112" height="12" rx="2" fill="#c4cddd" opacity=".5" /><path d="m142 123-10-8-10 8" fill="none" stroke="#c4cddd" stroke-width="1.1" /><circle cx="210" cy="115" r="2" fill="#c4cddd" /><path d="M113 127h4m5 0h4m92 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g><g><rect x="108" y="134" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="114" cy="139" r="2" fill="#c4cddd" /><path d="M120 139h24" stroke="#c4cddd" stroke-width="2" /><rect x="112" y="144" width="112" height="12" rx="2" fill="#c4cddd" opacity=".5" /><path d="m142 155-10-8-10 8" fill="none" stroke="#c4cddd" stroke-width="1.1" /><circle cx="210" cy="147" r="2" fill="#c4cddd" /><path d="M113 159h4m5 0h4m92 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g><g><rect x="108" y="166" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="114" cy="171" r="2" fill="#c4cddd" /><path d="M120 171h24" stroke="#c4cddd" stroke-width="2" /><rect x="112" y="176" width="112" height="12" rx="2" fill="#c4cddd" opacity=".5" /><path d="m142 187-10-8-10 8" fill="none" stroke="#c4cddd" stroke-width="1.1" /><circle cx="210" cy="179" r="2" fill="#c4cddd" /><path d="M113 191h4m5 0h4m92 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g></g></g></g></g><g class="promotion-insert" data-kind="social"><g class="promotion-payload"><g><rect x="108" y="70" width="120" height="29" rx="4" fill="url(#promotion-highlight)" /><circle cx="114" cy="75" r="2" fill="#ffffffc9" /><path d="M120 75h24" stroke="#ffffffc9" stroke-width="2" /><rect x="112" y="80" width="112" height="12" rx="2" fill="#ffffffc9" opacity=".5" /><path d="m142 91-10-8-10 8" fill="none" stroke="#ffffffc9" stroke-width="1.1" /><circle cx="210" cy="83" r="2" fill="#ffffffc9" /><path d="M113 95h4m5 0h4m92 0h4" stroke="#ffffffc9" stroke-width="1.5" stroke-linecap="round" /></g></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g><g class="promotion-slot" data-channel="facebook" style="--slot-delay:-42s"><g class="promotion-preview" data-preview="facebook" data-kind="social"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-facebook" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-feed"><g class=""><rect x="108" y="38" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="45" r="2.5" fill="#cbd3e3" /><path d="M124 44h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="108" y="70" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="77" r="2.5" fill="#cbd3e3" /><path d="M124 76h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class="promotion-post-displaced"><g class=""><rect x="108" y="102" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="109" r="2.5" fill="#cbd3e3" /><path d="M124 108h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="108" y="134" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="141" r="2.5" fill="#cbd3e3" /><path d="M124 140h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="108" y="166" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="173" r="2.5" fill="#cbd3e3" /><path d="M124 172h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g></g></g></g></g><g class="promotion-insert" data-kind="social"><g class="promotion-payload"><rect x="108" y="70" width="120" height="27" rx="4" fill="url(#promotion-highlight)" /><circle cx="116" cy="77" r="2.5" fill="#ffffffb3" /><path d="M124 76h94m-94 6h81" fill="none" stroke="#ffffffb3" stroke-width="2" stroke-linecap="round" /></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g><g class="promotion-slot" data-channel="twitter" style="--slot-delay:-36s"><g class="promotion-preview" data-preview="twitter" data-kind="social"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-twitter" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-feed" data-platform="twitter"><g><rect x="108" y="38" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="116" cy="46" r="4" fill="#c4cddd" /><path d="M126 44h32m-32 6h94m-94 5h74" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M128 62h4m18 0h4m18 0h4m18 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g><g><rect x="108" y="70" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="116" cy="78" r="4" fill="#c4cddd" /><path d="M126 76h32m-32 6h94m-94 5h74" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M128 94h4m18 0h4m18 0h4m18 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g><g class="promotion-post-displaced" data-platform="twitter"><g><rect x="108" y="102" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="116" cy="110" r="4" fill="#c4cddd" /><path d="M126 108h32m-32 6h94m-94 5h74" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M128 126h4m18 0h4m18 0h4m18 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g><g><rect x="108" y="134" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="116" cy="142" r="4" fill="#c4cddd" /><path d="M126 140h32m-32 6h94m-94 5h74" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M128 158h4m18 0h4m18 0h4m18 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g><g><rect x="108" y="166" width="120" height="29" rx="4" fill="#edf0f6" /><circle cx="116" cy="174" r="4" fill="#c4cddd" /><path d="M126 172h32m-32 6h94m-94 5h74" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M128 190h4m18 0h4m18 0h4m18 0h4" stroke="#c4cddd" stroke-width="1.5" stroke-linecap="round" /></g></g></g></g></g><g class="promotion-insert" data-kind="social"><g class="promotion-payload"><g><rect x="108" y="70" width="120" height="29" rx="4" fill="url(#promotion-highlight)" /><circle cx="116" cy="78" r="4" fill="#ffffffc9" /><path d="M126 76h32m-32 6h94m-94 5h74" stroke="#ffffffc9" stroke-width="2" stroke-linecap="round" /><path d="M128 94h4m18 0h4m18 0h4m18 0h4" stroke="#ffffffc9" stroke-width="1.5" stroke-linecap="round" /></g></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g><g class="promotion-slot" data-channel="tiktok" style="--slot-delay:-30s"><g class="promotion-preview" data-preview="tiktok" data-kind="social"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-tiktok" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-feed" data-platform="tiktok"><g><rect x="132" y="38" width="62" height="64" rx="5" fill="#edf0f6" /><path d="m157 61 15 9-15 9z" fill="#c4cddd" /><path d="M138 90h30m-30 5h20" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M205 62c-7-8-12 2 0 9 12-7 7-17 0-9z" fill="#c4cddd" /><circle cx="205" cy="81" r="3" fill="#c4cddd" /><path d="m202 92 7-3-2 7" fill="none" stroke="#c4cddd" stroke-width="1.5" /></g><g class="promotion-post-displaced" data-platform="tiktok"><g><rect x="132" y="110" width="62" height="64" rx="5" fill="#edf0f6" /><path d="m157 133 15 9-15 9z" fill="#c4cddd" /><path d="M138 162h30m-30 5h20" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M205 134c-7-8-12 2 0 9 12-7 7-17 0-9z" fill="#c4cddd" /><circle cx="205" cy="153" r="3" fill="#c4cddd" /><path d="m202 164 7-3-2 7" fill="none" stroke="#c4cddd" stroke-width="1.5" /></g><g><rect x="132" y="182" width="62" height="64" rx="5" fill="#edf0f6" /><path d="m157 205 15 9-15 9z" fill="#c4cddd" /><path d="M138 234h30m-30 5h20" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M205 206c-7-8-12 2 0 9 12-7 7-17 0-9z" fill="#c4cddd" /><circle cx="205" cy="225" r="3" fill="#c4cddd" /><path d="m202 236 7-3-2 7" fill="none" stroke="#c4cddd" stroke-width="1.5" /></g><g><rect x="132" y="254" width="62" height="64" rx="5" fill="#edf0f6" /><path d="m157 277 15 9-15 9z" fill="#c4cddd" /><path d="M138 306h30m-30 5h20" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M205 278c-7-8-12 2 0 9 12-7 7-17 0-9z" fill="#c4cddd" /><circle cx="205" cy="297" r="3" fill="#c4cddd" /><path d="m202 308 7-3-2 7" fill="none" stroke="#c4cddd" stroke-width="1.5" /></g><g><rect x="132" y="326" width="62" height="64" rx="5" fill="#edf0f6" /><path d="m157 349 15 9-15 9z" fill="#c4cddd" /><path d="M138 378h30m-30 5h20" stroke="#c4cddd" stroke-width="2" stroke-linecap="round" /><path d="M205 350c-7-8-12 2 0 9 12-7 7-17 0-9z" fill="#c4cddd" /><circle cx="205" cy="369" r="3" fill="#c4cddd" /><path d="m202 380 7-3-2 7" fill="none" stroke="#c4cddd" stroke-width="1.5" /></g></g></g></g></g><g class="promotion-insert" data-kind="social"><g class="promotion-payload"><g><rect x="132" y="38" width="62" height="64" rx="5" fill="url(#promotion-highlight)" /><path d="m157 61 15 9-15 9z" fill="#ffffffc9" /><path d="M138 90h30m-30 5h20" stroke="#ffffffc9" stroke-width="2" stroke-linecap="round" /><path d="M205 62c-7-8-12 2 0 9 12-7 7-17 0-9z" fill="#ffffffc9" /><circle cx="205" cy="81" r="3" fill="#ffffffc9" /><path d="m202 92 7-3-2 7" fill="none" stroke="#ffffffc9" stroke-width="1.5" /></g></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g><g class="promotion-slot" data-channel="tv" style="--slot-delay:-24s"><g class="promotion-preview" data-preview="tv" data-kind="video"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-tv" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-video-first"><rect x="107" y="38" width="58" height="29" rx="4" fill="#edf0f6" /><path d="m131.36 46.120000000000005 13.92 6.38-13.92 6.38z" fill="#cbd3e3" /></g><g class="promotion-video-displaced"><g class="promotion-video-second"><rect x="171" y="38" width="58" height="29" rx="4" fill="#edf0f6" /><path d="m195.36 46.120000000000005 13.92 6.38-13.92 6.38z" fill="#cbd3e3" /></g><g class="promotion-video-third"><rect x="107" y="76" width="58" height="29" rx="4" fill="#edf0f6" /><path d="m131.36 84.12 13.92 6.38-13.92 6.38z" fill="#cbd3e3" /></g><g class="promotion-video-last"><rect x="171" y="76" width="58" height="29" rx="4" fill="#edf0f6" /><path d="m195.36 84.12 13.92 6.38-13.92 6.38z" fill="#cbd3e3" /></g></g></g></g><g class="promotion-insert" data-kind="video"><g class="promotion-payload"><rect x="107" y="38" width="58" height="29" rx="4" fill="url(#promotion-highlight)" /><path d="m131.36 46.120000000000005 13.92 6.38-13.92 6.38z" fill="#ffffffb3" /></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g><g class="promotion-slot" data-channel="news" style="--slot-delay:-18s"><g class="promotion-preview" data-preview="news" data-kind="social"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-news" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-feed"><g class=""><rect x="108" y="38" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="45" r="2.5" fill="#cbd3e3" /><path d="M124 44h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="108" y="70" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="77" r="2.5" fill="#cbd3e3" /><path d="M124 76h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class="promotion-post-displaced"><g class=""><rect x="108" y="102" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="109" r="2.5" fill="#cbd3e3" /><path d="M124 108h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="108" y="134" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="141" r="2.5" fill="#cbd3e3" /><path d="M124 140h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="108" y="166" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="173" r="2.5" fill="#cbd3e3" /><path d="M124 172h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g></g></g></g></g><g class="promotion-insert" data-kind="social"><g class="promotion-payload"><rect x="108" y="70" width="120" height="27" rx="4" fill="url(#promotion-highlight)" /><circle cx="116" cy="77" r="2.5" fill="#ffffffb3" /><path d="M124 76h94m-94 6h81" fill="none" stroke="#ffffffb3" stroke-width="2" stroke-linecap="round" /></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g><g class="promotion-slot" data-channel="mail" style="--slot-delay:-12s"><g class="promotion-preview" data-preview="mail" data-kind="social"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-mail" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-feed"><g class=""><rect x="108" y="38" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="45" r="2.5" fill="#cbd3e3" /><path d="M124 44h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="108" y="70" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="77" r="2.5" fill="#cbd3e3" /><path d="M124 76h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class="promotion-post-displaced"><g class=""><rect x="108" y="102" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="109" r="2.5" fill="#cbd3e3" /><path d="M124 108h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="108" y="134" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="141" r="2.5" fill="#cbd3e3" /><path d="M124 140h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="108" y="166" width="120" height="27" rx="4" fill="#edf0f6" /><circle cx="116" cy="173" r="2.5" fill="#cbd3e3" /><path d="M124 172h94m-94 6h81" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g></g></g></g></g><g class="promotion-insert" data-kind="social"><g class="promotion-payload"><rect x="108" y="70" width="120" height="27" rx="4" fill="url(#promotion-highlight)" /><circle cx="116" cy="77" r="2.5" fill="#ffffffb3" /><path d="M124 76h94m-94 6h81" fill="none" stroke="#ffffffb3" stroke-width="2" stroke-linecap="round" /></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g><g class="promotion-slot" data-channel="search" style="--slot-delay:-6s"><g class="promotion-preview" data-preview="search" data-kind="search"><rect x="96" y="12" width="145" height="110" rx="10" fill="#fff" stroke="#cbd3eb" stroke-width="1.2" filter="url(#flow-shadow)" /><use href="#ad-search" x="106" y="18" width="12" height="12" /><path d="M125 23h36m64-3 5 5m0-5-5 5" stroke="#c5cce0" stroke-width="1.2" stroke-linecap="round" /><path d="M97 32h143" stroke="#e9ecf5" /><g clip-path="url(#promotion-preview-clip)"><g class="promotion-first"><rect x="107" y="38" width="122" height="19" rx="4" fill="#edf0f6" /><circle cx="115" cy="45" r="2.5" fill="#cbd3e3" /><path d="M123 44h96m-96 6h83" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class="promotion-displaced"><g class=""><rect x="107" y="61" width="122" height="19" rx="4" fill="#edf0f6" /><circle cx="115" cy="68" r="2.5" fill="#cbd3e3" /><path d="M123 67h96m-96 6h83" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g><g class=""><rect x="107" y="84" width="122" height="19" rx="4" fill="#edf0f6" /><circle cx="115" cy="91" r="2.5" fill="#cbd3e3" /><path d="M123 90h96m-96 6h83" fill="none" stroke="#cbd3e3" stroke-width="2" stroke-linecap="round" /></g></g></g></g><g class="promotion-insert" data-kind="search"><g class="promotion-payload"><rect x="107" y="61" width="122" height="19" rx="4" fill="url(#promotion-highlight)" /><circle cx="115" cy="68" r="2.5" fill="#ffffffb3" /><path d="M123 67h96m-96 6h83" fill="none" stroke="#ffffffb3" stroke-width="2" stroke-linecap="round" /></g></g><g class="promotion-ok"><circle cx="227" cy="108" r="9" fill="#e8f6f0" stroke="#9ccfbb" /><path d="m222 108 3 3 6-7" fill="none" stroke="#53a184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><g class="promotion-signals"><path d="M171 119Q140.5 124 110 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q176.5 124 182 135" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q152.5 124 134 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /><path d="M171 119Q200.5 124 230 160" fill="none" stroke="#ae9de1" stroke-width="1.3" stroke-dasharray="3 4" /></g><g class="promotion-reaction" style="--reaction-lag:0.0s"><g transform="translate(104 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="M6 11 1.5 6C-2 1 4-1 6 3c2-4 8-2 4.5 3z" fill="#dc8daf" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.12s"><g transform="translate(176 132)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><use href="#handover-thumb" x="-1" y="-1" width="14" height="14" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.24s"><g transform="translate(128 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><circle cx="6" cy="6" r="6" fill="#f7d98d" /><path d="M3 7q3 4 6 0" fill="none" stroke="#b38a47" stroke-width="1" /><circle cx="4" cy="4" r=".8" fill="#b38a47" /><circle cx="8" cy="4" r=".8" fill="#b38a47" /></g></g><g class="promotion-reaction" style="--reaction-lag:0.36s"><g transform="translate(224 157)"><circle cx="6" cy="6" r="8" fill="#fff" stroke="#e0d7ef" /><path d="m6 0 2 4 4 .5-3 3 .7 4.5L6 10l-3.7 2 .7-4.5-3-3L4 4z" fill="#b09bdb" /></g></g></g></svg></div><div class="flow-caption"><span class="flow-caption__number" aria-hidden="true">05</span><h3 id="flow-title-4">Продвижение и рост</h3><p>Запускаем рекламу и помогаем найти свою аудиторию.</p></div></li></ol></div></div></section>
 
     <!-- ============================================================
          PORTFOLIO
@@ -507,344 +356,13 @@
         <div class="section-header">
           <div>
             <h2 class="section-title">Портфолио</h2>
-            <p class="section-subtitle">Реальные проекты для реального бизнеса. Создаём сайты и продукты, которые приносят результат.</p>
+            <p class="section-subtitle">Сайты услуг, веб-платформы и две браузерные игры. Разные форматы — внимание к каждой задаче.</p>
           </div>
-          <a href="#contact" class="btn-text section-link">Смотреть все кейсы →</a>
+          <a href="portfolio.html" class="btn-text section-link">Смотреть все проекты</a>
         </div>
 
-        <div class="portfolio-grid">
-
-          <!-- TechMarket -->
-          <article class="portfolio-card animate-fade-up">
-            <div class="portfolio-card__image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs>
-                  <linearGradient id="shopHero" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#1A365D"/>
-                    <stop offset="100%" stop-color="#2C5282"/>
-                  </linearGradient>
-                </defs>
-                <rect width="440" height="280" fill="#EDF2F7"/>
-                <!-- Nav -->
-                <rect width="440" height="44" fill="#1A365D"/>
-                <rect x="18" y="17" width="70" height="10" fill="#fff" rx="2" opacity="0.9"/>
-                <rect x="130" y="18" width="170" height="8" fill="#2B6CB0" rx="4"/>
-                <circle cx="380" cy="22" r="10" fill="#2B6CB0"/>
-                <circle cx="410" cy="22" r="10" fill="#E53E3E"/>
-                <!-- Hero banner -->
-                <rect x="0" y="44" width="440" height="90" fill="url(#shopHero)"/>
-                <rect x="20" y="62" width="140" height="18" fill="#fff" rx="3" opacity="0.9"/>
-                <rect x="20" y="88" width="90" height="12" fill="#90CDF4" rx="2" opacity="0.8"/>
-                <rect x="20" y="108" width="110" height="16" fill="#E53E3E" rx="8"/>
-                <rect x="240" y="50" width="180" height="74" fill="#2B6CB0" rx="6" opacity="0.6"/>
-                <!-- Product cards row 1 -->
-                <rect x="12" y="148" width="96" height="86" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="14" y="150" width="92" height="50" fill="#EBF8FF"/>
-                <rect x="20" y="208" width="60" height="8" fill="#4A5568" rx="2"/>
-                <rect x="20" y="220" width="40" height="7" fill="#E53E3E" rx="2"/>
-                <rect x="120" y="148" width="96" height="86" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="122" y="150" width="92" height="50" fill="#FFF5F5"/>
-                <rect x="128" y="208" width="60" height="8" fill="#4A5568" rx="2"/>
-                <rect x="128" y="220" width="40" height="7" fill="#E53E3E" rx="2"/>
-                <rect x="228" y="148" width="96" height="86" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="230" y="150" width="92" height="50" fill="#F0FFF4"/>
-                <rect x="236" y="208" width="60" height="8" fill="#4A5568" rx="2"/>
-                <rect x="236" y="220" width="40" height="7" fill="#E53E3E" rx="2"/>
-                <rect x="336" y="148" width="96" height="86" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="338" y="150" width="92" height="50" fill="#FFFFF0"/>
-                <rect x="344" y="208" width="60" height="8" fill="#4A5568" rx="2"/>
-                <rect x="344" y="220" width="40" height="7" fill="#E53E3E" rx="2"/>
-                <!-- Pagination -->
-                <circle cx="208" cy="264" r="5" fill="#3182CE"/>
-                <circle cx="222" cy="264" r="4" fill="#CBD5E0"/>
-                <circle cx="235" cy="264" r="4" fill="#CBD5E0"/>
-              </svg>
-            </div>
-            <div class="portfolio-card__body">
-              <div class="portfolio-card__type">Интернет-магазин</div>
-              <h3 class="portfolio-card__title">TechMarket</h3>
-              <p class="portfolio-card__desc">Крупный интернет-магазин электроники с каталогом 50 000+ товаров</p>
-              <div class="portfolio-card__tags">
-                <span class="portfolio-card__tag">React</span>
-                <span class="portfolio-card__tag">Laravel</span>
-                <span class="portfolio-card__tag">MySQL</span>
-              </div>
-              <div class="portfolio-card__arrow">
-                <span>Подробнее</span>
-                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
-              </div>
-            </div>
-          </article>
-
-          <!-- Maison Decor -->
-          <article class="portfolio-card animate-fade-up">
-            <div class="portfolio-card__image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs>
-                  <linearGradient id="decorHero" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#C8B89A"/>
-                    <stop offset="100%" stop-color="#A89070"/>
-                  </linearGradient>
-                </defs>
-                <rect width="440" height="280" fill="#FAF7F2"/>
-                <!-- Clean nav -->
-                <rect width="440" height="50" fill="#fff" stroke="#EDE7DD" stroke-width="1"/>
-                <rect x="185" y="20" width="70" height="10" fill="#8C7D6A" rx="2"/>
-                <rect x="20" y="22" width="18" height="2" fill="#C5B9A8"/>
-                <rect x="20" y="28" width="18" height="2" fill="#C5B9A8"/>
-                <rect x="360" y="20" width="60" height="10" fill="#8C7D6A" rx="4"/>
-                <!-- Full-width image hero -->
-                <rect x="0" y="50" width="440" height="140" fill="url(#decorHero)"/>
-                <!-- Interior image shapes -->
-                <rect x="0" y="50" width="220" height="140" fill="#C4B095" opacity="0.5"/>
-                <rect x="220" y="50" width="220" height="140" fill="#A89070" opacity="0.4"/>
-                <!-- Text overlay -->
-                <rect x="24" y="90" width="200" height="24" fill="#fff" rx="3" opacity="0.9"/>
-                <rect x="24" y="122" width="130" height="12" fill="#fff" rx="2" opacity="0.7"/>
-                <rect x="24" y="146" width="110" height="28" fill="#8C7D6A" rx="4"/>
-                <!-- Below: content cards -->
-                <rect x="12" y="206" width="130" height="60" fill="#fff" rx="4" stroke="#EDE7DD" stroke-width="1"/>
-                <rect x="22" y="216" width="80" height="8" fill="#8C7D6A" rx="2"/>
-                <rect x="22" y="232" width="100" height="7" fill="#C5B9A8" rx="2"/>
-                <rect x="22" y="246" width="70" height="7" fill="#C5B9A8" rx="2"/>
-                <rect x="155" y="206" width="130" height="60" fill="#fff" rx="4" stroke="#EDE7DD" stroke-width="1"/>
-                <rect x="165" y="216" width="80" height="8" fill="#8C7D6A" rx="2"/>
-                <rect x="165" y="232" width="100" height="7" fill="#C5B9A8" rx="2"/>
-                <rect x="165" y="246" width="70" height="7" fill="#C5B9A8" rx="2"/>
-                <rect x="298" y="206" width="130" height="60" fill="#fff" rx="4" stroke="#EDE7DD" stroke-width="1"/>
-                <rect x="308" y="216" width="80" height="8" fill="#8C7D6A" rx="2"/>
-                <rect x="308" y="232" width="100" height="7" fill="#C5B9A8" rx="2"/>
-                <rect x="308" y="246" width="70" height="7" fill="#C5B9A8" rx="2"/>
-              </svg>
-            </div>
-            <div class="portfolio-card__body">
-              <div class="portfolio-card__type">Дизайн интерьеров</div>
-              <h3 class="portfolio-card__title">Maison Decor</h3>
-              <p class="portfolio-card__desc">Сайт-визитка для студии премиального дизайна интерьеров</p>
-              <div class="portfolio-card__tags">
-                <span class="portfolio-card__tag">Vue.js</span>
-                <span class="portfolio-card__tag">GSAP</span>
-                <span class="portfolio-card__tag">Figma</span>
-              </div>
-              <div class="portfolio-card__arrow">
-                <span>Подробнее</span>
-                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
-              </div>
-            </div>
-          </article>
-
-          <!-- MoveApp -->
-          <article class="portfolio-card animate-fade-up">
-            <div class="portfolio-card__image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs>
-                  <linearGradient id="appBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#0F0A2A"/>
-                    <stop offset="100%" stop-color="#1E0D4E"/>
-                  </linearGradient>
-                  <radialGradient id="appGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.4"/>
-                    <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
-                  </radialGradient>
-                </defs>
-                <rect width="440" height="280" fill="url(#appBg)"/>
-                <!-- Glow -->
-                <ellipse cx="220" cy="140" rx="150" ry="120" fill="url(#appGlow)"/>
-                <!-- Phone frame -->
-                <rect x="155" y="14" width="130" height="252" fill="#120833" rx="20" stroke="#4A1D96" stroke-width="2"/>
-                <!-- Notch -->
-                <rect x="192" y="18" width="56" height="6" fill="#0F0A2A" rx="3"/>
-                <!-- Screen content -->
-                <rect x="162" y="30" width="116" height="226" fill="#1E0D4E" rx="14"/>
-                <!-- Avatar / profile top -->
-                <circle cx="220" cy="58" r="18" fill="#6D28D9"/>
-                <rect x="197" y="82" width="46" height="7" fill="#E9D5FF" rx="3"/>
-                <rect x="205" y="93" width="30" height="5" fill="#7C3AED" rx="2"/>
-                <!-- Stats bar -->
-                <rect x="168" y="108" width="104" height="34" fill="#2D1065" rx="8"/>
-                <rect x="175" y="115" width="24" height="4" fill="#A78BFA" rx="2"/>
-                <rect x="175" y="123" width="16" height="8" fill="#C4B5FD" rx="2"/>
-                <rect x="215" y="115" width="24" height="4" fill="#A78BFA" rx="2"/>
-                <rect x="215" y="123" width="16" height="8" fill="#C4B5FD" rx="2"/>
-                <rect x="255" y="115" width="10" height="4" fill="#A78BFA" rx="2"/>
-                <rect x="255" y="123" width="10" height="8" fill="#C4B5FD" rx="2"/>
-                <!-- Chart area -->
-                <rect x="168" y="150" width="104" height="56" fill="#1A0840" rx="8"/>
-                <polyline points="175,195 185,178 200,185 215,165 235,172 255,160 268,168" fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-linejoin="round"/>
-                <polyline points="175,195 185,178 200,185 215,165 235,172 255,160 268,168" fill="url(#appGlow)" opacity="0.3"/>
-                <!-- Bottom tabs -->
-                <rect x="168" y="216" width="104" height="32" fill="#1E0D4E" rx="8"/>
-                <circle cx="189" cy="232" r="6" fill="#7C3AED"/>
-                <circle cx="220" cy="232" r="6" fill="#4A1D96"/>
-                <circle cx="251" cy="232" r="6" fill="#4A1D96"/>
-                <!-- Outside phone text -->
-                <rect x="18" y="80" width="120" height="18" fill="#E9D5FF" rx="3" opacity="0.8"/>
-                <rect x="18" y="106" width="90" height="10" fill="#A78BFA" rx="2" opacity="0.6"/>
-                <rect x="18" y="124" width="110" height="10" fill="#7C3AED" rx="2" opacity="0.5"/>
-                <rect x="18" y="148" width="80" height="20" fill="#6D28D9" rx="10"/>
-                <rect x="28" y="154" width="60" height="8" fill="#fff" rx="4" opacity="0.8"/>
-                <!-- Right side stats -->
-                <rect x="308" y="80" width="114" height="50" fill="rgba(109,40,217,0.2)" rx="10" stroke="#4A1D96" stroke-width="1"/>
-                <rect x="318" y="90" width="60" height="8" fill="#A78BFA" rx="2"/>
-                <rect x="318" y="104" width="80" height="16" fill="#7C3AED" rx="3"/>
-                <rect x="308" y="144" width="114" height="50" fill="rgba(109,40,217,0.2)" rx="10" stroke="#4A1D96" stroke-width="1"/>
-                <rect x="318" y="154" width="60" height="8" fill="#A78BFA" rx="2"/>
-                <rect x="318" y="168" width="80" height="16" fill="#6D28D9" rx="3"/>
-              </svg>
-            </div>
-            <div class="portfolio-card__body">
-              <div class="portfolio-card__type">Мобильное приложение</div>
-              <h3 class="portfolio-card__title">MoveApp</h3>
-              <p class="portfolio-card__desc">Фитнес-трекер с элементами геймификации и социальной сети</p>
-              <div class="portfolio-card__tags">
-                <span class="portfolio-card__tag">React Native</span>
-                <span class="portfolio-card__tag">Node.js</span>
-                <span class="portfolio-card__tag">MongoDB</span>
-              </div>
-              <div class="portfolio-card__arrow">
-                <span>Подробнее</span>
-                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
-              </div>
-            </div>
-          </article>
-
-          <!-- SkyTravel -->
-          <article class="portfolio-card animate-fade-up">
-            <div class="portfolio-card__image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <defs>
-                  <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#1E3A5F"/>
-                    <stop offset="60%" stop-color="#2E6FA3"/>
-                    <stop offset="100%" stop-color="#5BA3D9"/>
-                  </linearGradient>
-                  <linearGradient id="sea" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#1A4F7A"/>
-                    <stop offset="100%" stop-color="#0D3358"/>
-                  </linearGradient>
-                </defs>
-                <rect width="440" height="280" fill="url(#sky)"/>
-                <!-- Stars -->
-                <circle cx="60" cy="30" r="1.5" fill="#fff" opacity="0.8"/>
-                <circle cx="120" cy="50" r="1" fill="#fff" opacity="0.6"/>
-                <circle cx="200" cy="20" r="1.5" fill="#fff" opacity="0.7"/>
-                <circle cx="300" cy="40" r="1" fill="#fff" opacity="0.5"/>
-                <circle cx="380" cy="25" r="1.5" fill="#fff" opacity="0.8"/>
-                <circle cx="420" cy="60" r="1" fill="#fff" opacity="0.6"/>
-                <!-- Moon -->
-                <circle cx="390" cy="45" r="22" fill="#FEF3C7" opacity="0.9"/>
-                <circle cx="398" cy="38" r="17" fill="#2E6FA3"/>
-                <!-- Mountains -->
-                <polygon points="0,200 80,100 160,200" fill="#1A3A5C"/>
-                <polygon points="60,200 160,80 260,200" fill="#1E4570"/>
-                <polygon points="200,200 300,100 400,200" fill="#1A3A5C"/>
-                <polygon points="300,200 400,90 440,150 440,200" fill="#1E4570"/>
-                <!-- Snow caps -->
-                <polygon points="80,100 95,130 65,130" fill="#fff" opacity="0.7"/>
-                <polygon points="160,80 175,115 145,115" fill="#fff" opacity="0.7"/>
-                <polygon points="300,100 315,130 285,130" fill="#fff" opacity="0.7"/>
-                <!-- Sea / water -->
-                <rect x="0" y="200" width="440" height="80" fill="url(#sea)"/>
-                <path d="M0,210 Q55,202 110,210 T220,210 T330,210 T440,210 L440,280 L0,280 Z" fill="#0D3358" opacity="0.5"/>
-                <!-- Transparent glass nav -->
-                <rect x="0" y="0" width="440" height="46" fill="rgba(0,0,0,0.3)"/>
-                <rect x="16" y="16" width="70" height="14" fill="#fff" rx="3" opacity="0.9"/>
-                <rect x="260" y="19" width="40" height="8" fill="#fff" rx="2" opacity="0.6"/>
-                <rect x="310" y="19" width="40" height="8" fill="#fff" rx="2" opacity="0.6"/>
-                <rect x="360" y="14" width="64" height="18" fill="#3B82F6" rx="9"/>
-                <rect x="366" y="19" width="52" height="8" fill="#fff" rx="4" opacity="0.85"/>
-                <!-- Hero card -->
-                <rect x="20" y="70" width="200" height="110" fill="rgba(255,255,255,0.12)" rx="12" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-                <rect x="34" y="84" width="130" height="16" fill="#fff" rx="3" opacity="0.9"/>
-                <rect x="34" y="106" width="100" height="10" fill="#BAE6FD" rx="2" opacity="0.8"/>
-                <rect x="34" y="122" width="80" height="10" fill="#BAE6FD" rx="2" opacity="0.6"/>
-                <rect x="34" y="144" width="110" height="24" fill="#3B82F6" rx="12"/>
-                <rect x="44" y="150" width="90" height="12" fill="#fff" rx="6" opacity="0.9"/>
-              </svg>
-            </div>
-            <div class="portfolio-card__body">
-              <div class="portfolio-card__type">Лендинг</div>
-              <h3 class="portfolio-card__title">SkyTravel</h3>
-              <p class="portfolio-card__desc">Агрегатор авторских туров с онлайн-бронированием</p>
-              <div class="portfolio-card__tags">
-                <span class="portfolio-card__tag">HTML/CSS</span>
-                <span class="portfolio-card__tag">JavaScript</span>
-                <span class="portfolio-card__tag">PHP</span>
-              </div>
-              <div class="portfolio-card__arrow">
-                <span>Подробнее</span>
-                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
-              </div>
-            </div>
-          </article>
-
-          <!-- Объяви.ру -->
-          <article class="portfolio-card animate-fade-up">
-            <div class="portfolio-card__image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <rect width="440" height="280" fill="#F7FAFC"/>
-                <!-- Nav bar -->
-                <rect width="440" height="50" fill="#2B8A6E"/>
-                <rect x="16" y="15" width="80" height="20" fill="#fff" rx="4" opacity="0.9"/>
-                <rect x="116" y="16" width="200" height="18" fill="#1A6B54" rx="4"/>
-                <rect x="330" y="16" width="20" height="18" fill="#E6FFFA" rx="3"/>
-                <circle cx="398" cy="25" r="14" fill="#fff" opacity="0.9"/>
-                <!-- Filter sidebar -->
-                <rect x="0" y="50" width="100" height="230" fill="#EDF2F7"/>
-                <rect x="10" y="66" width="80" height="12" fill="#4A5568" rx="3"/>
-                <rect x="10" y="88" width="60" height="8" fill="#A0AEC0" rx="2"/>
-                <rect x="10" y="104" width="70" height="8" fill="#A0AEC0" rx="2"/>
-                <rect x="10" y="120" width="55" height="8" fill="#A0AEC0" rx="2"/>
-                <rect x="10" y="136" width="65" height="8" fill="#A0AEC0" rx="2"/>
-                <rect x="10" y="154" width="80" height="12" fill="#4A5568" rx="3"/>
-                <rect x="10" y="174" width="60" height="8" fill="#A0AEC0" rx="2"/>
-                <rect x="10" y="190" width="70" height="8" fill="#A0AEC0" rx="2"/>
-                <!-- Product grid -->
-                <!-- Row 1 -->
-                <rect x="108" y="58" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="110" y="60" width="96" height="58" fill="#E6FFFA"/>
-                <rect x="116" y="124" width="70" height="8" fill="#2D3748" rx="2"/>
-                <rect x="116" y="138" width="50" height="7" fill="#2B8A6E" rx="2"/>
-                <rect x="218" y="58" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="220" y="60" width="96" height="58" fill="#EDF2F7"/>
-                <rect x="226" y="124" width="70" height="8" fill="#2D3748" rx="2"/>
-                <rect x="226" y="138" width="50" height="7" fill="#2B8A6E" rx="2"/>
-                <rect x="328" y="58" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="330" y="60" width="96" height="58" fill="#FFFBEB"/>
-                <rect x="336" y="124" width="70" height="8" fill="#2D3748" rx="2"/>
-                <rect x="336" y="138" width="50" height="7" fill="#2B8A6E" rx="2"/>
-                <!-- Row 2 -->
-                <rect x="108" y="168" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="110" y="170" width="96" height="58" fill="#FFF5F5"/>
-                <rect x="116" y="234" width="70" height="8" fill="#2D3748" rx="2"/>
-                <rect x="116" y="248" width="50" height="7" fill="#2B8A6E" rx="2"/>
-                <rect x="218" y="168" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="220" y="170" width="96" height="58" fill="#EBF8FF"/>
-                <rect x="226" y="234" width="70" height="8" fill="#2D3748" rx="2"/>
-                <rect x="226" y="248" width="50" height="7" fill="#2B8A6E" rx="2"/>
-                <rect x="328" y="168" width="100" height="100" fill="#fff" rx="6" stroke="#E2E8F0" stroke-width="1"/>
-                <rect x="330" y="170" width="96" height="58" fill="#F0FFF4"/>
-                <rect x="336" y="234" width="70" height="8" fill="#2D3748" rx="2"/>
-                <rect x="336" y="248" width="50" height="7" fill="#2B8A6E" rx="2"/>
-              </svg>
-            </div>
-            <div class="portfolio-card__body">
-              <div class="portfolio-card__type">Доска объявлений</div>
-              <h3 class="portfolio-card__title">Объяви.ру</h3>
-              <p class="portfolio-card__desc">Высоконагруженный портал с миллионом посещений в сутки</p>
-              <div class="portfolio-card__tags">
-                <span class="portfolio-card__tag">Laravel</span>
-                <span class="portfolio-card__tag">PostgreSQL</span>
-                <span class="portfolio-card__tag">Redis</span>
-              </div>
-              <div class="portfolio-card__arrow">
-                <span>Подробнее</span>
-                <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" aria-hidden="true">
-              </div>
-            </div>
-          </article>
-
-        </div>
+        <p class="content-note portfolio-note">Шесть работ из портфолио команды. Пока представлены концепт-превью; реальные изображения и подробности кейсов будут добавлены.</p>
+        <div class="portfolio-grid" data-projects></div>
       </div>
     </section>
 
@@ -855,8 +373,8 @@
       <div class="container">
         <div class="section-header partners__header">
           <div>
-            <h2 class="section-title">Партнёры</h2>
-            <p class="section-subtitle">Нам доверяют компании из разных сфер. Строим долгосрочные партнёрские отношения и растём вместе.</p>
+            <h2 class="section-title">Партнёры <span class="demo-badge">Демо</span></h2>
+            <p class="section-subtitle">Демонстрационный блок: здесь появятся компании, с которыми мы сотрудничали, после согласования публикации названий и логотипов.</p>
           </div>
         </div>
 
@@ -876,95 +394,37 @@
     <!-- ============================================================
          CONTACT
     ============================================================ -->
-    <section class="contact" id="contact" style="scroll-margin-top: 80px;">
-      <div class="container">
-        <div class="contact__inner">
 
-          <!-- Left info -->
-          <div class="contact__info">
-            <p class="contact__eyebrow">НАЧНЁМ СОТРУДНИЧЕСТВО?</p>
-            <h2 class="contact__title">Оставьте заявку —<br>и мы свяжемся с вами</h2>
-            <p class="contact__desc">Обсудим ваш проект, подберём оптимальное решение и подготовим предварительную оценку.</p>
+    <section class="team-section" id="team"><div class="container"><div class="section-header"><div><p class="section-tag">КОМАНДА И СОПРОВОЖДЕНИЕ</p><h2 class="section-title">Разные компетенции — одна команда</h2><p class="section-subtitle">Программист, дизайнер и маркетолог работают над общей задачей. ИИ-помощник ускоряет рутину, а решения и результат проверяют специалисты.</p></div></div><div class="team-grid">
+      <article class="team-card"><div class="service-card__icon service-card__icon--blue"><img src="assets/icons/code.svg" width="24" height="24" alt=""></div><h3>Программист</h3><p>Архитектура, разработка, интеграции и проверка работы продукта.</p></article>
+      <article class="team-card"><div class="service-card__icon service-card__icon--violet"><img src="assets/icons/design.svg" width="24" height="24" alt=""></div><h3>Дизайнер</h3><p>Структура, пользовательские сценарии и визуальный характер интерфейса.</p></article>
+      <article class="team-card"><div class="service-card__icon service-card__icon--cyan"><img src="assets/icons/marketing.svg" width="24" height="24" alt=""></div><h3>Маркетолог</h3><p>Аудитория, позиционирование и понятный путь к целевому действию.</p></article>
+      <article class="team-card"><div class="service-card__icon service-card__icon--pink"><span class="ai-symbol">AI</span></div><h3>ИИ-помощник</h3><p>Варианты идей, помощь с кодом и материалами под контролем команды.</p></article>
+    </div><div class="support-card"><div><h3>После запуска — остаёмся рядом</h3><p>Поддерживаем разработанные проекты: устраняем ошибки, обновляем компоненты и добавляем функции. Объём сопровождения, сроки реакции и стоимость согласуем отдельно.</p></div><a class="btn-secondary" href="article.html?id=support">Как устроена поддержка →</a></div></div></section>
 
-            <ul class="contact__advantages">
-              <li class="contact__advantage">
-                <img src="assets/icons/check.svg" alt="" width="20" height="20" class="contact__adv-icon" aria-hidden="true">
-                <span>Бесплатная консультация</span>
-              </li>
-              <li class="contact__advantage">
-                <img src="assets/icons/check.svg" alt="" width="20" height="20" class="contact__adv-icon" aria-hidden="true">
-                <span>Ответ в течение 1 часа</span>
-              </li>
-              <li class="contact__advantage">
-                <img src="assets/icons/check.svg" alt="" width="20" height="20" class="contact__adv-icon" aria-hidden="true">
-                <span>Индивидуальное предложение</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Right form -->
-          <div class="contact__form-wrap">
-            <form class="contact-form" id="contact-form" novalidate>
-
-              <div class="form-group">
-                <label for="name">Ваше имя <span class="form-required">*</span></label>
-                <input type="text" id="name" name="name" placeholder="Иван Иванов" autocomplete="name">
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Телефон <span class="form-required">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="example@mail.ru" autocomplete="email">
-              </div>
-
-              <div class="form-group">
-                <label for="project_type">Тип проекта</label>
-                <select id="project_type" name="project_type">
-                  <option value="">— Выберите тип проекта —</option>
-                  <option value="card">Сайт-визитка</option>
-                  <option value="landing">Лендинг</option>
-                  <option value="shop">Интернет-магазин</option>
-                  <option value="corporate">Корпоративный сайт</option>
-                  <option value="mobile">Мобильное приложение</option>
-                  <option value="forum">Форум</option>
-                  <option value="board">Доска объявлений</option>
-                  <option value="webservice">Веб-сервис</option>
-                  <option value="uxui">UI/UX дизайн</option>
-                  <option value="redesign">Редизайн</option>
-                  <option value="seo">Продвижение</option>
-                  <option value="other">Другое</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Расскажите о проекте</label>
-                <textarea id="message" name="message" rows="4" placeholder="Кратко опишите задачу, сроки, бюджет…"></textarea>
-              </div>
-
-              <button type="submit" class="btn-primary form-submit-btn">
-                Отправить заявку <span aria-hidden="true">→</span>
-              </button>
-
-              <p class="form-privacy">Мы не передаём ваши данные третьим лицам.</p>
-            </form>
-
-            <!-- Success state -->
-            <div class="form-success" role="alert" aria-live="polite">
-              <div class="form-success__icon" aria-hidden="true">✓</div>
-              <h3>Спасибо!</h3>
-              <p>Мы получили вашу заявку и скоро свяжемся с вами.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <section class="contact calculator" id="contact" style="scroll-margin-top:80px"><div class="container"><div class="section-header"><div><p class="contact__eyebrow">ОТ ИДЕИ К ПОНЯТНОЙ ОЦЕНКЕ</p><h2 class="section-title">Соберите свой проект</h2><p class="section-subtitle">Выберите формат и функции — посмотрите, как меняется пример сайта и из чего складывается стоимость.</p></div><span class="demo-badge">Демонстрационные тарифы · EUR</span></div><div class="calculator-layout">
+      <div class="estimate-controls"><form class="contact-form estimate-form" id="estimate-form"><fieldset><legend><span>01</span> Основа проекта</legend><div class="form-group"><label for="estimate-type">Какой проект нужен?</label><select id="estimate-type"><option value="800" data-type="landing">Лендинг</option><option value="1000" data-type="card">Сайт-визитка</option><option value="1600" data-type="corporate">Корпоративный сайт</option><option value="2200" data-type="shop">Интернет-магазин</option><option value="3200" data-type="platform">Веб-приложение</option><option value="2500" data-type="game">Браузерная игра</option></select></div><div class="form-group"><label for="estimate-menu">Тип навигации</label><select id="estimate-menu"><option value="0">Обычное меню</option><option value="150">Полноэкранное меню</option><option value="300">Мегаменю с разделами</option></select></div></fieldset>
+      <fieldset><legend><span>02</span> Функции и возможности</legend><div class="estimate-features"><label data-for="landing card corporate shop platform game"><input type="checkbox" name="feature" value="120" data-feature="form" data-label="Форма заявки"><span>Форма заявки<small>+120 €</small></span></label>
+<label data-for="landing card corporate shop"><input type="checkbox" name="feature" value="350" data-feature="cms" data-label="Управление контентом"><span>Управление контентом<small>+350 €</small></span></label>
+<label data-for="corporate shop platform"><input type="checkbox" name="feature" value="250" data-feature="catalog" data-label="Каталог и фильтры"><span>Каталог и фильтры<small>+250 €</small></span></label>
+<label data-for="shop platform game"><input type="checkbox" name="feature" value="500" data-feature="account" data-label="Личный кабинет"><span>Личный кабинет<small>+500 €</small></span></label>
+<label data-for="shop platform"><input type="checkbox" name="feature" value="400" data-feature="payment" data-label="Онлайн-оплата"><span>Онлайн-оплата<small>+400 €</small></span></label>
+<label data-for="landing card corporate shop platform game"><input type="checkbox" name="feature" value="300" data-feature="language" data-label="Мультиязычность"><span>Мультиязычность<small>+300 €</small></span></label>
+<label data-for="landing card corporate shop platform game"><input type="checkbox" name="feature" value="150" data-feature="theme" data-label="Светлая / тёмная тема"><span>Светлая / тёмная тема<small>+150 €</small></span></label>
+<label data-for="landing card corporate shop platform"><input type="checkbox" name="feature" value="180" data-feature="search" data-label="Поиск по сайту"><span>Поиск по сайту<small>+180 €</small></span></label>
+<label data-for="landing card corporate shop"><input type="checkbox" name="feature" value="220" data-feature="carousel" data-label="Карусели и отзывы"><span>Карусели и отзывы<small>+220 €</small></span></label>
+<label data-for="landing card corporate"><input type="checkbox" name="feature" value="140" data-feature="tabs" data-label="Интерактивные табы"><span>Интерактивные табы<small>+140 €</small></span></label>
+<label data-for="landing card corporate shop"><input type="checkbox" name="feature" value="120" data-feature="map" data-label="Google Карта"><span>Google Карта<small>+120 €</small></span></label>
+<label data-for="landing card corporate shop platform"><input type="checkbox" name="feature" value="300" data-feature="crm" data-label="CRM-интеграция"><span>CRM-интеграция<small>+300 €</small></span></label>
+<label data-for="landing card corporate shop platform game"><input type="checkbox" name="feature" value="250" data-feature="animation" data-label="Дополнительная анимация"><span>Дополнительная анимация<small>+250 €</small></span></label>
+<label data-for="game"><input type="checkbox" name="feature" value="200" data-feature="leaderboard" data-label="Таблица результатов"><span>Таблица результатов<small>+200 €</small></span></label>
+</div><p class="field-hint">Доступные функции зависят от типа проекта. Интеграции оцениваются для одного согласованного сервиса.</p></fieldset>
+      <fieldset><legend><span>03</span> Ваша задача</legend><div class="form-group"><label for="estimate-note">Что важно учесть? Необязательно</label><textarea id="estimate-note" rows="3" maxlength="2000" placeholder="Для кого проект, какую задачу он должен решить?"></textarea></div></fieldset><button class="btn-text" id="estimate-reset" type="button">Сбросить выбор</button></form><aside class="estimate-summary" aria-label="Предварительная стоимость"><span class="section-tag">ВАША КОНФИГУРАЦИЯ</span><h3>Понятно, за что платите</h3><p class="estimate-summary__intro" id="estimate-count">Базовая конфигурация</p><div class="estimate-lines" id="estimate-lines"></div><div class="estimate-total" aria-live="polite" aria-atomic="true"><span>Предварительно от</span><strong class="gradient-text" id="estimate-total">800 €</strong></div><ul class="estimate-included" id="estimate-base-included"><li>✓ Адаптивный дизайн</li><li>✓ Разработка и базовая проверка</li></ul><button type="button" class="btn-primary" id="estimate-download">Скачать расчёт <span>↓</span></button><p class="field-hint" id="estimate-status" role="status"></p><p class="estimate-disclaimer">Цены демонстрационные, не оферта. Итоговая стоимость и сроки определяются после согласования задания. Домен, хостинг, контент, платные сервисы и поддержка — отдельно.</p><p class="estimate-disclaimer">Расчёт скачивается файлом. Данные не отправляются команде — подключение приёма заявок планируется отдельно.</p></aside></div>
+<div class="estimate-workspace"><section class="estimate-preview" aria-labelledby="estimate-preview-title"><div class="estimate-preview__heading"><div><span class="section-tag">ВАШ ПРОЕКТ В ДЕЙСТВИИ</span><h3 id="estimate-preview-title">Ваш проект. В деталях.</h3></div><div class="estimate-device" role="group" aria-label="Размер предпросмотра"><button type="button" data-preview-device="desktop" aria-pressed="true">Компьютер</button><button type="button" data-preview-device="mobile" aria-pressed="false">Телефон</button></div></div><p class="estimate-preview__hint">Полноценный фронтенд-пример: исследуйте страницы, открывайте карточки и пробуйте функции. Выбранные опции сразу появляются в проекте.</p><div class="estimate-browser"><div class="estimate-preview-tools"><label for="estimate-zoom">Масштаб</label><select id="estimate-zoom"><option value="fit">Вписать</option><option value="0.5" selected>50%</option><option value="0.75">75%</option><option value="1">100%</option></select><span id="estimate-preview-scale">1440 px · 50%</span><button type="button" id="estimate-preview-restart">Начать заново ↻</button></div><div class="estimate-browser__bar"><span aria-hidden="true">● ● ●</span><span id="estimate-preview-location">forma / landing</span><span>Демо</span></div><div class="estimate-viewport" id="estimate-viewport"><div class="estimate-canvas" id="estimate-canvas"><iframe id="estimate-preview-frame" src="project-preview.html" title="Интерактивный пример выбранного проекта" sandbox="allow-scripts allow-forms" loading="lazy"></iframe></div></div></div><div class="estimate-preview__explanation" role="status" id="estimate-preview-explanation"></div><p class="estimate-preview__hint">EN / RO / RU показывают принцип перевода. Состав языков и объём перевода согласуем отдельно. Данные профиля, корзина и заказы сохраняются в рамках открытого примера. Реальные платежи и отправка заявок не выполняются.</p></section>      </div>
+    </div></div></section>
 
   </main>
+  <noscript><p class="content-note">Для калькулятора и просмотра списка работ включите JavaScript. Описание услуг и команды доступно без него.</p></noscript>
 
   <!-- ============================================================
        FOOTER
@@ -975,19 +435,9 @@
 
         <!-- Brand column -->
         <div class="footer__brand">
-          <a href="#" class="footer__logo">Nexora</a>
+          <a href="index.html" class="footer__logo">Nexora</a>
           <p class="footer__desc">Создаём цифровые продукты, которые помогают бизнесу расти.</p>
-          <div class="footer__socials">
-            <a href="#" class="footer__social" aria-label="Telegram">
-              <img src="assets/icons/telegram.svg" alt="" width="20" height="20">
-            </a>
-            <a href="#" class="footer__social" aria-label="VK">
-              <img src="assets/icons/vk.svg" alt="" width="20" height="20">
-            </a>
-            <a href="#" class="footer__social" aria-label="YouTube">
-              <img src="assets/icons/youtube.svg" alt="" width="20" height="20">
-            </a>
-          </div>
+          
         </div>
 
         <!-- Services column -->
@@ -1007,42 +457,26 @@
         <div class="footer__col">
           <h4 class="footer__col-title">Компания</h4>
           <ul>
-            <li><a href="#partners">О нас</a></li>
-            <li><a href="#portfolio">Кейсы</a></li>
+            <li><a href="#team">Команда</a></li>
+            <li><a href="portfolio.html">Кейсы</a></li>
             <li><a href="#process">Этапы работы</a></li>
             <li><a href="#partners">Партнёры</a></li>
-            <li><a href="#contact">Блог</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="blog.html">Блог</a></li>
           </ul>
         </div>
 
         <!-- Contacts column -->
         <div class="footer__col">
           <h4 class="footer__col-title">Контакты</h4>
-          <ul class="footer__contacts">
-            <li>
-              <img src="assets/icons/mail.svg" alt="" width="16" height="16" aria-hidden="true">
-              <a href="mailto:hello@nexora.ru">hello@nexora.ru</a>
-            </li>
-            <li>
-              <img src="assets/icons/phone.svg" alt="" width="16" height="16" aria-hidden="true">
-              <a href="tel:+79991234567">+7 (999) 123-45-67</a>
-            </li>
-            <li>
-              <img src="assets/icons/location.svg" alt="" width="16" height="16" aria-hidden="true">
-              <span>г. Москва, ул. Примерная, 10</span>
-            </li>
-          </ul>
+          <ul class="footer__contacts"><li><span>Работаем удалённо</span></li><li><a href="#contact">Собрать оценку проекта →</a></li><li><span>Контакты будут добавлены перед запуском</span></li></ul>
         </div>
 
       </div>
 
       <div class="footer__bottom">
         <p class="footer__copy">© 2026 Nexora. Все права защищены.</p>
-        <div class="footer__bottom-links">
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Пользовательское соглашение</a>
-        </div>
+        <div class="footer__bottom-links"><a href="portfolio.html">Портфолио</a><a href="blog.html">Блог команды</a></div>
       </div>
     </div>
   </footer>
@@ -1052,8 +486,16 @@
   <!-- Isotope — фильтрация карточек технологий -->
   <script src="assets/vendor/isotope.pkgd.min.js"></script>
   <script src="js/technologies-filter.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/enhancements.js"></script>
+  <script src="js/calculator-preview.js"></script>
   <script src="js/portfolio.js"></script>
-  <script src="js/form.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/process-flow.js"></script>
 </body>
 </html>
+
+
+
+
+

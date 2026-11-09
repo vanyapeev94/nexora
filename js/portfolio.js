@@ -27,7 +27,7 @@
       dot.setAttribute('aria-label', `Проект ${i + 1}`);
       dot.addEventListener('click', () => {
         const card = cards[i];
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        card.scrollIntoView({ behavior: document.documentElement.dataset.motion === 'off' || window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest', inline: 'start' });
       });
       dots.appendChild(dot);
     });

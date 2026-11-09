@@ -1,0 +1,257 @@
+/* Process conveyor — uses the existing Nexora blue/lavender/cyan palette. */
+.motion-toggle{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-border);background:rgba(255,255,255,.8);color:var(--color-muted);padding:10px 13px;border-radius:8px;font-size:11px;font-weight:500;white-space:nowrap}
+.motion-toggle__track{display:block;position:relative;width:27px;height:16px;border-radius:8px;background:#dce2f5;transition:background .2s}
+.motion-toggle__track:after{content:'';position:absolute;left:3px;top:3px;width:10px;height:10px;border-radius:50%;background:white;box-shadow:0 1px 3px #6578ff30;transition:transform .2s}
+html[data-motion="on"] .motion-toggle__track{background:var(--gradient-cta)}
+html[data-motion="on"] .motion-toggle__track:after{transform:translateX(11px)}
+.header__motion{padding:9px;width:37px;height:37px;justify-content:center;flex-shrink:0}
+.header__motion .motion-toggle__track{flex-shrink:0}
+/* Compact, language-independent scenes. Text is allowed only as code. */
+.flow-heading{align-items:center;margin-bottom:26px}
+.flow-heading .section-title{margin-bottom:0}
+.flow-motion-toggle{width:38px;height:32px;padding:8px;justify-content:center}
+.pipeline{--cycle:12s;position:relative;max-width:1380px;margin-inline:auto;padding:24px 0;isolation:isolate}
+.pipeline__stages{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:center;gap:22px;list-style:none;margin:0;padding:0}
+.flow-stage{position:relative;min-width:0;--offset:0s}
+.flow-stage:nth-child(2){--offset:-9.6s}.flow-stage:nth-child(3){--offset:-7.2s}.flow-stage:nth-child(4){--offset:-4.8s}.flow-stage:nth-child(5){--offset:-2.4s}
+.flow-scene{width:100%;max-width:200px;aspect-ratio:260/200;margin-inline:auto;position:relative}
+.flow-scene svg{width:100%;height:100%;display:block;overflow:visible}
+.flow-svg-defs{position:absolute;width:0;height:0;overflow:hidden}
+.flow-svg [data-anim]{transform-box:fill-box;transform-origin:center}
+.flow-svg .paper{fill:#fff;stroke:#d4dbef;stroke-width:1.2}
+.flow-svg .line{fill:none;stroke:#bdc9e9;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.flow-svg .desk{fill:none;stroke:#d2d9ed;stroke-width:3;stroke-linecap:round}
+.flow-svg .bubble-dot{fill:#fff;stroke:#d4dbef;stroke-width:1.2}
+.flow-svg .check{fill:none;stroke:#a695d6;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.flow-svg .check-white{fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.flow-svg .code-text{font:12px Consolas,monospace;fill:#9b9ccb}
+.flow-svg .svg-cursor{fill:#9e99d8;stroke:#fff;stroke-width:1}
+.flow-svg .flow-flash{opacity:0}
+.pipeline__stages{align-items:start}
+.flow-caption{max-width:250px;margin:26px auto 0;text-align:center}
+.flow-caption__number{display:inline-flex;align-items:center;justify-content:center;width:36px;height:30px;border:1px solid #dce1f5;border-radius:8px;background:linear-gradient(135deg,#edf1ff,#f2eafa);font-size:16px;font-weight:600;letter-spacing:.02em;color:#7d79ad;margin-bottom:16px}
+.flow-caption h3{font-size:18px;font-weight:600;line-height:1.45;letter-spacing:-.015em;color:var(--color-text);margin:0 0 12px}
+.flow-caption p{font-size:16px;line-height:1.7;color:var(--color-muted);margin:0;text-wrap:pretty}
+.flow-link{position:absolute;left:calc(100% - 3px);top:49%;height:18px;width:28px;pointer-events:none}
+.flow-link__line{position:absolute;left:0;right:0;top:9px;border-top:1px dashed #c3cdeb}
+.flow-link__line:after{content:'';position:absolute;right:1px;top:-3px;width:5px;height:5px;border-top:1px solid #a9b7df;border-right:1px solid #a9b7df;transform:rotate(45deg)}
+.flow-link__packet{position:absolute;left:8px;top:4px;width:12px;height:9px;border-radius:3px;background:linear-gradient(135deg,#a5b5ee,#b7a5df);box-shadow:0 2px 4px #6578ff15}
+.flow-link__packet:after{content:'';position:absolute;left:3px;top:0;width:5px;height:4px;border-right:1px solid #ffffffb3;border-bottom:1px solid #ffffffb3;transform:rotate(45deg)}
+html[data-motion="on"] .pipeline [data-anim="idea"]{animation:flow-idea 3.6s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="chat-a"]{animation:flow-chat 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="chat-b"]{animation:flow-chat 4.4s -1.05s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="approve"]{animation:flow-approve 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="header"]{animation:flow-assemble 4.4s 0s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="hero"]{animation:flow-assemble 4.4s -.35s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="content"]{animation:flow-assemble 4.4s -.7s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="footer"]{animation:flow-assemble 4.4s -1.05s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="cursor"]{animation:flow-cursor 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="file"]{animation:flow-file 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="gear"]{animation:flow-gear 7.5s linear infinite!important}
+html[data-motion="on"] .pipeline [data-anim="gear-back"]{animation:flow-gear 5.8s linear infinite reverse!important}
+html[data-motion="on"] .pipeline [data-anim="code"]{animation:flow-code 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="test"]{animation:flow-test 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="flash"]{animation:flow-flash 4.4s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="present"]{animation:flow-present 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="client"]{animation:flow-client 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="success"]{animation:flow-success 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="broadcast"]{animation:flow-broadcast 2.8s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="audience-a"]{animation:flow-audience 2.8s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="audience-b"]{animation:flow-audience 2.8s -.5s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="audience-c"]{animation:flow-audience 2.8s -1s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="chart"]{animation:flow-chart 4.4s ease-in-out infinite!important;transform-origin:bottom}
+html[data-motion="on"] .pipeline .flow-link__packet{animation:flow-packet var(--cycle) var(--offset) linear infinite!important}
+@keyframes flow-idea{0%,100%{transform:translateY(0);filter:drop-shadow(0 0 0 #c1b1fc00)}50%{transform:translateY(-5px);filter:drop-shadow(0 0 7px #c1b1fc80)}}
+@keyframes flow-chat{0%,100%{opacity:.35;transform:translateY(5px) scale(.92)}16%{opacity:1;transform:translateY(-2px) scale(1.03)}26%,58%{opacity:1;transform:translateY(0) scale(1)}80%{opacity:.6;transform:translateY(-3px) scale(.97)}}
+@keyframes flow-approve{0%,35%,100%{opacity:.25;transform:scale(.85)}48%{opacity:1;transform:scale(1.14)}57%,82%{opacity:1;transform:scale(1)}}
+@keyframes flow-assemble{0%,100%{opacity:.18;transform:translateY(-13px) scale(.94)}22%{opacity:1;transform:translateY(2px) scale(1.02)}30%,67%{opacity:1;transform:translateY(0) scale(1)}86%{opacity:.45;transform:translateY(-5px) scale(.98)}}
+@keyframes flow-cursor{0%,100%{transform:translate(0,0)}22%,30%{transform:translate(-59px,-64px)}46%{transform:translate(-21px,-10px)}60%,66%{transform:translate(-8px,-2px)}84%{transform:translate(-30px,-30px)}}
+@keyframes flow-file{0%,100%{transform:translateX(0)}35%{transform:translateX(5px) rotate(3deg)}65%{transform:translateX(1px) rotate(-2deg)}}
+@keyframes flow-gear{to{transform:rotate(360deg)}}
+@keyframes flow-code{0%,100%{clip-path:inset(0 80% 0 0)}55%,90%{clip-path:inset(0 0 0 0)}}
+@keyframes flow-test{0%,48%{opacity:.25;transform:scale(.9)}65%,92%{opacity:1;transform:scale(1)}100%{opacity:.25;transform:scale(.9)}}
+@keyframes flow-flash{0%,68%,100%{opacity:0;transform:scale(.7)}76%{opacity:.6;transform:scale(1)}88%{opacity:0;transform:scale(1.35)}}
+@keyframes flow-present{0%,100%{transform:translateY(2px) rotate(-.6deg)}45%{transform:translateY(-3px) rotate(.6deg)}70%{transform:translateY(-1px)}}
+@keyframes flow-client{0%,100%{transform:translateY(0)}45%{transform:translateY(-3px)}}
+@keyframes flow-success{0%,25%,100%{opacity:.3;transform:scale(.9)}42%{opacity:1;transform:scale(1.12)}52%,68%{opacity:1;transform:scale(1)}82%{opacity:.8;transform:translateY(-2px) scale(1.02)}}
+@keyframes flow-broadcast{0%{opacity:.2;transform:scale(.8)}45%{opacity:1}100%{opacity:.2;transform:scale(1.12)}}
+@keyframes flow-audience{0%,100%{opacity:.45;transform:scale(.94)}36%{opacity:1;transform:translateY(-3px) scale(1.12)}50%,74%{opacity:1;transform:scale(1)}}
+@keyframes flow-chart{0%,100%{transform:scaleY(.6)}65%,85%{transform:scaleY(1)}}
+@keyframes flow-packet{0%,5%,27%,55%,77%,100%{opacity:0;transform:translateX(-10px) scale(.6)}8%,58%{opacity:1;transform:translateX(-8px) scale(1)}23%,73%{opacity:1;transform:translateX(10px) scale(1)}25%,75%{opacity:0;transform:translateX(13px) scale(.6)}}
+
+html[data-motion="on"] .pipeline [data-anim="worker"]{animation:flow-worker 2.5s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="worker-alt"]{animation:flow-worker 2.5s -1.25s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="typing"]{animation:flow-typing .22s ease-in-out infinite alternate!important}
+html[data-motion="on"] .pipeline [data-anim="code-rise-a"]{animation:flow-code-rise 4.4s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="code-rise-b"]{animation:flow-code-rise 4.4s -1.45s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="code-rise-c"]{animation:flow-code-rise 4.4s -2.9s ease-out infinite!important}
+@keyframes flow-worker{0%,100%{transform:translateY(0) rotate(-1deg)}35%{transform:translateY(-1px) rotate(1.2deg)}65%{transform:translateY(1.5px) rotate(.4deg)}}
+@keyframes flow-typing{from{transform:translateY(0)}to{transform:translateY(-1.5px)}}
+@keyframes flow-code-rise{0%,100%{opacity:.2;transform:translateY(6px)}35%,70%{opacity:1;transform:translateY(-5px)}90%{opacity:.3;transform:translateY(-9px)}}
+html[data-motion="off"] *,html[data-motion="off"] *:before,html[data-motion="off"] *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html[data-motion="off"] .animate-fade-up{opacity:1!important;transform:none!important}
+html[data-motion="off"] .pipeline .flow-link__packet{opacity:1}
+@media(max-width:1023px){.pipeline__stages{gap:16px}.flow-link{width:22px}.flow-link__packet{left:5px;width:11px}}
+@media(max-width:700px){.flow-heading{margin-bottom:18px}.pipeline{max-width:230px;padding:0}.pipeline__stages{grid-template-columns:1fr;gap:24px}.flow-scene{max-width:178px}.flow-link{width:18px;height:25px;top:calc(100% - 2px);left:calc(50% - 9px)}.flow-link__line{top:0;bottom:0;left:9px;right:auto;border-top:0;border-left:1px dashed #c3cdeb}.flow-link__line:after{top:auto;bottom:1px;right:auto;left:-3px;transform:rotate(135deg)}.flow-link__packet{left:4px;top:7px}.header__motion{width:35px;height:35px}}
+@media(max-width:700px){@keyframes flow-packet{0%,5%,27%,55%,77%,100%{opacity:0;transform:translateY(-8px) scale(.6)}8%,58%{opacity:1;transform:translateY(-6px)}23%,73%{opacity:1;transform:translateY(8px)}25%,75%{opacity:0;transform:translateY(10px) scale(.6)}}}
+
+/* Short reactions and secondary actions keep the compact scenes alive. */
+.flow-svg .flow-transient{opacity:0}
+html[data-motion="on"] .pipeline [data-anim="chat-dot"]{animation:flow-dot 1s var(--beat) ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="content"]{animation:flow-resize 4.4s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="click"]{animation:flow-click 4.4s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="typing-alt"]{animation:flow-typing .22s -.22s ease-in-out infinite alternate!important}
+html[data-motion="on"] .pipeline [data-anim="data-path"]{animation:flow-data 1s linear infinite!important}
+html[data-motion="on"] .pipeline [data-anim="test"] .check{animation:flow-check 4.4s ease-in-out infinite!important;stroke-dasharray:24}
+html[data-motion="on"] .pipeline [data-anim="confetti"]{animation:flow-confetti 4.4s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="signal-a"]{animation:flow-signal-a 2.8s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="signal-b"]{animation:flow-signal-b 2.8s -.9s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="signal-c"]{animation:flow-signal-c 2.8s -1.8s ease-out infinite!important}
+@keyframes flow-dot{0%,65%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-3px);opacity:1}}
+@keyframes flow-resize{0%,14%,100%{opacity:.2;transform:translateY(6px) scale(1.12,1.18)}34%{opacity:1;transform:scale(1.12,1.18)}56%{opacity:1;transform:scale(.98)}65%,80%{opacity:1;transform:scale(1)}}
+@keyframes flow-click{0%,21%,34%,59%,74%,100%{opacity:0;transform:scale(.5)}24%,62%{opacity:.8;transform:scale(.7)}32%,72%{opacity:0;transform:scale(1.7)}}
+@keyframes flow-data{to{stroke-dashoffset:-12}}
+@keyframes flow-check{0%,42%,100%{stroke-dashoffset:24}65%,90%{stroke-dashoffset:0}}
+@keyframes flow-confetti{0%,35%,80%,100%{opacity:0;transform:translateY(2px) scale(.75)}46%{opacity:.85;transform:translateY(-3px) scale(1.1)}65%{opacity:0;transform:translateY(-6px) scale(1.2)}}
+@keyframes flow-signal-a{0%{opacity:0;transform:translate(0,0)}15%{opacity:.8}85%{opacity:.8;transform:translate(32px,-46px)}100%{opacity:0;transform:translate(35px,-49px)}}
+@keyframes flow-signal-b{0%{opacity:0;transform:translate(0,0)}15%{opacity:.8}85%{opacity:.8;transform:translate(55px,0)}100%{opacity:0;transform:translate(59px,0)}}
+@keyframes flow-signal-c{0%{opacity:0;transform:translate(0,0)}15%{opacity:.8}85%{opacity:.8;transform:translate(31px,44px)}100%{opacity:0;transform:translate(35px,48px)}}
+
+/* Idea exchange: glow → package → flight → unpack → absorb. */
+.idea-cycle--echo{display:none}
+.flow-svg .idea-mail{transform-box:view-box;transform-origin:0 0;transform:translate(133px,20px)}
+.flow-svg .record-lines{stroke-dasharray:26;stroke-dashoffset:0}
+.flow-svg .signature{fill:none;stroke:#a298c6;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:65;stroke-dashoffset:0}
+.flow-svg .mail-flap{opacity:0}
+html[data-motion="on"] .pipeline .idea-cycle--echo{display:initial}
+html[data-motion="on"] .pipeline [data-anim="sender-bulb"]{animation:idea-light 6s var(--message-delay) ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="idea-flight"]{animation:idea-flight 6s var(--message-delay) linear infinite!important}
+html[data-motion="on"] .pipeline [data-anim="mail-fold"]{animation:idea-pack 6s var(--message-delay) ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="mail-flap"]{animation:idea-flap 6s var(--message-delay) ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="received-bulb"]{animation:idea-absorb 6s var(--message-delay) ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="receive-ripple"]{animation:idea-ripple 3s ease-out infinite!important}
+html[data-motion="on"] .pipeline .record-lines{animation:idea-record 3s linear infinite!important}
+html[data-motion="on"] .pipeline [data-anim="record-pen"]{animation:idea-write 3s ease-in-out infinite!important}
+@keyframes idea-light{0%,100%{opacity:0;transform:scale(.65)}8%,18%{opacity:1;transform:scale(1);filter:drop-shadow(0 0 5px #efd58a80)}24%{opacity:1;transform:translate(2px,5px) scale(.65)}30%,95%{opacity:0;transform:translate(5px,10px) scale(.1)}}
+@keyframes idea-flight{0%,22%{opacity:0;transform:translate(63px,48px)}26%{opacity:1;transform:translate(69px,42px) rotate(-15deg)}37%{opacity:1;transform:translate(99px,18px) rotate(-10deg)}49%{opacity:1;transform:translate(145px,10px) rotate(2deg)}61%{opacity:1;transform:translate(185px,27px) rotate(12deg)}68%{opacity:1;transform:translate(204px,45px) rotate(0)}75%,100%{opacity:0;transform:translate(204px,45px)}}
+@keyframes idea-pack{0%,21%{transform:scale(.3,.15)}28%,66%{transform:scale(1)}72%{transform:scale(1.15,.9)}78%,100%{transform:scale(.2)}}
+@keyframes idea-flap{0%,21%,30%,65%,78%,100%{opacity:0;transform:scaleY(.1)}24%,70%,74%{opacity:1;transform:scaleY(1)}}
+@keyframes idea-absorb{0%,65%,100%{opacity:0;transform:scale(.4)}73%{opacity:1;transform:scale(.9);filter:drop-shadow(0 0 5px #efd58a90)}82%{opacity:.8;transform:translateY(-3px) scale(1.08)}95%{opacity:0;transform:translateY(-7px) scale(1.15)}}
+@keyframes idea-ripple{0%,35%,100%{opacity:0;transform:scale(.6)}50%{opacity:.7;transform:scale(.9)}85%{opacity:0;transform:scale(1.6)}}
+@keyframes idea-record{0%{stroke-dashoffset:26}75%,100%{stroke-dashoffset:0}}
+@keyframes idea-write{0%,100%{transform:translate(-12px,-18px)}23%{transform:translate(3px,-18px)}30%{transform:translate(-12px,-10px)}52%{transform:translate(1px,-10px)}60%{transform:translate(-12px,-2px)}80%,94%{transform:translate(-3px,-2px)}}
+
+/* Handover is a signed acceptance document, rather than a meeting screen. */
+@keyframes contract-left{0%,8%,100%{stroke-dashoffset:65}34%,90%{stroke-dashoffset:0}}
+@keyframes contract-right{0%,38%,100%{stroke-dashoffset:65}65%,90%{stroke-dashoffset:0}}
+@keyframes contract-pen{0%,8%,100%{opacity:.4;transform:translate(-7px,0)}16%{opacity:1;transform:translate(-3px,-5px)}24%{opacity:1;transform:translate(5px,1px)}34%{transform:translate(14px,-2px)}41%{opacity:1;transform:translate(37px,0)}50%{transform:translate(43px,-4px)}60%{transform:translate(51px,1px)}69%{opacity:1;transform:translate(57px,-5px)}79%,90%{opacity:0;transform:translate(61px,-15px)}}
+@keyframes contract-seal{0%,65%,100%{opacity:.2;transform:scale(.8)}73%{opacity:1;transform:scale(1.13)}80%,92%{opacity:1;transform:scale(1)}}
+
+/* Channels are vector pictograms. No text labels or remote icon requests. */
+
+/* A single 12-second handover story: desktop → mobile → acceptance. */
+.flow-svg .handover-laptop{transform-box:view-box;transform-origin:0 0;transform:translate(0,-4px) scale(.58)}
+.flow-svg .handover-phone{transform-box:view-box;transform-origin:0 0;transform:translate(99px,1px) scale(.65)}
+.flow-svg .handover-contract{transform-box:view-box;transform-origin:0 0;transform:translate(44px,67px) scale(.65)}
+html[data-motion="on"] .pipeline [data-anim="handover-laptop"]{animation:handover-laptop 12s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="demo-scroll"]{animation:handover-scroll 12s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="laptop-confirm"]{animation:handover-laptop-ok 12s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="handover-phone"]{animation:handover-phone 12s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="demo-phone-pages"]{animation:handover-phone-pages 12s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="phone-confirm"]{animation:handover-phone-ok 12s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="handover-contract"]{animation:handover-contract 12s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="signature-left"]{animation:handover-sign-left 12s linear infinite!important}
+html[data-motion="on"] .pipeline [data-anim="signature-right"]{animation:handover-sign-right 12s linear infinite!important}
+html[data-motion="on"] .pipeline [data-anim="signing-pen"]{animation:handover-pen 12s ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="contract-seal"]{animation:handover-seal 12s ease-out infinite!important}
+@keyframes handover-laptop{0%{opacity:0;transform:translateY(5px) scale(.96)}4%,30%{opacity:1;transform:translateY(0) scale(1)}35%,100%{opacity:0;transform:translateY(-5px) scale(.96)}}
+@keyframes handover-scroll{0%,6%,100%{transform:translateY(0)}13%{transform:translateY(-22px)}21%,34%{transform:translateY(-66px)}35%,99%{transform:translateY(0)}}
+@keyframes handover-laptop-ok{0%,22%,35%,100%{opacity:0;transform:scale(.7)}25%{opacity:1;transform:scale(1.12)}28%,31%{opacity:1;transform:scale(1)}}
+@keyframes handover-phone{0%,33%,70%,100%{opacity:0;transform:translateY(5px) scale(.96)}38%,65%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes handover-phone-pages{0%,40%,100%{transform:translateX(0)}44%,49%{transform:translateX(-52px)}53%,69%{transform:translateX(-104px)}70%,99%{transform:translateX(0)}}
+@keyframes handover-phone-ok{0%,55%,70%,100%{opacity:0;transform:scale(.7)}59%{opacity:1;transform:scale(1.12)}62%,66%{opacity:1;transform:scale(1)}}
+@keyframes handover-contract{0%,68%,100%{opacity:0;transform:translateY(5px) scale(.96)}73%,96%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes handover-sign-left{0%,74%,100%{stroke-dashoffset:65}81%,98%{stroke-dashoffset:0}}
+@keyframes handover-sign-right{0%,82%,100%{stroke-dashoffset:65}90%,98%{stroke-dashoffset:0}}
+@keyframes handover-pen{0%,73%,100%{opacity:0;transform:translate(-7px,0)}75%{opacity:1;transform:translate(-7px,0)}77%{opacity:1;transform:translate(-2px,-4px)}81%{opacity:1;transform:translate(14px,-2px)}83%{transform:translate(37px,0)}86%{transform:translate(43px,-4px)}90%{opacity:1;transform:translate(57px,-5px)}94%,99%{opacity:0;transform:translate(61px,-15px)}}
+@keyframes handover-seal{0%,90%,100%{opacity:.2;transform:scale(.8)}93%{opacity:1;transform:scale(1.13)}96%,98%{opacity:1;transform:scale(1)}}
+
+
+/* Keep readable type at every width; change the layout instead of shrinking text. */
+@media(min-width:701px) and (max-width:1100px){
+  .pipeline{max-width:760px}
+  .pipeline .pipeline__stages{grid-template-columns:1fr;gap:56px}
+  .flow-stage{display:grid;grid-template-columns:200px minmax(0,1fr);gap:36px;align-items:center}
+  .flow-stage .flow-scene{position:static}
+  .flow-caption{max-width:440px;margin:0;text-align:left}
+  .flow-stage .flow-link{left:91px;top:calc(100% + 14px);width:18px;height:25px}
+  .flow-link__line{top:0;bottom:0;left:9px;right:auto;border-top:0;border-left:1px dashed #c3cdeb}
+  .flow-link__line:after{top:auto;bottom:1px;right:auto;left:-3px;transform:rotate(135deg)}
+  .flow-link__packet{left:4px;top:7px}
+  @keyframes flow-packet{0%,5%,27%,55%,77%,100%{opacity:0;transform:translateY(-8px) scale(.6)}8%,58%{opacity:1;transform:translateY(-6px)}23%,73%{opacity:1;transform:translateY(8px)}25%,75%{opacity:0;transform:translateY(10px) scale(.6)}}
+}
+@media(max-width:700px){
+  .pipeline{max-width:360px;padding:16px 0}
+  .pipeline .pipeline__stages{gap:56px}
+  .flow-stage .flow-scene{position:static}
+  .flow-caption{max-width:330px;margin-top:22px}
+  .flow-stage .flow-link{top:calc(100% + 14px)}
+}
+
+/* Campaign dashboard: fixed channel tiles, understated activation, profile groups. */
+html[data-motion="on"] .pipeline .campaign-channel__tile{animation:campaign-activate 5s var(--channel-phase) ease-in-out infinite!important}
+html[data-motion="on"] .pipeline .campaign-person__ring{animation:campaign-response 3.8s var(--person-phase) ease-in-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="reach-pulse"]{animation:campaign-reach 2.4s ease-out infinite!important}
+html[data-motion="on"] .pipeline [data-anim="campaign-hand"]{animation:flow-typing .4s ease-in-out infinite alternate!important}
+@keyframes campaign-activate{0%,30%,100%{fill:#f9faff;stroke:#e6e9f4}45%,60%{fill:#eeebfa;stroke:#bdafe0}75%{fill:#f5f3fc;stroke:#d7cdec}}
+@keyframes campaign-response{0%,100%{stroke:#dcdff0;fill:#fff}40%,65%{stroke:#b8abd8;fill:#f5f1fc}}
+@keyframes campaign-reach{0%{opacity:0;transform:translateY(-6px) scale(.6)}25%{opacity:.75;transform:translateY(-2px) scale(.85)}80%{opacity:.6;transform:translateY(7px) scale(.7)}100%{opacity:0;transform:translateY(10px) scale(.5)}}
+
+/* Sequential placements use the same local clock as all conveyor stages. */
+.promotion-slot{--slot-delay:0s}
+.promotion-preview,.promotion-insert,.promotion-ok,.promotion-signals,.promotion-reaction{display:none;pointer-events:none}
+html[data-motion="on"] .pipeline .promotion-slot>*{display:initial;animation-duration:60s!important;animation-delay:var(--slot-delay)!important;animation-iteration-count:infinite!important;animation-timing-function:linear!important}
+html[data-motion="on"] .pipeline .promotion-preview{transform-box:view-box;transform-origin:55px 156px;animation-name:promotion-window!important}
+html[data-motion="on"] .pipeline .promotion-insert{transform-box:view-box;transform-origin:55px 156px;animation-name:promotion-insert!important}
+html[data-motion="on"] .pipeline .promotion-ok{transform-box:fill-box;transform-origin:center;animation-name:promotion-ok!important}
+html[data-motion="on"] .pipeline .promotion-signals{animation-name:promotion-signals!important;stroke-dashoffset:30}
+html[data-motion="on"] .pipeline .promotion-reaction{transform-box:fill-box;transform-origin:center;animation-name:promotion-reaction!important;animation-delay:calc(var(--slot-delay) + var(--reaction-lag))!important}
+html[data-motion="on"] .pipeline .promotion-slot .promotion-first,
+html[data-motion="on"] .pipeline .promotion-slot .promotion-displaced,
+html[data-motion="on"] .pipeline .promotion-slot .promotion-video-first,
+html[data-motion="on"] .pipeline .promotion-slot .promotion-video-displaced,
+html[data-motion="on"] .pipeline .promotion-slot .promotion-feed,
+html[data-motion="on"] .pipeline .promotion-slot .promotion-post-displaced,
+html[data-motion="on"] .pipeline .promotion-slot [data-kind="search"] .promotion-payload{animation-duration:60s!important;animation-delay:var(--slot-delay)!important;animation-iteration-count:infinite!important;animation-timing-function:ease-in-out!important}
+html[data-motion="on"] .pipeline .promotion-first{animation-name:promotion-rank-first!important}
+html[data-motion="on"] .pipeline .promotion-displaced{animation-name:promotion-open-gap!important}
+html[data-motion="on"] .pipeline .promotion-video-first{animation-name:promotion-video-first!important}
+html[data-motion="on"] .pipeline .promotion-video-displaced{animation-name:none!important}
+html[data-motion="on"] .pipeline .promotion-video-second,
+html[data-motion="on"] .pipeline .promotion-video-third,
+html[data-motion="on"] .pipeline .promotion-video-last{animation:60s var(--slot-delay) ease-in-out infinite!important}
+html[data-motion="on"] .pipeline .promotion-video-second{animation-name:promotion-video-second!important}
+html[data-motion="on"] .pipeline .promotion-video-third{animation-name:promotion-video-third!important}
+html[data-motion="on"] .pipeline .promotion-video-last{animation-name:promotion-video-gap!important}
+html[data-motion="on"] .pipeline .promotion-feed{animation-name:promotion-scroll!important}
+html[data-motion="on"] .pipeline .promotion-post-displaced{animation-name:promotion-post-gap!important}
+html[data-motion="on"] .pipeline .promotion-slot [data-kind="search"] .promotion-payload{animation-name:promotion-rank-project!important}
+@keyframes promotion-window{0%,10%,100%{opacity:0;transform:scale(.04)}.8%,9.1%{opacity:1;transform:scale(1)}9.8%{opacity:0;transform:scale(.04)}}
+@keyframes promotion-insert{0%,2.8%,10%,100%{opacity:0;transform:translate(-14px,10px) scale(.12)}3.2%{opacity:1;transform:translate(-18px,0px) scale(.35)}4.1%{opacity:1;transform:translate(-24px,-7px) scale(1.04)}4.8%,9.1%{opacity:1;transform:translate(0,0) scale(1)}9.8%{opacity:0;transform:translate(-14px,10px) scale(.12)}}
+@keyframes promotion-open-gap{0%,3%,10%,100%{transform:translateY(0)}4.8%,9.8%{transform:translateY(23px)}}
+@keyframes promotion-rank-first{0%,6%,10%,100%{transform:translateY(0)}7.1%,9.8%{transform:translateY(23px)}}
+@keyframes promotion-rank-project{0%,6%,10%,100%{transform:translateY(0)}7.1%,9.8%{transform:translateY(-23px)}}
+@keyframes promotion-video-first{0%,3%,10%,100%{transform:translateX(0)}4.8%,9.8%{transform:translateX(64px)}}
+@keyframes promotion-video-gap{0%,3%,10%,100%{transform:translateY(0)}4.8%,9.8%{transform:translateY(38px)}}
+@keyframes promotion-video-second{0%,3%,10%,100%{transform:translate(0,0)}4.8%,9.8%{transform:translate(-64px,38px)}}
+@keyframes promotion-video-third{0%,3%,10%,100%{transform:translateX(0)}4.8%,9.8%{transform:translateX(64px)}}
+@keyframes promotion-scroll{0%,1.1%,10%,100%{transform:translateY(0)}2.5%,9.8%{transform:translateY(-32px)}}
+@keyframes promotion-post-gap{0%,3%,10%,100%{transform:translateY(0)}4.8%,9.8%{transform:translateY(32px)}}
+html[data-motion="on"] .pipeline .promotion-feed[data-platform="tiktok"]{animation-name:promotion-tiktok-scroll!important}
+html[data-motion="on"] .pipeline .promotion-post-displaced[data-platform="tiktok"]{animation-name:promotion-tiktok-gap!important}
+@keyframes promotion-tiktok-scroll{0%,1.1%,10%,100%{transform:translateY(0)}2.5%,9.8%{transform:translateY(-72px)}}
+@keyframes promotion-tiktok-gap{0%,3%,10%,100%{transform:translateY(0)}4.8%,9.8%{transform:translateY(72px)}}
+@keyframes promotion-ok{0%,7.1%,10%,100%{opacity:0;transform:scale(.5)}7.5%{opacity:1;transform:scale(1.15)}7.8%,9.1%{opacity:1;transform:scale(1)}9.8%{opacity:0;transform:scale(.5)}}
+@keyframes promotion-signals{0%,7.5%,10%,100%{opacity:0;stroke-dashoffset:30}7.8%{opacity:.9}9.2%{opacity:0;stroke-dashoffset:0}}
+@keyframes promotion-reaction{0%,8%,10%,100%{opacity:0;transform:translateY(3px) scale(.5)}8.4%{opacity:1;transform:translateY(-3px) scale(1.1)}9%{opacity:1;transform:translateY(-8px) scale(1)}9.8%{opacity:0;transform:translateY(-15px) scale(.8)}}
+
